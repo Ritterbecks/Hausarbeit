@@ -1,0 +1,35 @@
+  \thisfloatsetup{
+  capbesidewidth=\marginparwidth,
+}
+\begin{table}[htb]
+\centering
+%\sffamily,
+\small
+%\sansmath
+\arrayrulecolor{white}
+%\setlength{\arrayrulewidth}{2pt}
+\vspace{0.2cm}
+  \rowcolors{2}{halfgray!15}{halfgray!5}
+ \setlength{\extrarowheight}{.00em}
+			\begin{tabularx}{0.99\textwidth}{c*{1}{>{\RaggedLeft\arraybackslash}X}r*{2}{>{\RaggedLeft\arraybackslash}X}}		
+\rowcolor{mycolor}  
+\multicolumn{1}{c}{\color{white}\textbf{Kugel}} & 
+\multicolumn{1}{c}{\color{white}\textbf{Höhe $\boldsymbol{h}$}} &
+ \multicolumn{1}{c}{\color{white}\textbf{$\boldsymbol{E_\mathrm{pot}}$ in}} &  \multicolumn{1}{c}{\color{white}\textbf{$\boldsymbol{E_\mathrm{kin}}$ in}} &    \multicolumn{1}{c}{\color{white}\textbf{Abweichung}}\\ \rowcolor{mycolor}
+ \multicolumn{1}{c}{\color{white}\textbf{Nr.}} & 
+ \multicolumn{1}{c}{\color{white}\textbf{in $\boldsymbol{\si{\milli\metre}}$}} &
+     \multicolumn{1}{c}{\color{white}\textbf{$\boldsymbol{\si{\milli\newton\metre}}$}}  &    \multicolumn{1}{c}{\color{white}\textbf{$\boldsymbol{\si{\milli\newton\metre}}$}}  &     \multicolumn{1}{c}{\color{white}\textbf{in $\si{\percent}$}}\\
+1	&	22	&	3,392	&	3,050	&	10,1	\\
+2	&	24	&	3,700	&	3,398	&	8,2	\\
+3	&	35	&	5,396	&	5,242	&	2,8	\\
+4	&	47	&	7,245	&	6,922	&	4,5	\\
+5	&	60	&	9,250	&	8,813	&	4,7	\\
+6	&	22	&	3,392	&	2,915	&	14,0	\\
+7	&	24	&	3,700	&	3,398	&	8,2	\\
+8	&	35	&	5,396	&	4,930	&	8,6	\\
+9	&	47	&	7,245	&	6,706	&	7,4	\\
+10	&	60	&	9,250	&	7,517	&	18,7	\\
+		\end{tabularx}
+		\caption[Umsetzung der potentiellen in kinetische Energie II]{Videoanalyse einer Messreihe mit Holzkugeln des Radius $r=\SI{17.5}{\milli\metre}$. Es werden die ersten $\SI{0.2}{\second}$ zur Berechnung der kinetischen Energie verwendet.}
+		\label{tab:maisbex1}	
+		\end{table} %\vspace*{-5cm}\newpage

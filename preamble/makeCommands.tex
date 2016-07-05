@@ -1,0 +1,495 @@
+%% Index (package imakeidx)
+\IfDefined{makeindex}{%
+ \IfPackageLoaded{imakeidx}{%
+  \makeindex[%
+    ,title=\indexname%
+    ,program=makeindex% (makeindex,xindy,texindy)
+    ,intoc=true,%
+    ,columns=2%
+    ,columnsep=35pt%
+    ,columnseprule=false%
+  ]%
+ }%
+}%
+%% Glossary/Acronym list/list of symbols (glossaries package)
+\IfDefined{makeglossaries}{\makenoidxglossaries}
+% --| Index |---------------------------------------------------------
+
+% prints 1st argument emphasized and indexes it
+\newcommand{\emphidx}[1]{\emph{#1}\index{#1}}
+
+% prints and indexes 1st argument
+\newcommand{\idx}[1]{#1\index{#1}}
+
+% --| Length |-------------------------------------------------------
+
+% define margin width variable
+\newlength{\marginwidth}
+\setlength{\marginwidth}{\marginparwidth}
+\addtolength{\marginwidth}{\marginparsep}
+
+% define text width and height
+\newlength{\doctextwidth}
+\setlength{\doctextwidth}{\textwidth}
+\newlength{\doctextheight}
+\setlength{\doctextheight}{\textheight}
+%% Glossary (depreciated glossary package - not supported by this template!)
+\IfDefined{makenomenclature}{\makenomenclature}
+
+%% Mini TOC (package minitoc - not supported by this template!)
+%\IfPackageLoaded{minitoc}{\IfElseUndefined{chapter}{\dosecttoc}{\dominitoc}}
+\contentsmargin{0cm}
+\usepackage{mdframed}
+\usepackage{amsthm}
+%% Line numbers (package lineno)
+%\IfDefined{linenumbers}{\linenumbers}
+
+%% prints all new columntype definitions into the log file.
+\IfDefined{showcols}{\showcols}
+
+
+\newcommand{\intoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\newcommand{\intff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\newtheorem{notation}{Notation}[chapter]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%% dedicated to boxed/framed environements %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mycolornumbox}% % Theorem style name
+{0pt}% Space above
+{0pt}% Space below
+{\normalfont}% % Body font
+{}% Indent amount
+{\small\bfseries\sffamily\color{mycolor}}% % Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\sffamily\color{mycolor}\thmname{#1}\nobreakspace\thmnumber{#2}% Theorem text (e.g. Theorem 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Optional theorem note
+\renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
+
+\newtheoremstyle{blacknumex}% Theorem style name
+{5pt}% Space above
+{5pt}% Space below
+{\normalfont}% Body font
+{} % Indent amount
+{\small\bfseries\sffamily}% Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\sffamily{\tiny\ensuremath{\blacksquare}}\nobreakspace\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries---\nobreakspace#3.}}% Optional theorem note
+
+\newtheoremstyle{blacknumbox} % Theorem style name
+{0pt}% Space above
+{0pt}% Space below
+{\normalfont}% Body font
+{}% Indent amount
+{\small\bfseries\sffamily}% Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\sffamily\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries---\nobreakspace#3.}}% Optional theorem note
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% dedicated to non-boxed/non-framed environements %%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mycolornum}% % Theorem style name
+{5pt}% Space above
+{5pt}% Space below
+{\normalfont}% % Body font
+{}% Indent amount
+{\small\bfseries\sffamily\color{mycolor}}% % Theorem head font
+{\;}% Punctuation after theorem head
+{0.25em}% Space after theorem head
+{\small\sffamily\color{mycolor}\thmname{#1}\nobreakspace\thmnumber{\@ifnotempty{#1}{}\@upn{#2}}% Theorem text (e.g. Theorem 2.1)
+\thmnote{\nobreakspace\the\thm@notefont\sffamily\bfseries\color{black}---\nobreakspace#3.}} % Optional theorem note
+\renewcommand{\qedsymbol}{$\blacksquare$}% Optional qed square
+\makeatother
+
+% Defines the theorem text style for each type of theorem to one of the three styles above
+
+\newcounter{dummy} 
+\numberwithin{dummy}{chapter}
+\theoremstyle{mycolornumbox}
+\newtheorem{theoremeT}[dummy]{Theorem}
+\newtheorem{problem}{Problem}[chapter]
+\newtheorem{exerciseT}{Exercise}[chapter]
+\theoremstyle{blacknumex}
+\newtheorem{exampleT}{Example}[chapter]
+\theoremstyle{blacknumbox}
+\newtheorem{vocabulary}{Vocabulary}[chapter]
+\newtheorem{definitionT}{Definition}[section]
+\newtheorem{corollaryT}[dummy]{Corollary}
+\theoremstyle{mycolornum}
+\newtheorem{proposition}[dummy]{Proposition}
+
+%----------------------------------------------------------------------------------------
+%	DEFINITION OF COLORED BOXES
+%----------------------------------------------------------------------------------------
+
+% Required for creating the theorem, definition, exercise and corollary boxes
+
+% Theorem box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+backgroundcolor=black!5,
+linecolor=mycolor,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+innerbottommargin=5pt]{tBox}
+
+% Exercise box	  
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+backgroundcolor=mycolor!10,
+linecolor=mycolor,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+innerbottommargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt]{eBox}	
+
+% Definition box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=mycolor,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=0pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=0pt]{dBox}	
+
+% Corollary box
+\newmdenv[skipabove=7pt,
+skipbelow=7pt,
+rightline=false,
+leftline=true,
+topline=false,
+bottomline=false,
+linecolor=gray,
+backgroundcolor=black!5,
+innerleftmargin=5pt,
+innerrightmargin=5pt,
+innertopmargin=5pt,
+leftmargin=0cm,
+rightmargin=0cm,
+linewidth=4pt,
+innerbottommargin=5pt]{cBox}
+
+% Creates an environment for each type of theorem and assigns it a theorem text style from the "Theorem Styles" section above and a colored box from above
+\newenvironment{theorem}{\begin{tBox}\begin{theoremeT}}{\end{theoremeT}\end{tBox}}
+\newenvironment{exercise}{\begin{eBox}\begin{exerciseT}}{\hfill{\color{mycolor}\tiny\ensuremath{\blacksquare}}\end{exerciseT}\end{eBox}}				  
+\newenvironment{definition}{\begin{dBox}\begin{definitionT}}{\end{definitionT}\end{dBox}}	
+\newenvironment{example}{\begin{exampleT}}{\hfill{\tiny\ensuremath{\blacksquare}}\end{exampleT}}		
+\newenvironment{corollary}{\begin{cBox}\begin{corollaryT}}{\end{corollaryT}\end{cBox}}	
+
+%----------------------------------------------------------------------------------------
+%	REMARK ENVIRONMENT
+%----------------------------------------------------------------------------------------
+
+\newenvironment{remark}{\par\vspace{10pt}\small % Vertical white space above the remark and smaller font size
+\begin{list}{}{
+\leftmargin=35pt % Indentation on the left
+\rightmargin=25pt}\item\ignorespaces % Indentation on the right
+\makebox[-2.5pt]{\begin{tikzpicture}[overlay]
+\node[draw=mycolor!60,line width=1pt,circle,fill=mycolor!20,font=\sffamily\bfseries,inner sep=2pt,outer sep=0pt] at (-15pt,0pt){\textcolor{mycolor}{!}};\end{tikzpicture}} % Orange R in a circle
+\advance\baselineskip -1pt}{\end{list}\vskip5pt} % Tighter line spacing and white space after remark
+
+%----------------------------------------------------------------------------------------
+%  MARGINS SECTIONTITLES
+%----------------------------------------------------------------------------------------
+\makeatletter
+% Section numbers into left margin: llap = rlap, remove \hskip
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER HEADINGS
+%----------------------------------------------------------------------------------------
+% A switch to conditionally include a picture, implemented by  Christian Hupfer
+\newif\ifusechapterimage
+\usechapterimagetrue
+\newcommand{\thechapterimage}{}%
+\newcommand{\chapterimage}[1]{\ifusechapterimage\renewcommand{\thechapterimage}{#1}\fi}%
+\def\@makechapterhead#1{%
+{\parindent \z@ \raggedright \normalfont
+\ifnum \c@secnumdepth >\m@ne
+\ifappendix % Falls das Kapitel auf einer rechten Seite beginnt
+\startcontents
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+%\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
+%\draw[anchor=west] (\Gm@lmargin-30mm,-4.5cm) node [line width=2pt,rounded corners=45pt,draw=mycolor,fill=white,fill opacity=0.5,inner sep=45pt]{\strut\makebox[24cm]{}};
+%\draw[anchor=west][mycolor!50, thick](\Gm@lmargin+10mm,-5.9) -- (\Gm@lmargin+12.41cm,-5.9);
+%\draw[anchor=west][mycolor!50, ultra thick](\Gm@lmargin+10mm,-4.3) -- (\Gm@lmargin+17.513cm,-5.7);
+\draw[anchor=east] (14.2cm,-5cm) node
+{\LARGE\color{black}\hfill\textssc{\textlcsc{\protect\parbox{1\textwidth}{\protect\raggedleft #1}}\strut}};
+\draw[anchor=east] (16.8cm,-5.0cm) node {\fontseries{n}\fontsize{80}{130}\selectfont{\textcolor{mycolor} {{\fontencoding{U}\fontfamily{eur}\fontseries{b}\selectfont\@Alph\c@chapter}}\strut}};
+\end{tikzpicture}};
+\end{tikzpicture}
+\else % Falls das Kapitel auf einer linken Seite beginnt
+\begin{tikzpicture}[remember picture,overlay]
+\node at (current page.north west)
+{\begin{tikzpicture}[remember picture,overlay]
+%-.\node[anchor=north west,inner sep=0pt] at (0,0) {\ifusechapterimage\includegraphics[width=\paperwidth]{\thechapterimage}\fi};
+%\draw[anchor=west] (\Gm@lmargin-30mm,-4.5cm) node [line width=2pt,rounded corners=45pt,draw=mycolor,fill=white,fill opacity=0.5,inner sep=45pt]{\strut\makebox[24cm]{}};
+%\draw[anchor=west][black!70, thick](\Gm@lmargin+10mm,-5.9) -- (\Gm@lmargin+12.41cm,-5.9);
+%\draw[anchor=west][mycolor!50, ultra thick](\Gm@lmargin+10mm,-4.3) -- (\Gm@lmargin+17.513cm,-5.7);
+\draw[anchor=east] (14.2cm,-5cm) node {\LARGE\color{black}\hfill\textssc{\textlcsc{\protect\parbox{.9\textwidth}{\protect\raggedleft #1}}\strut}};
+\draw[anchor=east] (16.15cm,-5.0cm) node {\fontseries{n}\fontsize{80}{130}\selectfont{\textcolor{mycolor} {{\fontencoding{U}\fontfamily{eur}\fontseries{b}\selectfont\@arabic\c@chapter}}\strut}};
+\end{tikzpicture}};
+\end{tikzpicture}
+\fi\fi\par\vspace*{90\p@}}}
+
+%-------------------------------------------
+% Kapitelüberschriften für unnummerierte Abschnitte
+
+%\def\@makeschapterhead#1{%
+%\begin{tikzpicture}[remember picture,overlay]
+%\node at (current page.north west)
+%{\begin{tikzpicture}[remember picture,overlay]
+%\draw[anchor=west] (\Gm@lmargin+3cm,-9cm) node [line width=2pt,rounded corners=15pt,draw=mycolor,fill=white,fill opacity=0.5,inner sep=15pt]{\strut\makebox[18cm]{}};
+%\draw[anchor=west][halfgray, thick](\Gm@lmargin+10mm,-4.4) -- (\Gm@lmargin+12.41cm,-4.4);
+%\draw[anchor=west][halfgray, thick](\Gm@lmargin+10mm,-5.5) -- (\Gm@lmargin+12.41cm,-5.5);
+%\draw[anchor=east] (\Gm@rmargin+5.52cm,-4cm) node {\huge\color{mycolor}\hfill\textssc{\textlcsc{\protect\parbox{.9\textwidth}{\protect\raggedleft #1}}\strut}};
+%\end{tikzpicture}};
+%\end{tikzpicture}
+%\par\vspace*{60\p@}}
+%\makeatother
+
+% Beschneidung des Tufte-Plots
+\newcommand\clipright[1][white]{
+  \fill[#1](current axis.south east)rectangle(current axis.north-|current axis.outer east);
+  \pgfresetboundingbox
+  \useasboundingbox(current axis.outer south west)rectangle([xshift=.5ex]current axis.outer north-|current axis.east);
+}
+
+% Caption der Randabbildungen
+\makeatletter
+\DeclareCaptionStyle{marginfigure}{labelsep = colon, labelfont  = {mycolor, footnotesize, , it, sc, bf}, justification = RaggedRight, position=bottom, textfont = {footnotesize, it, color=halfgray}}
+\DeclareCaptionStyle{margintable}{labelsep = colon, labelfont  = {mycolor, footnotesize, , it, sc, bf}, justification = RaggedRight, position=bottom, textfont = {footnotesize, it, color=halfgray}}
+\makeatother
+
+\AtEveryCitekey{%
+    \clearfield{url}%}%
+}
+% Umdefinition der Listings-Bezeichnungen
+\makeatletter
+\renewcommand{\@marginparreset}{%
+  \reset@font\scriptsize
+  \RaggedRight
+  \@setminipage
+}
+\lst@UserCommand\lstlistingname{R-code}
+\lst@UserCommand\lstlistlistingname{Quellcode}
+\makeatother
+
+\usepackage{textcase} % provides \MakeTextUppercase and \MakeTextLowercase
+% Define Lower Case \scshape
+\newcommand\textlcsc[1]{\textssc{\MakeLowercase{#1}}} 
+
+
+\newcounter{mynote}% a new counter for use in margin notes
+
+\newcommand{\mynote}[2][0]{% a simple margin note
+   \refstepcounter{footnote}% step counter
+   \mbox{\textsuperscript{\tiny{\thefootnote}}}% the number (superscript) in text
+   \marginnote{\mbox{\textsuperscript{\raisebox{-0.4mm}{\color{halfgray}\itshape\RaggedRight\thefootnote}}}{\color{halfgray}\textit{\RaggedRight#2}}}[#1\baselineskip]% the note
+}
+
+\deffootnote[0.4em]{0.0em}{0em}{% modified example from page 83
+  \makebox[0.4em][l]{\textsuperscript{\raisebox{-0.4mm}{\itshape\thefootnotemark}}}}
+  
+ \makeatletter
+ % Basically the same as for `\l@section` etc, just `\@nodottedtocline` instead of `\@dottedtcline`:
+ \newcommand*\l@chapterinfo{\addvspace{1pt}\@nodottedtocline{1}{1.0cm}{0.0em}}
+ \newcommand*\l@sectioninfo{\@nodottedtocline{1}{1.5em}{2.3em}}
+ \newcommand*\l@subsectioninfo{\@nodottedtocline{2}{3.8em}{3.2em}}
+ \newcommand*\l@subsubsectioninfo{\@nodottedtocline{3}{7.0em}{4.1em}}
+ \newcommand*\l@paragraphinfo{\@nodottedtocline{4}{10em}{5em}}
+ \newcommand*\l@subparagraphinfo{\@nodottedtocline{5}{12em}{6em}}
+ 
+ 
+ % Copied from the book class macro `\@dottedtocline`. Removed the dots and page number
+ \def\@nodottedtocline#1#2#3#4#5{%
+   \ifnum #1>\c@tocdepth \else
+     \vskip \z@ \@plus.2\p@
+     {\leftskip #2\relax \parfillskip -\rightskip
+      \parindent #2\relax\@afterindenttrue
+      \interlinepenalty\@M
+      \leavevmode
+      \@tempdima #3\relax
+      \advance\leftskip \@tempdima \null\nobreak\hskip -\leftskip
+      {#4}\nobreak
+      \leaders\hbox{$\m@th
+         \mkern \@dotsep mu\hbox{\,}\mkern \@dotsep
+         mu$}\hfill
+      \nobreak
+      \hb@xt@\@pnumwidth{\hfil\normalfont \normalcolor }%
+      \par}%
+   \fi}
+  
+ \makeatother
+ 
+ \def\chapterinfo#1{%
+     \addcontentsline{toc}{chapterinfo}{%
+     \noexpand{}\color{halfgray}\itshape#1}%
+ }
+ \def\sectioninfo#1{%
+     \addcontentsline{toc}{sectioninfo}{%
+     \noexpand\numberline{}#1}%
+ }
+ \def\subsectioninfo#1{%
+     \addcontentsline{toc}{subsectioninfo}{%
+     \noexpand\numberline{}#1}%
+ }
+ %\renewcommand{\scdefault}{ssc} % MinionPro's spaced small caps as standard
+ %\setstretch{1.025}
+ %\setlength{\RaggedRightParindent}{\parindent}
+ % Kleinbuchstaben
+ \makeatletter
+ \newcommand*{\Section}{}
+ \let\Chapter\chapter
+ \renewcommand*{\chapter}{%
+   \@ifstar {\star@chapter}{\@dblarg\nonstar@chapter}%
+ }
+ \newcommand*{\star@chapter}[1]{%
+   \Chapter*{\MakeLowercase{#1}}%
+ }
+ \newcommand*{\nonstar@chapter}[2][]{%
+   \Chapter[{#1}]{\MakeLowercase{#2}}%
+ }
+ 
+ \let\Section\section
+ \renewcommand*{\section}{%
+   \@ifstar {\star@section}{\@dblarg\nonstar@section}%
+ }
+ \newcommand*{\star@section}[1]{%
+   \Section*{\MakeLowercase{#1}}%
+ }
+ \newcommand*{\nonstar@section}[2][]{%
+   \Section[{#1}]{\MakeLowercase{#2}}%
+ }
+ \let\Subsection\subsection
+ \renewcommand*{\subsection}{%
+   \@ifstar {\star@subsection}{\@dblarg\nonstar@subsection}%
+ }
+ \newcommand*{\star@subsection}[1]{%
+   \Subsection*{\MakeLowercase{#1}}%
+ }
+ \newcommand*{\nonstar@subsection}[2][]{%
+   \Subsection[{#1}]{\MakeLowercase{#2}}%
+ }
+% 
+% \let\Paragraph\paragraph
+% \renewcommand*{\paragraph}{%
+%   \@ifstar {\star@paragraph}{\@dblarg\nonstar@paragraph}%
+% }
+% \newcommand*{\star@paragraph}[1]{%
+%   \Paragraph*{\MakeLowercase{#1}}%
+% }
+% \newcommand*{\nonstar@paragraph}[2][]{%
+%   \Paragraph[{#1}]{\MakeLowercase{#2}}%
+% }
+ \renewcommand\addchaptertocentry[2]{%
+   \addtocentrydefault{chapter}{\protect\lowercase{#1}}{%
+     \protect\texorpdfstring{\MakeLowercase{#2}}{#2}}}
+     
+     
+     \captionsetup[capbesidefigure]{labelsep = colon, labelfont  = {mycolor, footnotesize, , it, sc, bf}, justification = RaggedRight, position=bottom, textfont = {footnotesize, it, color=halfgray}}
+ %\renewcommand\addsectiontocentry[2]{%
+ %  \addtocentrydefault{section}{\protect\lowercase{#1}}{%
+ %    \protect\texorpdfstring{\MakeLowercase{#2}}{#2}}}    
+ 
+ %\renewcommand\addsubsectiontocentry[2]{%
+ %  \addtocentrydefault{subsection}{\protect\lowercase{#1}}{%
+ %    \protect\texorpdfstring{\MakeLowercase{#2}}{#2}}}     
+ \setcounter{tocdepth}{1}    
+ % \bookmarklevel[3]{\chapterinfo} 
+ \makeatother 
+\renewcommand*{\raggedleftmarginnote}{\RaggedLeft}
+\renewcommand*{\raggedrightmarginnote}{\RaggedRight}
+\newcommand\Marginnote[1]{\marginnote{\hspace{0pt}#1}}
+
+% --| other new definitions |-----------------------------------------
+
+
+
+% --| Math |-------------------------------------------------------
+
+
+% -- new commands --
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\Abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\Trace}[1]{\ensuremath{\Tr\left\{\,#1\,\right\}}} % Trace /Spur
+%
+
+% -- differentials --
+\newcommand{\pd}{\partial\mspace{1mu}} % partial diff
+\newcommand{\td}{\,\mathrm{d}}	% total diff
+
+% -- Abbreviations --
+\renewcommand{\Re}{\text{Re}}			% Real value
+\renewcommand{\Im}{\text{Im}}			% Real value
+\newcommand{\complex}{\mathbb{C}} % Complex
+\newcommand{\real}{\mathbb{R}}    % Real
+\renewcommand{\i}{\mathrm{i}}   
+%
+\newcommand{\Ham}{\mathcal{H}}    
+\newcommand{\Prob}{\mathscr{P}}   
+\newcommand{\unity}{\mathds{1}}   
+%
+% -- New Operators --
+\IfDefined{DeclareMathOperator}{
+  \DeclareMathOperator{\rot}{rot}
+  \DeclareMathOperator{\grad}{grad}
+  \DeclareMathOperator{\rect}{rect}
+  \renewcommand{\div}{\text{div}\,}
+  \DeclareMathOperator{\Tr}{Tr}
+  \DeclareMathOperator{\const}{const}
+  \DeclareMathOperator{\e}{e} 			% exponatial Function
+  
+}
+
+% -- new symbols --
+\newcommand{\laplace}{\Delta}
+\newcommand{\dalembert}{\Box}
+\newcommand*{\tran}{^{\mkern-1.5mu\mathsf{T}}}
+
+\newenvironment{items}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\topsep}{0.6cm}
+    \setlength{\partopsep}{0pt}
+    \setlength{\parsep}{\parskip}
+    \setlength{\itemsep}{\parskip}
+    \setlength{\leftmargin}{0pt}
+    \setlength{\itemindent}{0pt}
+  }
+}{\end{list}}
+
+\newenvironment{enum}{%
+  \begin{list}{\arabic{enumi}}{%
+    \setlength{\topsep}{0.6cm}
+    \setlength{\partopsep}{0pt}
+    \setlength{\parsep}{\parskip}
+    \setlength{\itemsep}{\parskip}
+    \setlength{\leftmargin}{0pt}
+    \setlength{\itemindent}{0pt}
+    \usecounter{enumi}
+  }
+}{\end{list}}

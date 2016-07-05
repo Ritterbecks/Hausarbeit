@@ -1,0 +1,977 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{Blaum2011}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=be6cf6161368392d75137dc99437e911}{%
+           family={Blaum},
+           family_i={B\bibinitperiod},
+           given={Maximilian},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Johannes Gutenberg Universit"at Mainz}%
+      }
+      \strng{namehash}{be6cf6161368392d75137dc99437e911}
+      \strng{fullhash}{be6cf6161368392d75137dc99437e911}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2011}
+      \field{labelmonth}{04}
+      \field{labelday}{08}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{08}
+      \field{month}{04}
+      \field{title}{{Neukonzeption des Versuchs Quadrupolmassenspektrometer im Fortgeschrittenen-Praktikum}}
+      \field{type}{Staatsexamensarbeit}
+      \field{year}{2011}
+    \endentry
+    \entry{Boehmer2013}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=fbff91df0e84427caf1d1139a6cc3934}{%
+           family={Böhmer},
+           family_i={B\bibinitperiod},
+           given={Mathias},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen}%
+      }
+      \strng{namehash}{fbff91df0e84427caf1d1139a6cc3934}
+      \strng{fullhash}{fbff91df0e84427caf1d1139a6cc3934}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2013}
+      \field{labelmonth}{05}
+      \field{labelday}{16}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{month}{05}
+      \field{title}{Konzeption eines {A}nalogie-{V}ersuches zur {M}assenspektrometrie für ein {P}hysikpraktikum für {B}iologie-{S}tu{\-}dierende}
+      \field{type}{Staatsexamensarbeit}
+      \field{year}{2013}
+    \endentry
+    \entry{Bronstein2008}{book}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=ba6c811366f3a6be3e43921f441b6a21}{%
+           family={Bronstein},
+           family_i={B\bibinitperiod},
+           given={I.\bibnamedelimi N.},
+           given_i={I\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{uniquename=0,hash=fc5c3db79154d7982339f7bbea5042cc}{%
+           family={Semendjajew},
+           family_i={S\bibinitperiod},
+           given={K.\bibnamedelimi A.},
+           given_i={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{uniquename=0,hash=4377a49dca4cd118a836b5320add0636}{%
+           family={Musiol},
+           family_i={M\bibinitperiod},
+           given={G.},
+           given_i={G\bibinitperiod}}}%
+        {{uniquename=0,hash=b8b53f8521e49acdfac990b9abf0ebd8}{%
+           family={Mühlig},
+           family_i={M\bibinitperiod},
+           given={H},
+           given_i={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Frankfurt am Main}%
+      }
+      \list{publisher}{1}{%
+        {Verlag Harri Deutsch GmbH}%
+      }
+      \strng{namehash}{5427302109272ae1657c5597a4c5e09d}
+      \strng{fullhash}{7dccd0424fe93b4d5bca94e1dc7f40f6}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{7., vollständig überarbeitete und ergänzte Auflage}
+      \field{title}{{Taschenbuch der Mathematik}}
+      \field{year}{2008}
+    \endentry
+    \entry{Budz2005}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=b25c5aee3cef6902d6377d3cf53b4850}{%
+           family={Budzikiewicz},
+           family_i={B\bibinitperiod},
+           given={Herbert},
+           given_i={H\bibinitperiod}}}%
+        {{uniquename=0,hash=a950d886f0351472be7f011eee87d8e5}{%
+           family={Schäfer},
+           family_i={S\bibinitperiod},
+           given={Mathias},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Weinheim}%
+      }
+      \list{publisher}{1}{%
+        {WILEY-VCH GmbH\,\&\,Co.\,KGaA}%
+      }
+      \strng{namehash}{ad60fe6827001cf9909c61fefdb3414e}
+      \strng{fullhash}{6ebcff40d2e299a591337410a7fc7138}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2005}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5., vollständig überarbeitete und aktualisierte Auflage}
+      \field{subtitle}{{Eine Einführung}}
+      \field{title}{Massenspektrometrie}
+      \field{year}{2005}
+    \endentry
+    \entry{Graf2002}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=129348232b83ba9507735e9f75e29b6d}{%
+           family={Bühler},
+           family_i={B\bibinitperiod},
+           given={Achim},
+           given_i={A\bibinitperiod}}}%
+        {{uniquename=0,hash=24f59984067e6be1c11dd7e7d2c02a64}{%
+           family={Graf},
+           family_i={G\bibinitperiod},
+           given={Erwin},
+           given_i={E\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=38effd0a33dc36c4832643ede427f92d}{%
+           family={Demuth},
+           family_i={D\bibinitperiod},
+           given={Reinhard},
+           given_i={R\bibinitperiod}}}%
+        {{hash=70b16e2a67ec8f1283cf10f5cc7e5f63}{%
+           family={Duvinage},
+           family_i={D\bibinitperiod},
+           given={Brigitte},
+           given_i={B\bibinitperiod}}}%
+        {{hash=e8d25076798cc73ba83cda5a4a00d02c}{%
+           family={Latzel},
+           family_i={L\bibinitperiod},
+           given={Gert},
+           given_i={G\bibinitperiod}}}%
+        {{hash=07c162391f87d1bcbf3c7bfc7f30165d}{%
+           family={Obendrauf},
+           family_i={O\bibinitperiod},
+           given={Viktor},
+           given_i={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Köln und Leipzig}%
+      }
+      \list{publisher}{1}{%
+        {Aulis Verlag Deubner \& Co\,KG}%
+      }
+      \strng{namehash}{a115931f2e3362fa4d1d6a2094cc9feb}
+      \strng{fullhash}{21731a4b5267bd3c0f0ce6a1363b4d91}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelyear}{2002}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{Praxis der Naturwissenschaften - Chemie in der Schule}}
+      \field{number}{51}
+      \field{subtitle}{{Modellversuch zur Veranschaulichung}}
+      \field{title}{{Funktionsprinzip eines Massenspektrometers}}
+      \field{volume}{6}
+      \field{year}{2002}
+      \field{pages}{33\bibrangedash 36}
+      \range{pages}{4}
+    \endentry
+    \entry{clift2013}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=db485fcf6fc3acbc3d3982c41050dd83}{%
+           family={Clift},
+           family_i={C\bibinitperiod},
+           given={R.},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=bc8bcc859d6312667c59286cf5cbcc2e}{%
+           family={Grace},
+           family_i={G\bibinitperiod},
+           given={J.R.},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=d90b61f165f36223193a435037987660}{%
+           family={Weber},
+           family_i={W\bibinitperiod},
+           given={M.E.},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Mineola, New York}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{46153f8a17f7bcc231f5b0d21eb6f308}
+      \strng{fullhash}{c932c16d91dc522f389f97b2e1c95293}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{2013}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{{Dover Civil and Mechanical Engineering}}
+      \field{title}{{Bubbles, Drops, and Particles}}
+      \field{year}{2013}
+      \field{pages}{97\bibrangedash 125}
+      \range{pages}{29}
+    \endentry
+    \entry{Cramer2008}{book}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=c8293e08acfd5abc3d275e104b6dbbb0}{%
+           family={Cramer},
+           family_i={C\bibinitperiod},
+           given={Erhard},
+           given_i={E\bibinitperiod}}}%
+        {{uniquename=0,hash=e50ec8797d2aa38dfeb6cb9be8df7455}{%
+           family={Kamps},
+           family_i={K\bibinitperiod},
+           given={Udo},
+           given_i={U\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{77158ac03b0261d492e12b6bbe09b2e8}
+      \strng{fullhash}{1157555eb0c55565cec1e889fe3417f0}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2., überarbeitete Auflage}
+      \field{subtitle}{{Ein Skript für Studierende der Informatik, der Ingenieur- und Wirtschaftswissenschaften}}
+      \field{title}{{Grundlagen der Wahrscheinlichkeitsrechnung und Statistik}}
+      \field{year}{2008}
+    \endentry
+    \entry{Demtroeder2008}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=59654c899d48eff28a4d8063e886fb5f}{%
+           family={Demtröder},
+           family_i={D\bibinitperiod},
+           given={Wolfgang},
+           given_i={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin und Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{fullhash}{59654c899d48eff28a4d8063e886fb5f}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5., neu bearbeitete und aktualisierte Auflage}
+      \field{subtitle}{{Mechanik und Wärme}}
+      \field{title}{{Experimentalphysik I}}
+      \field{year}{2008}
+    \endentry
+    \entry{Demtroeder2009}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=59654c899d48eff28a4d8063e886fb5f}{%
+           family={Demtröder},
+           family_i={D\bibinitperiod},
+           given={Wolfgang},
+           given_i={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin und Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{fullhash}{59654c899d48eff28a4d8063e886fb5f}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5., überarbeitete und erweiterte Auflage}
+      \field{subtitle}{{Elektrizität und Optik}}
+      \field{title}{{Experimentalphysik II}}
+      \field{year}{2009}
+    \endentry
+    \entry{Demtroeder2010}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=59654c899d48eff28a4d8063e886fb5f}{%
+           family={Demtröder},
+           family_i={D\bibinitperiod},
+           given={Wolfgang},
+           given_i={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin und Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{59654c899d48eff28a4d8063e886fb5f}
+      \strng{fullhash}{59654c899d48eff28a4d8063e886fb5f}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4., überarbeitete Auflage}
+      \field{subtitle}{{Atome, Moleküle und Festkörper}}
+      \field{title}{{Experimentalphysik III}}
+      \field{year}{2010}
+    \endentry
+    \entry{Dubs2009}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=47a269dd250ddd5af6bc81018226b3b8}{%
+           family={Dubs},
+           family_i={D\bibinitperiod},
+           given={Rolf},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Stuttgart}%
+      }
+      \list{publisher}{1}{%
+        {Franz Steiner Verlag}%
+      }
+      \strng{namehash}{47a269dd250ddd5af6bc81018226b3b8}
+      \strng{fullhash}{47a269dd250ddd5af6bc81018226b3b8}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{{Ein Beitrag zur Interaktion von Lehrenden und Lernenden im Unterricht}}
+      \field{title}{Lehrerverhalten}
+      \field{year}{2009}
+      \field{pages}{73}
+      \range{pages}{1}
+    \endentry
+    \entry{Furlan2012}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cbb876b0a69df2eb1b632d57399da04d}{%
+           family={Furlan},
+           family_i={F\bibinitperiod},
+           given={Peter},
+           given_i={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dortmund}%
+      }
+      \list{publisher}{1}{%
+        {Verlag Martina Furlan}%
+      }
+      \strng{namehash}{cbb876b0a69df2eb1b632d57399da04d}
+      \strng{fullhash}{cbb876b0a69df2eb1b632d57399da04d}
+      \field{sortinit}{F}
+      \field{sortinithash}{c6a7d9913bbd7b20ea954441c0460b78}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{{für Ingenieure, Naturwissenschaftler und Mathematiker}}
+      \field{title}{{Das gelbe Rechenbuch 3}}
+      \field{year}{2012}
+    \endentry
+    \entry{Giancoli2010}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=115aa716cd1f9717f7546a8ecacdc84a}{%
+           family={Giancoli},
+           family_i={G\bibinitperiod},
+           given={Douglas\bibnamedelima C},
+           given_i={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Studium}%
+      }
+      \strng{namehash}{115aa716cd1f9717f7546a8ecacdc84a}
+      \strng{fullhash}{115aa716cd1f9717f7546a8ecacdc84a}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3., erweiterte Auflage}
+      \field{subtitle}{{Lehr-und Übungsbuch}}
+      \field{title}{Physik}
+      \field{year}{2010}
+    \endentry
+    \entry{Goldstein1886}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=cc3fd85236374646dfc5c7b94fa05e22}{%
+           family={Goldstein},
+           family_i={G\bibinitperiod},
+           given={Eugen},
+           given_i={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc3fd85236374646dfc5c7b94fa05e22}
+      \strng{fullhash}{cc3fd85236374646dfc5c7b94fa05e22}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{1886}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Sitzungsberichte der Preu{ß}ischen Akademie der Wissenschaften}}
+      \field{volume}{691}
+      \field{year}{1886}
+      \field{pages}{691\bibrangedash 699}
+      \range{pages}{9}
+    \endentry
+    \entry{Gomoletz2007}{book}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=96b3aaa9330da5bbe2055ae32c9288b1}{%
+           family={Gomoletz},
+           family_i={G\bibinitperiod},
+           given={Joachim},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=b18e358eea7e125ebf59fe95b5abab82}{%
+           family={Grehn},
+           family_i={G\bibinitperiod},
+           given={Joachim},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=0686fec249e309ec59ceae0f0cac38ff}{%
+           family={Krause},
+           family_i={K\bibinitperiod},
+           given={Joachim},
+           given_i={J\bibinitperiod}}}%
+        {{uniquename=0,hash=e2a5df96104159d692af7b5ae0a71faa}{%
+           family={Peters},
+           family_i={P\bibinitperiod},
+           given={Georg},
+           given_i={G\bibinitperiod}}}%
+        {{uniquename=0,hash=52ea4ec8dfca2dda01fe109b4141dd9c}{%
+           family={Schmidt},
+           family_i={S\bibinitperiod},
+           given={Herbert\bibnamedelima Kurt},
+           given_i={H\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{uniquename=0,hash=4cb312805dc34a78e54730316625900f}{%
+           family={Schwarze},
+           family_i={S\bibinitperiod},
+           given={Heiner},
+           given_i={H\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=b18e358eea7e125ebf59fe95b5abab82}{%
+           family={Grehn},
+           family_i={G\bibinitperiod},
+           given={Joachim},
+           given_i={J\bibinitperiod}}}%
+        {{hash=0686fec249e309ec59ceae0f0cac38ff}{%
+           family={Krause},
+           family_i={K\bibinitperiod},
+           given={Joachim},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Braunschweig}%
+      }
+      \list{publisher}{1}{%
+        {Bildungshaus Schulbuchverlag Westermann Schroedel Diesterweg Schöningh Winklers GmbH}%
+      }
+      \strng{namehash}{6e8fc0170a4a461a078c14cd357050ba}
+      \strng{fullhash}{f45fe7ca0f0bebeeed9c138323defd73}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2007}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4. Auflage}
+      \field{title}{{Metzler Physik}}
+      \field{year}{2007}
+    \endentry
+    \entry{Greiner2008II}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=d51b4fc65f0446833f6a69fc1ef5bbcd}{%
+           family={Greiner},
+           family_i={G\bibinitperiod},
+           given={Walter},
+           given_i={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Frankfurt am Main}%
+      }
+      \list{publisher}{1}{%
+        {Verlag Harri Deutsch GmbH}%
+      }
+      \strng{namehash}{d51b4fc65f0446833f6a69fc1ef5bbcd}
+      \strng{fullhash}{d51b4fc65f0446833f6a69fc1ef5bbcd}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{extrayear}{1}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8., überarbeitete und erweiterte Auflage}
+      \field{subtitle}{{Kinematik und Dynamik der Punktteilchen, Relativität}}
+      \field{title}{{Klassische Mechanik I}}
+      \field{year}{2008}
+    \endentry
+    \entry{Greiner2008}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=d51b4fc65f0446833f6a69fc1ef5bbcd}{%
+           family={Greiner},
+           family_i={G\bibinitperiod},
+           given={Walter},
+           given_i={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Frankfurt am Main}%
+      }
+      \list{publisher}{1}{%
+        {Verlag Harri Deutsch GmbH}%
+      }
+      \strng{namehash}{d51b4fc65f0446833f6a69fc1ef5bbcd}
+      \strng{fullhash}{d51b4fc65f0446833f6a69fc1ef5bbcd}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{extrayear}{2}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8., überarbeitete und erweiterte Auflage}
+      \field{subtitle}{{Teilchensysteme, Lagrange-Hamiltonsche Dynamik, Nichtlineare Phänomene}}
+      \field{title}{{Klassische Mechanik II}}
+      \field{year}{2008}
+    \endentry
+    \entry{Gross2012}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4e40ea97f34ae9ef7a6ebb169587c99e}{%
+           family={Gross},
+           family_i={G\bibinitperiod},
+           given={Jürgen\bibnamedelima H},
+           given_i={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin und Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{4e40ea97f34ae9ef7a6ebb169587c99e}
+      \strng{fullhash}{4e40ea97f34ae9ef7a6ebb169587c99e}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelyear}{2012}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{{Ein Lehrbuch}}
+      \field{title}{Massenspektrometrie}
+      \field{year}{2012}
+    \endentry
+    \entry{Halliday2009}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=9d9a6552821ea504ab1a5c767dddff92}{%
+           family={Halliday},
+           family_i={H\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{uniquename=0,hash=8967f5a0664f741b0ef2530a47e698fa}{%
+           family={Resnick},
+           family_i={R\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=aa8304879d8f7d99c7c4570759b948e2}{%
+           family={Walker},
+           family_i={W\bibinitperiod},
+           given={Jearl},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Weinheim}%
+      }
+      \list{publisher}{1}{%
+        {WILEY-VCH GmbH\,\&\,Co.\,KGaA}%
+      }
+      \strng{namehash}{f6f98a542bf7cb3b8c4a7c380ec744f2}
+      \strng{fullhash}{3978689396696961b0bd612b55ccf075}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelyear}{2009}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2., überarbeitete und ergänzte Auflage}
+      \field{title}{{Halliday Physik}}
+      \field{year}{2009}
+    \endentry
+    \entry{Kircher2013}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=a3f9e775fc9617dccd1221daea96b2b8}{%
+           family={Kircher},
+           family_i={K\bibinitperiod},
+           given={Ernst},
+           given_i={E\bibinitperiod}}}%
+        {{uniquename=0,hash=c381fdacf75640bb64f685ba98fc2252}{%
+           family={Girwidz},
+           family_i={G\bibinitperiod},
+           given={Raimund},
+           given_i={R\bibinitperiod}}}%
+        {{uniquename=0,hash=a78708d164311c6e291ee365bab7ad22}{%
+           family={Häu{ß}ler},
+           family_i={H\bibinitperiod},
+           given={Peter},
+           given_i={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin und Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Spektrum}%
+      }
+      \strng{namehash}{15953d5c3655155ddf43e1cc9297a93f}
+      \strng{fullhash}{3dcad8d29a8b4fe253ea36b9e6341841}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{2015}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3. Auflage}
+      \field{subtitle}{{Theorie und Praxis}}
+      \field{title}{Physikdidaktik}
+      \field{year}{2015}
+    \endentry
+    \entry{Koestler2010}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=bb803a7364947492c8478a70897e256a}{%
+           family={Köstler},
+           family_i={K\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Gie{ß}en, Justus-Liebig-Universität}%
+      }
+      \strng{namehash}{bb803a7364947492c8478a70897e256a}
+      \strng{fullhash}{bb803a7364947492c8478a70897e256a}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelyear}{2010}
+      \field{labelmonth}{12}
+      \field{labelday}{03}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{03}
+      \field{month}{12}
+      \field{subtitle}{{Apparative und präparative Entwicklung, sowie lateral hochauflösende Untersuchung artifizieller und biologischer Proben}}
+      \field{title}{{Bildgebende Massenspektrometrie}}
+      \field{type}{Inauguraldissertation}
+      \field{year}{2010}
+    \endentry
+    \entry{Lumer1999}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=64af009fdadd3c9b3193f5ce0244e419}{%
+           family={Lumer},
+           family_i={L\bibinitperiod},
+           given={Christoph},
+           given_i={C\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=451c46e4a4f2534ebc82963e8d4de5a3}{%
+           family={Sandkühler},
+           family_i={S\bibinitperiod},
+           given={Hans\bibnamedelima Jörg},
+           given_i={H\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Hamburg}%
+      }
+      \strng{namehash}{64af009fdadd3c9b3193f5ce0244e419}
+      \strng{fullhash}{64af009fdadd3c9b3193f5ce0244e419}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelyear}{1999}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Enzyklopädie Philosophie, Bd}
+      \field{title}{{Kognitivismus/Nonkognitivismus}}
+      \field{volume}{1}
+      \field{year}{1999}
+      \field{pages}{695\bibrangedash 699}
+      \range{pages}{5}
+    \endentry
+    \entry{Mais2014}{thesis}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=662389482096fb398f8b8198f46628fb}{%
+           family={Mais},
+           family_i={M\bibinitperiod},
+           given={Axel},
+           given_i={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {RWTH Aachen}%
+      }
+      \strng{namehash}{662389482096fb398f8b8198f46628fb}
+      \strng{fullhash}{662389482096fb398f8b8198f46628fb}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{2014}
+      \field{labelmonth}{07}
+      \field{labelday}{17}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{17}
+      \field{month}{07}
+      \field{title}{Entwicklung eines {A}nalogie-{V}ersuches zur {M}assenspektrometrie für {B}iologie-{S}tu{\-}die{\-}rende}
+      \field{type}{Staatsexamensarbeit}
+      \field{year}{2014}
+    \endentry
+    \entry{Mucke1995}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=05f95e22b763bfd96cc3bad1b6a7dd80}{%
+           family={Muckenfu{ß}},
+           family_i={M\bibinitperiod},
+           given={Heinz},
+           given_i={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin}%
+      }
+      \list{publisher}{1}{%
+        {Cornelsen}%
+      }
+      \strng{namehash}{05f95e22b763bfd96cc3bad1b6a7dd80}
+      \strng{fullhash}{05f95e22b763bfd96cc3bad1b6a7dd80}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelyear}{1995}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{{Entwurf einer zeitgemässen Didaktik des Physikunterrichts}}
+      \field{title}{{Lernen im sinnstiftenden Kontext}}
+      \field{year}{1995}
+    \endentry
+    \entry{Schiller32016}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9deeb797b58f61736d087155c6f5a81a}{%
+           family={Schiller},
+           family_i={S\bibinitperiod},
+           given={Christoph},
+           given_i={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Christoph Schiller}%
+      }
+      \strng{namehash}{9deeb797b58f61736d087155c6f5a81a}
+      \strng{fullhash}{9deeb797b58f61736d087155c6f5a81a}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{extrayear}{1}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{28. Auflage}
+      \field{subtitle}{{The Adventure of Physics Volume III}}
+      \field{title}{{Motion Mountain}}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.motionmountain.net/
+      \endverb
+    \endentry
+    \entry{Schiller12016}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9deeb797b58f61736d087155c6f5a81a}{%
+           family={Schiller},
+           family_i={S\bibinitperiod},
+           given={Christoph},
+           given_i={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Christoph Schiller}%
+      }
+      \strng{namehash}{9deeb797b58f61736d087155c6f5a81a}
+      \strng{fullhash}{9deeb797b58f61736d087155c6f5a81a}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{extrayear}{2}
+      \field{labelyear}{2016}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{28. Auflage}
+      \field{subtitle}{{The Adventure of Physics Volume I}}
+      \field{title}{{Motion Mountain}}
+      \field{year}{2016}
+      \verb{url}
+      \verb http://www.motionmountain.net/
+      \endverb
+    \endentry
+    \entry{Schilling1987}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=8966f839da972d239723dcf44bf82972}{%
+           family={Schilling},
+           family_i={S\bibinitperiod},
+           given={Elisabeth},
+           given_i={E\bibinitperiod}}}%
+        {{uniquename=0,hash=19a726a2dcc4e4c02dc5f793d342c022}{%
+           family={Luchner},
+           family_i={L\bibinitperiod},
+           given={Karl},
+           given_i={K\bibinitperiod}}}%
+        {{uniquename=0,hash=451c1fbab1c8b4f6822b87a46853528b}{%
+           family={Deger},
+           family_i={D\bibinitperiod},
+           given={Hermann},
+           given_i={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bonn}%
+      }
+      \list{publisher}{1}{%
+        {Ferdinand Dümmler Verlag}%
+      }
+      \strng{namehash}{f77f1f56657864aa9b8ffb3036a9e159}
+      \strng{fullhash}{06d9548d0730f0b54f6ff8ec0fc4893b}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{1987}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{{Der mathematische und naturwissenschaftliche Unterricht (MNU}}
+      \field{number}{1}
+      \field{title}{{Mechanisches Funktionsmodell eines geschwindigkeitsfokussierenden Massenspektrographen}}
+      \field{volume}{40}
+      \field{year}{1987}
+      \field{pages}{34\bibrangedash 38}
+      \range{pages}{5}
+    \endentry
+    \entry{Stroppe2008}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9f7ef33dedd9193af1ba2bdc7be1bf0f}{%
+           family={Stroppe},
+           family_i={S\bibinitperiod},
+           given={Heribert},
+           given_i={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Fachbuchverlag im Carl Hanser Verlag}%
+      }
+      \strng{namehash}{9f7ef33dedd9193af1ba2bdc7be1bf0f}
+      \strng{fullhash}{9f7ef33dedd9193af1ba2bdc7be1bf0f}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelyear}{2008}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{14., aktualisierte Auflage}
+      \field{subtitle}{{für Studierende der Natur- und Ingenieurwissenschaften}}
+      \field{title}{PHYSIK}
+      \field{year}{2008}
+    \endentry
+    \entry{Nuffield1970}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4be6c18a64c16d571299bc96ce2dcc4e}{%
+           family={{The\bibnamedelimb Nuffield\bibnamedelimb Foundation}},
+           family_i={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Middlesex, England}%
+      }
+      \list{publisher}{1}{%
+        {Penguin Books Ltd.}%
+      }
+      \strng{namehash}{4be6c18a64c16d571299bc96ce2dcc4e}
+      \strng{fullhash}{4be6c18a64c16d571299bc96ce2dcc4e}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelyear}{1970}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{subtitle}{{Topics 13 to 19}}
+      \field{title}{{Chemistry. Teacher´s Guide II}}
+      \field{year}{1970}
+      \field{pages}{262\bibrangedash 264}
+      \range{pages}{3}
+    \endentry
+    \entry{Tipler2010}{book}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=4e06076900e6f9d5f91fd9fb273e8795}{%
+           family={Tipler},
+           family_i={T\bibinitperiod},
+           given={Paul\bibnamedelima A},
+           given_i={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {München}%
+      }
+      \list{publisher}{1}{%
+        {Oldenbourg Wissenschaftsverlag GmbH}%
+      }
+      \strng{namehash}{4e06076900e6f9d5f91fd9fb273e8795}
+      \strng{fullhash}{4e06076900e6f9d5f91fd9fb273e8795}
+      \field{sortinit}{T}
+      \field{sortinithash}{423d138a005a533b47e6475e39378bf2}
+      \field{labelyear}{2010}
+      \field{datelabelsource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2., verbesserte und aktualisierte Auflage}
+      \field{title}{{Moderne Physik}}
+      \field{year}{2010}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

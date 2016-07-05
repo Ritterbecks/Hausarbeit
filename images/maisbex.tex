@@ -1,0 +1,141 @@
+  \thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+
+\begin{figure}[htb!p]
+\centering
+\pgfplotsset{compat=1.3}
+%\sansmath
+\subfloat[]{
+\begin{tikzpicture}
+\begin{axis}[	
+	clip=false,
+%clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+              axis x line*=middle,
+              axis y line*=none,
+    grid style={white,thick},
+	axis on top,
+    width=11cm,
+    height=6.797cm,
+    xmin=-12,
+    xmax=75,
+    ymin=0,
+    ymax=0.8,
+    /tikz/ybar interval,
+    tick align=outside,
+    xlabel={$\varphi$},
+    x label style={at={(axis cs:60.75,-0.1)}},
+    y label style={at={(axis cs:-13.75,0.5)}},
+    ylabel={\rotatebox[origin=b]{270}{$\rho$}},    
+    axis line style={draw opacity=0},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\footnotesize},
+    yticklabels={${0,0}$, ${0,2}$, ${0,4}$, $\si{\percent}$, ${0,8}$ },            
+    ytick={0.0,0.2,0.4,0.6, 0.8},
+    xticklabels={$ $,$\SI{-6.75}{\degree}$, $$, $$, $\SI{6.75}{\degree}$, $$, $$, $\SI{20.25}{\degree}$, $$,$$,
+                     $\SI{33.75}{\degree}$, $$,$$, $\SI{47.25}{\degree}$, $$,$$, $\SI{60.75}{\degree}$,
+                     $$,$$, $\SI{74.25}{\degree}$},
+           scaled ticks=false,
+    width=\textwidth,                        
+    xtick=data,                          
+    label style={font=\small, Honeydew4!70!black},
+    enlarge x limits=true,
+    tick style={draw=none},
+    x tick label as interval=false,
+    nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+    every node near coord/.append style={
+    fill=white,
+    /pgf/number format/precision=2,
+    /pgf/number format/fixed zerofill,
+    anchor=mid west,    
+    shift={(3pt,4pt)},
+    inner sep=0,
+    above,
+    font=\footnotesize,
+    rotate=45},
+           legend style ={ at={(axis cs:6.75,0.7)}, 
+                anchor=north west, draw=none, 
+                fill=none,align=left, text=Honeydew4!70!black, font=\footnotesize},
+]
+\draw[thick,Honeydew4!70!black, ->,>={Kite[round, length=0.4cm, width=4pt]}] (axis cs:-13.75,0.4) -- (axis cs:-13.75,0.6);
+\draw[thick, Honeydew4!70!black,->,>={Kite[round, length=0.4cm, width=4pt]}] (axis cs:54.00,-0.1) -- (axis cs:72.00, -0.1);
+\addplot[mycolor2!70!white, fill=mycolor2, draw=none, mark=none]
+table[x =Lower, y =Count,]{images/data/Mais0g.dat};
+ \addplot[mycolor!70!white, fill=mycolor, draw=none, mark=none]
+  table[x =Lower, y =Count,]{images/data/Mais1g.dat};
+ \addplot[mycolor4!70!white, fill=mycolor4, draw=none, mark=none]
+   table[x =Lower, y =Count,]{images/data/Mais3g.dat};
+\end{axis}
+\clipright
+\end{tikzpicture}}
+\\
+\subfloat[]{
+\begin{tikzpicture}
+\begin{axis}[	
+	clip=false,
+%clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+              axis x line*=middle,
+              axis y line*=none,
+    grid style={white,thick},
+	axis on top,
+    width=11cm,
+    height=6.797cm,
+    xmin=-12,
+    xmax=75,
+    ymin=0,
+    /tikz/ybar interval,
+    tick align=outside,
+    xlabel={$\varphi$},
+    x label style={at={(axis cs:60.75,-0.1)}},
+    y label style={at={(axis cs:-13.75,0.5)}},
+    ylabel={\rotatebox[origin=b]{270}{$\rho$}},    
+    axis line style={draw opacity=0},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\footnotesize},
+    yticklabels={${0,0}$, ${0,2}$, ${0,4}$, $\si{\percent}$, ${0,8}$ },            
+    ytick={0.0,0.2,0.4,0.6, 0.8},
+    xticklabels={$ $,$\SI{-6.75}{\degree}$, $$, $$, $\SI{6.75}{\degree}$, $$, $$, $\SI{20.25}{\degree}$, $$,$$,
+                     $\SI{33.75}{\degree}$, $$,$$, $\SI{47.25}{\degree}$, $$,$$, $\SI{60.75}{\degree}$,
+                     $$,$$, $\SI{74.25}{\degree}$},
+           scaled ticks=false,
+    width=\textwidth,                        
+    xtick=data,                          
+    label style={font=\small, Honeydew4!70!black},
+    enlarge x limits=true,
+    tick style={draw=none},
+    x tick label as interval=false,
+    nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+    every node near coord/.append style={
+    fill=white,
+    /pgf/number format/precision=2,
+    /pgf/number format/fixed zerofill,
+    anchor=mid west,    
+    shift={(3pt,4pt)},
+    inner sep=0,
+    above,
+    font=\footnotesize,
+    rotate=45},
+           legend style ={ at={(axis cs:6.75,0.7)}, 
+                anchor=north west, draw=none, 
+                fill=none,align=left, text=Honeydew4!70!black, font=\footnotesize},
+]
+\draw[thick,Honeydew4!70!black, ->,>={Kite[round, length=0.4cm, width=4pt]}] (axis cs:-13.75,0.4) -- (axis cs:-13.75,0.6);
+\draw[thick, Honeydew4!70!black,->,>={Kite[round, length=0.4cm, width=4pt]}] (axis cs:54.00,-0.1) -- (axis cs:72.00, -0.1);
+\addplot[mycolor2!70!white, fill=mycolor2, draw=none, mark=none]
+table[x =Lower, y =Count,]{images/data/nmDet.dat};
+ \addplot[mycolor!70!white, fill=mycolor, draw=none, mark=none]
+  table[x =Lower, y =Count,]{images/data/3cmleerDet.dat};
+ \addplot[mycolor4!70!white, fill=mycolor4, draw=none, mark=none]
+   table[x =Lower, y =Count,]{images/data/3cmrotDet.dat};
+\end{axis}
+\clipright
+\end{tikzpicture}}
+  \caption[Aufspaltung mit Föhn als Analysator]{
+  {\color{mycolor}\textbf{(a)}:} Referenzmessung von \textsc{Mais} für jeweils $n=50$ Kugeln mit --- von links nach rechts --- $\SI{0}{\gram}$, $\SI{1}{\gram}$ und $\SI{3}{\gram}$ Eisenwollefüllung. Die Messreihe mit einer Füllung von $\SI{2}{\gram}$ wird aufgrund zu vieler Überlappungen nicht dargestellt.
+   {\color{mycolor}\textbf{(b)}:}Drei Messreihen zur Tauglichkeit des Föhns als Massenanalysator mit jeweils $n=50$ Datensätzen. Von links nach rechts: Ohne Föhn, befüllte Kugeln, leere Kugeln. Der Hohe Ausschlag bei $x=\SI{0}{\degree}$ lässt sich durch die Videoanalyse erklären: Selbst bei einer $y$-Koordinate von $\SI{2.24}{\centi\metre}$ wird eine Kugel noch als im Intervall $(-2,25; 2,25]$ detektiert gewertet. An Stelle einer tabellarischen Zusammenfassung sind alle relativen Häufigkeiten an den Histogrammen vermerkt.}
+  \label{fig:maisbex}
+  \vspace{-0pt}
+\end{figure}

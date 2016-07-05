@@ -1,0 +1,115 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+\begin{figure}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\small
+%\sansmath
+\begin{tikzpicture}[
+	scale=1,
+	ka roehre/.style={fill=white,draw=black!80}
+]
+\begin{scope}[scale=1.26]
+% Neon
+\foreach \x in {1,...,60}
+        {
+            \pgfmathrandominteger{\a}{800}{900}
+            \pgfmathrandominteger{\b}{289}{390}
+            \shade[ball color=mycolor5!50, opacity=1] (-0.01*\a,0.01*\b) circle (1pt);
+        };
+\foreach \x in {1,...,5}
+        {
+            \pgfmathrandominteger{\a}{840}{852}
+            \pgfmathrandominteger{\b}{393}{425}
+            \shade[ball color=mycolor5!50, opacity=1] (-0.01*\a,0.01*\b) circle (1pt);
+        };  
+        
+\foreach \x in {1,...,5}
+        {
+            \pgfmathrandominteger{\a}{970}{1005}
+            \pgfmathrandominteger{\b}{333}{345}
+            \shade[ball color=mycolor5!50, opacity=1] (-0.01*\a,0.01*\b) circle (1pt);
+        };          
+\foreach \x in {1,...,6}
+        {
+            \pgfmathrandominteger{\a}{950}{970}
+            \pgfmathrandominteger{\b}{308}{365}
+            \shade[ball color=mycolor5!50, opacity=1] (-0.01*\a,0.01*\b) circle (1pt);
+        };  
+\foreach \x in {1,...,23}
+        {
+            \pgfmathrandominteger{\a}{900}{940}
+            \pgfmathrandominteger{\b}{297}{383}
+            \shade[ball color=mycolor5!50, opacity=1] (-0.01*\a,0.01*\b) circle (1pt);
+        };                                    
+\foreach \x in {1,...,23}
+                {
+                    \pgfmathrandominteger{\a}{760}{800}
+                    \pgfmathrandominteger{\b}{297}{383}
+                    \shade[ball color=mycolor5!50, opacity=1] (-0.01*\a,0.01*\b) circle (1pt);
+                };     
+% Magnete
+\draw[fill=halfgray!75] (-4.9,5.22) -- ++ (0.0,-1) arc (180:360:0.55 and 0.15) -- ++ (0.0,1) decorate[decoration={random steps,segment length=1.5pt,amplitude=0.5pt}] {arc (0:180:0.55 and 0.15) arc (180:360:0.55 and 0.15)};
+\node[draw=none,fill=none] at (-4.35, 4.72){\tiny N};
+\draw[fill=halfgray!50] (-4.9,1.5) -- ++ (0.0,1) arc (180:360:0.55 and 0.15) arc (0:180:0.55 and 0.15) arc (180:360:0.55 and 0.15) -- ++ (0.0,-1) decorate[decoration={random steps,segment length=1.5pt,amplitude=0.5pt}] {arc (360:180:0.55 and 0.15) };
+\node[draw=none,fill=none] at (-4.35, 2.0){\tiny S};
+%Verkabelung
+\draw[thick] (-5.31,4.75) -- (-5.31,4.25) arc (180:270:0.4) -- ++ (0.6, 0) ;
+\node[draw=none,fill=none] at (-5.31, 4.95){$+$};
+\draw[thick] (-5.31,1.8) -- (-5.31,2.45) arc (180:90:0.4) -- ++ (0.6, 0);
+\node[draw=none,fill=none] at (-5.31, 1.6){$-$};
+\draw[thick] (-9.4, 3.38) -- (-10.4, 3.38);
+\node[draw=none,fill=none] at (-10.3, 3.25){$+$};
+\draw[thick] (-8.44, 4.75) -- (-8.44, 4.1) arc (180:270:0.4) -- ++ (0.6, 0);
+\node[draw=none,fill=none] at (-8.44, 4.95){$-$};
+%Anode
+\draw[fill=mycolor2!50] (-9.45,3.73) arc (90:270:0.08 and 0.34) -- ++ (0.1,0) arc (270:90:0.08 and 0.34) -- cycle;
+\draw[fill=mycolor2!50] (-9.35,3.73) arc (90:-90:0.08 and 0.34)arc (270:90:0.08 and 0.34);
+% Kollimator
+\draw[fill=mycolor3!50] (-7.3,3.74) arc (34:50:1.40 and 0.4) arc (90:270:0.11 and 0.46) arc (299:314:1.40 and 0.4);
+\draw[fill=mycolor3!50] (-7.0,3.74) arc (90:-90:0.1 and 0.39)arc (270:90:0.1 and 0.39)-- ++ (-0.3,0) arc (90:270:0.1 and 0.39) -- ++ (0.3,0) arc (270:90:0.1 and 0.39);
+% Drehwurm aka Vakuumröhre
+\draw[mycolor!50] (-5.1,4) -- (-3.6,4) arc (270:345:0.5) arc (150:90:0.6 and 1.67) arc (90:270:0.45 and 1.86) arc (270:-90:0.45 and 1.86) arc (270:210:0.6 and 1.67) arc (15:90:0.5) -- ++ (-1.5,0) arc (90:180:0.1) -- ++ (0, -0.15) arc (0:-45:0.2) arc (0:-180:0.05) arc (225:180:0.2) -- ++ (0, 0.15) arc (0:90:0.1) -- ++ (-0.3,0) arc (270:180:0.16) arc (0:90:0.1) -- ++ (-1.2,0)  arc (90:115:0.1) arc (315:180:1.4 and 0.4) arc (0:90:0.05) -- ++ (-0.2,0) arc (270:225:0.2) arc (270:90:0.05) arc (135:90:0.2) -- ++ (0.2,0) arc (270:360:0.05) arc (180:104:1.4 and 0.4) arc (270:360:0.1) -- ++ (0, 0.15) arc (180:135:0.2) arc (180:0:0.05) arc (45:0:0.2) -- ++ (0, -0.15) arc (180:270:0.1) arc (80:34:1.4 and 0.4) arc (245:270:0.1) -- ++ (1.2,0) arc (270:360:0.1) arc (180:90:0.16)-- ++ (0.3,0) arc (270:360:0.1) -- ++ (0, 0.15) arc (180:135:0.2) arc (180:0:0.05) arc (45:0:0.2) -- ++ (0, -0.15) arc (180:270:0.1) -- cycle; 
+\shade[bottom color=mycolor!10, top color=mycolor!50,opacity=0.20] (-5.1,4) -- (-3.6,4) arc (270:345:0.5) arc (150:90:0.6 and 1.67) arc (90:270:0.45 and 1.86) arc (270:-90:0.45 and 1.86) arc (270:210:0.6 and 1.67) arc (15:90:0.5) -- ++ (-1.5,0) arc (90:180:0.1) -- ++ (0, -0.15) arc (0:-45:0.2) arc (0:-180:0.05) arc (225:180:0.2) -- ++ (0, 0.15) arc (0:90:0.1) -- ++ (-0.3,0) arc (270:180:0.16) arc (0:90:0.1) -- ++ (-1.2,0)  arc (90:115:0.1) arc (315:180:1.4 and 0.4) arc (0:90:0.05) -- ++ (-0.2,0) arc (270:225:0.2) arc (270:90:0.05) arc (135:90:0.2) -- ++ (0.2,0) arc (270:360:0.05) arc (180:104:1.4 and 0.4) arc (270:360:0.1) -- ++ (0, 0.15) arc (180:135:0.2) arc (180:0:0.05) arc (45:0:0.2) -- ++ (0, -0.15) arc (180:270:0.1) arc (80:34:1.4 and 0.4) arc (245:270:0.1) -- ++ (1.2,0) arc (270:360:0.1) arc (180:90:0.16)-- ++ (0.3,0) arc (270:360:0.1) -- ++ (0, 0.15) arc (180:135:0.2) arc (180:0:0.05) arc (45:0:0.2) -- ++ (0, -0.15) arc (180:270:0.1) -- cycle; 
+%B-Feld
+
+%E-Feld
+\draw[fill=mycolor!25] (-5.0, 2.8) -- (-4.8, 2.9) -- (-3.7, 2.9) -- (-3.9, 2.8);   \draw[fill=mycolor!25] (-5.0, 2.8) -- (-5.0, 2.75) -- (-3.9, 2.75) -- (-3.7, 2.85) -- (-3.7, 2.9) -- (-3.9, 2.8) -- (-5.0, 2.8);     
+\draw (-3.9, 2.75) -- (-3.9, 2.8);
+\draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]}, thick, mycolor, shorten >=0.4pt] (-4.65,3.75) -- (-4.65,2.76) ;
+\draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]}, thick, mycolor, shorten >=0.4pt] (-4.35,3.75) -- (-4.35,2.76);
+\draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]}, thick, mycolor, shorten >=0.4pt] (-4.05,3.75) -- (-4.05,2.76);
+\draw[fill=mycolor!75] (-5.0, 3.8) -- (-4.8, 3.9) -- (-3.7, 3.9) -- (-3.9, 3.8);
+\draw[fill=mycolor!75] (-5.0, 3.8) -- (-5.0, 3.75) -- (-3.9, 3.75) -- (-3.7, 3.85) -- (-3.7, 3.9) -- (-3.9, 3.8) -- (-5.0, 3.8); 
+\draw (-3.9, 3.75) -- (-3.9, 3.8);
+\begin{scope}[thick, every node/.style={sloped,allow upside down}]
+% Ion
+\draw[mycolor, thick] (-5.0, 3.38) arc (90:80:6.4)  -- node {\midarrow} ++ (1.02,-0.17);
+\draw[mycolor, thick] (-9.35, 3.38) -- node {\midarrow} (-7.70, 3.38); 
+\shade[ball color=mycolor!75, opacity=1] (-4.2,3.32) circle (3pt);
+    \node at (-4.2,3.32) {\tiny $+$};
+\shade[ball color=mycolor!75, opacity=1] (-8.80,3.38) circle (3pt);
+    \node at (-8.80,3.38) {\tiny $+$};
+    % Ion Kollimator
+    \draw[mycolor, thick] (-7.0, 3.38) -- (-5.8, 3.38) -- node {\midarrow} (-5.0, 3.38); 
+    \shade[ball color=mycolor!75, opacity=1] (-5.70,3.38) circle (3pt);
+        \node at (-5.70,3.38) {\tiny $+$};                   
+\end{scope}  
+%Kapillare
+\draw[color=mycolor,opacity=0.80] (-7.00,3.40) arc (90:270:0.01 and 0.02) -- ++ (1,0) arc (270:90:0.01 and 0.02) arc (90:-90:0.01 and 0.02) arc (270:90:0.01 and 0.02)-- ++ (-1,0) arc (90:-90:0.01 and 0.02) -- cycle;
+\shade[color=mycolor,opacity=0.80] (-7.00,3.40) arc (90:270:0.01 and 0.02) -- ++ (1,0) arc (270:90:0.01 and 0.02) arc (90:-90:0.01 and 0.02) arc (270:90:0.01 and 0.02)-- ++ (-1,0) arc (90:-90:0.01 and 0.02) -- cycle;    
+%Photoplatte
+\draw[fill=mycolor!25] (-2.87, 4.45) -- ++ (0.5, 0.2)  -- ++ (0, -2.2) -- ++ (-0.5, -0.35) -- cycle;
+\draw[thick, color=mycolor4] (-2.62, 3.47) arc (90:170:0.2 and 1.6 ); 
+\draw[thick, color=mycolor4] (-2.62, 3.47) arc (90:170:0.25 and 0.8 );
+\draw(-2.62, 4.55) -- (-2.62, 2.32)  ;
+\draw(-2.87, 3.35) -- (-2.37,3.62);
+\end{scope}
+\end{tikzpicture}
+  \caption[Parabelspektrograph von \textsc{Thomson}]{Parabelspektograph von \textsc{Thomson} und \textsc{Aston}. In der linken Kammer befindet sich Neon bei $\SI{10}{\pascal}$, rechts herrscht Vakuum. Dem Volumenstromfluss wirkt eine lange, dünne Kapillare an der Kathode entgegen. Die Polschuhe eines Hufeisenmagneten sind mit \textsw{N} und \textsw{S} bezeichnet. Auf einer Photoplatte entstehen parabolische Spuren, die Neon-Isotopen unterscheidbarer Masse zugeordnet werden konnten (eigene Darstellung).}
+  \label{fig:thoms2}
+  \vspace{-0pt}
+\end{figure}

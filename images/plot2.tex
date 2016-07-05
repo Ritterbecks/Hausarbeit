@@ -1,0 +1,72 @@
+  \thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+
+\begin{figure}[h!tb!p]
+\centering
+%\sansmath
+\begin{tikzpicture}
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=12cm,
+    height=7.797cm,
+    xmin=0,
+    xmax=1200,
+    ymin=-150,
+    ymax=200,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={$x$},
+    ylabel={\rotatebox[origin=b]{270}{$y$}},   
+   x label style={at={(axis cs:1000,-45)}},
+    y label style={at={(axis cs:-150.5,150)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\footnotesize},
+    yticklabels={${-150}$, ${-100}$, ${-50}$,  ${0}$,   ${50}$ , ${100}$, ${\si{\milli\newton}}$, ${200}$ },            
+    xtick={200,400,600,800,1000, 1200},
+    xticklabels={${200}$, ${400}$, ${600}$,  ${800}$, ${\si{\milli\metre}}$, ${1200}$},
+     ytick={-150, -100, -50, 0, 50, 100,150,200 }, 
+    scaled ticks=false,
+    width=\textwidth,        
+       legend style ={ at={(axis cs:150,-30)}, 
+         anchor=north west, draw=none, 
+             fill=none,align=left, text=Honeydew4!70!black,
+              font=\footnotesize},                      
+    cycle list name=mycolor4 black,                    
+    label style={font=\small,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-150.50, 110) -- (axis cs:-150.50, 190);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:900.00, -45) -- (axis cs:1100.00, -45);
+\draw[thick, mycolor!50, fill=mycolor] (axis cs:700,20) circle (6pt);
+\addplot
+table[x = x, y =y]{images/data/15.dat};
+\addlegendentry{$\SI{22.0}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/16.dat};
+\addlegendentry{$\SI{24.0}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/17.dat};
+\addlegendentry{$\SI{35.0}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/18.dat};
+\addlegendentry{$\SI{47.0}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/19.dat};
+\addlegendentry{$\SI{60.0}{\milli\metre}$};
+\end{axis}
+\clipright
+\end{tikzpicture}
+  \caption[Plot der gemessenen Kugelbahnen]{Plots der gemessenen Kugelbahnen für die Massen 6--10 mit den Starthöhen $h_i$. Der blaue Kreis deutet die ungefähre Fokussierungszone an (bei $(x,y)\tran = [(700, 20)\tran \pm (20 , 4)\tran] \si{\milli\metre}$).}
+  \label{fig:plot2}
+  \vspace{-40pt}
+\end{figure}

@@ -1,0 +1,48 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth,
+}
+\begin{figure}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\large
+%\sansmath
+\begin{tikzpicture}
+\begin{scope}[scale=1.7]
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick]  (0,0) -- ++ (0, 0.5) node [left=0.2cm] {Feinziel} -- ++ (0, 0.5) node [left=0.2cm] {Grobziel} -- ++ (0, 0.5) node [left=0.2cm] {Richtziel} -- ++ (0, 0.5) node [left=0.2cm] {Leitziel} -- ++ (0, 0.5) node [above] {\Large \textsc{Zielebene}};
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, every node/.style={
+    fill=white,
+    anchor=north west,    
+    shift={(-0.0cm,-0.2cm)},
+    inner sep=0,
+    font=\large,
+    rotate=45}, thick]  (0,0) -- ++ (0.5, 0.0) node [below, left] {Reproduktion} -- ++ (0.5, 0.0) node [below, left] {Reorganisation} -- ++ (0.5, 0.0) node [below, left] {Transfer} -- ++ (0.5, 0.0) node [below, left] {Problemlösen}-- ++ (0.5, 0.0); 
+\draw[every node/.style={
+    fill=white,
+    anchor=north west,    
+    shift={(-1.4cm,-1.0cm)},
+    inner sep=0,
+    font=\large,
+    rotate=45}, thick] (2.8,0) -- ++ (0.0,0.0) node {\Large \textsc{Zielstufe}};
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick]  (0,0) -- ++ (-0.35, -.35) node [left=0.1cm]  {Konzeptziel} -- ++  (-0.35, -.35) node [left=0.1cm] {Prozessziel} -- ++  (-0.35, -.35) node [left=0.1cm]  {Soziales Ziel} -- ++  (-0.35, -.35) node [left=0.1cm]  {Einstellungen} -- ++  (-0.35, -.35) node [below] {\Large \textsc{Zielklasse}};
+\shade[top color=mycolor!35, bottom color=mycolor!75, every node/.style={ midway}, thick, opacity=0.3] (-0.7, -0.7) -- ++ (1.5, 0) -- ++ (0, 1.5) -- ++ (-1.5, 0) -- ++ (0, -1.5) -- ++ (0.7, 0.7) -- ++ (1.5, 0) -- ++ (0, 1.5) -- ++ (-1.5, 0) -- ++ (-0.7, -0.7) -- ++ (1.5,0) -- ++ (0.7, 0.7) -- ++(0, -1.5) -- ++ (-0.7, -0.7) -- ++ (0, 1.5) -- ++ (0.7, 0.7) -- cycle; 
+\shade[top color=mycolor!35, bottom color=mycolor!75, every node/.style={ midway}, thick, opacity=0.3] (1.5, 0) -- ++ (0, 1.5) -- ++ (-0.7, -0.7) -- ++ (0, -1.5) -- cycle; 
+\shade[top color=mycolor!55, bottom color=mycolor!75, every node/.style={ midway}, thick, opacity=0.3] (-0.7, -0.7) -- ++ (1.5, 0) -- ++ (0, 0.7) -- ++ (-0.8, 0) -- cycle; 
+\draw[every node/.style={ midway}] (-0.7, -0.7) -- ++ (1.5, 0) -- ++ (0, 1.5) -- ++ (-1.5, 0) -- ++ (0, -1.5) -- ++ (0.7, 0.7) -- ++ (1.5, 0) -- ++ (0, 1.5) -- ++ (-1.5, 0) -- ++ (-0.7, -0.7) -- ++ (1.5,0) -- ++ (0.7, 0.7) -- ++(0, -1.5) -- ++ (-0.7, -0.7) -- ++ (0, 1.5) -- ++ (0.7, 0.7);   
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick, mycolor4]  (0,0) -- ++ (0.8, 0.8) node [above, right] {Lernziel $\boldsymbol{z}_\mathrm{kes}$};
+\foreach \x in {1,...,4}
+        { \draw ({-0.05}, {0+0.5*\x}) -- ++ ({0.1}, {0.0});
+        };
+\foreach \x in {1,...,4}
+        { \draw ({-0.35*\x-0.05*cos(45)}, {-0.35*\x+0.05*sin(45)}) -- ++ ({0.1*cos(45)},{-0.1*sin(45)}) ;
+        };  
+\foreach \x in {1,...,4}
+        { \draw ({0+0.5*\x},{-0.05} ) -- ++ ({0.0}, {0.1});
+        };              
+\end{scope} 
+\end{tikzpicture}
+\caption[Der Lernzielraum]{Darstellung des dreidimensionalen Lernzielraumes. Als Beispiel wird das Richtziel \textsw{Verständnis der Massenspektrometrie} dargestellt, was Grobziele und Feinziele der Zielebene, Konzept- und Prozessziele als Zielklasse und die Reproduktion, Reorganisation und den Transfer, d.\,h. die dritte Zielstufe mit einschließt. Es ist nicht zwingend erforderlich, dass das gesamte Volumen unter dem Lernziel $\boldsymbol{z}_\mathrm{kes}$ mitgedacht wird. Es gibt vor allem in der Teilchenphysik der Oberstufe Ziele, die nur Einstellungen und den Transfer als Leitziele verfolgen (nach \cite[S.\,89]{Kircher2013}).}
+  \label{fig:ziele}
+\end{figure}

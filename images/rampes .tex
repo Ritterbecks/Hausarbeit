@@ -1,0 +1,21 @@
+\begin{pspicture}(-16.6cm,-7.6cm)(26.6cm,6.6cm)
+\rput{-17.4}(2.2,0.9){\LARGE{$F_h$}}
+\psBall(0,0.9){violett}{1.5cm}
+ \pscustom[linecolor=mycolor,fillstyle=solid,fillcolor=mycolor!50, linewidth=3pt]
+ {\pspolygon[linestyle=none](-1.7,0.825458112)(-15,6.031345229)(-15.0,-5.0)(25.0,-5.0)(25,-4.4)(-1.7,-4.4)(-1.7,0.825458112)}
+ \pscustom[linecolor=mycolor,fillstyle=solid,fillcolor=mycolor!50, linewidth=3pt] {
+\psplot[linestyle=solid, linecolor=mycolor]{-1.7}{25}{0.007329964 x 2 exp mul 0.366498206 x mul sub 0.181227576 add }
+\psline{-}(25.0,-4.4)(25.0,-5)
+\psline{-}(25.0,-5.0)(-3.9,-5)
+}\psline[linestyle=dashed]{|-|}(-0.2,-5.0)(-0.2,0.35)
+\rput{0}(1.2,-2.65){\LARGE{$h - \SI{6}{\milli\metre}$}}
+\psline[linestyle=dashed]{|-}(-0.2,0.35)(0.54856,2.735)
+\psarcn[linewidth=1.2pt,linecolor=black,
+dimen=middle]{-}(-0.2,0.35){0.9cm}{-287.577}{-17.6}
+\pscircle*[linewidth=0.7pt,linecolor=black,fillcolor=black](0.2,0.5){2.5pt}
+\psline[linestyle=solid, linewidth=2pt]{->}(0.1,1.18)(3.916,-0.018)
+\psline[linestyle=dashed, linewidth=2pt, linecolor=mycolor]{-}(8.9,-2.52)(17.438,-5)
+\psline[linestyle=solid, linecolor=gray!80, linewidth=20pt]{-}(-16.0,-5.3)(26.0,-5.3)
+\psline[linestyle=solid, linecolor=black, linewidth=2pt]{-}(-16,-5.02)(26,-5.02)
+
+

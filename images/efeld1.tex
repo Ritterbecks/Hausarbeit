@@ -1,0 +1,71 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+\begin{figure}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\small
+%\sansmath
+\begin{tikzpicture}[
+	scale=1,
+	ka roehre/.style={fill=white,draw=black!80}
+]
+\begin{scope}[scale=2.17]
+
+%Verkabelung
+\node[draw=none,fill=none] at (-5.30, 3.55){$-$};
+\node[draw=none,fill=none] at (-5.30, 2.65){$+$};
+\node[draw=none,fill=none] at (-5.48, 3.7){\footnotesize $y$};
+\node[draw=none,fill=none] at (-2.71, 3.00){\footnotesize $x$};
+\node[draw=none,fill=none] at (-6.2, 2.8){\footnotesize $z$};
+%Achsen
+\draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, thick] (-5.40, 2.6) -- (-5.40, 3.8);
+\draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, thick] (-7.51, 3.1) -- (-2.61, 3.1);
+%Länge
+\draw[<->,>={Triangle[length=0pt 3*4,width=0pt 4]}, mycolor2] (-5.9, 2.5) -- (-4.8, 2.5);
+\draw[mycolor2] (-5.9, 2.4) -- (-5.9, 2.6);
+\draw[mycolor2] (-4.8, 2.4) -- (-4.8, 2.6);
+\node[rectangle,fill=white] at (-5.40, 2.50){\footnotesize $l$};
+%E-Feld
+\draw[fill=mycolor!75] (-6.0, 2.8) -- (-5.8, 2.9) -- (-4.7, 2.9) -- (-4.9, 2.8);   \draw[fill=mycolor!75] (-6.0, 2.8) -- (-6.0, 2.75) -- (-4.9, 2.75) -- (-4.7, 2.85) -- (-4.7, 2.9) -- (-4.9, 2.8) -- (-6.0, 2.8);     
+\draw (-4.9, 2.75) -- (-4.9, 2.8);
+\foreach \x in {0,...,7}
+        {
+\draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]}, thick, mycolor, shorten >=0.4pt] ({-5.87+(\x*0.15)},2.85) -- ({-5.87+(\x*0.15)},3.40) ;
+ };
+\draw[fill=mycolor!25] (-6.0, 3.4) -- (-5.8, 3.5) -- (-4.7, 3.5) -- (-4.9, 3.4);
+\draw[fill=mycolor!25] (-6.0, 3.4) -- (-6.0, 3.35) -- (-4.9, 3.35) -- (-4.7, 3.45) -- (-4.7, 3.5) -- (-4.9, 3.4) -- (-6.0, 3.4); 
+\draw (-4.9, 3.35) -- (-4.9, 3.4);
+\begin{scope}[thick, every node/.style={sloped,allow upside down}]
+% Elektronenbahn
+\draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]},mycolor, thick] (-7.51, 3.1)  -- node {\midarrow} (-6.0, 3.1) arc (90:70:4.2)  -- node {\midarrow} ++ (0.6,-0.22) -- ++ (1.2,-0.44); 
+%Geschwindigkeit
+\draw[dotted, mycolor4]  (-4.0,2.64)   -- ++ (0.7,0) -- ++ (0.0,-0.26) -- ++ (-0.7,0) ;
+    \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]},mycolor4, thick]  (-6.63,3.1)  -- (-5.93, 3.1) ;
+       \node at (-6.28,3.2) {\footnotesize $\dot{x}$};    
+        \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]},mycolor4, thick]  (-4.0,2.64)  --  (-3.3, 2.64) ;  
+   \node at (-3.65,2.74) {\footnotesize $\dot{x}$};       
+        \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]},mycolor4, thick]  (-4.0,2.64)  -- ++ (0.7, -0.26) ;
+        \node at (-3.35,2.3) {\footnotesize $(\dot{x}, \dot{y})\tran$};                   
+        \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]},mycolor4, thick]  (-4.0,2.64)  -- ++ (0.0, -0.26) ; 
+        \node at (-4.1,2.51) {\footnotesize $\dot{y}$}; 
+%Winkel
+\draw[mycolor2, thick]  (-4.56,2.85)   -- (-4.0,2.85) ;
+\draw[mycolor2, thick]  (-4.06,2.85) arc (360:339.86:0.5) ;
+\node at (-4.2,2.78) {\footnotesize $\alpha$}; 
+% Elektron
+\shade[ball color=mycolor!25, opacity=1] (-6.63,3.1) circle (2pt);
+   \node at (-6.63,3.1) {$-$};    
+\shade[ball color=mycolor!25, opacity=1] (-4.0,2.64) circle (2pt);
+    \node at (-4.0,2.64) {$-$};       
+\end{scope}
+%Achse z
+\draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, thick] (-5.40, 3.1) -- ++ (0.9, 0.45) -- ++ (-1.8, -0.9);
+\end{scope}
+\end{tikzpicture}
+  \caption[Ablenkung eines Elektrons im E-Feld]{Ein Elektron wird durch eine Spannung $U_\mathrm{B}$ (nicht skizziert) in $x$-Richtung beschleunigt. Zwischen den Kondensatorplatten mit Länge $l$ erfährt das Elektron durch das E-Feld eine Beschleunigung parallel zur $x$-Achse, welche proportional zur Feldstärke $E$ ist. Ab $x=\sfrac{l}{2}$ bewegt sich die Ladung mit konstanter Geschwindigkeit $v= (\dot{x}, \dot{y})\tran$ weiter (eigene Darstellung).}
+  \label{fig:efeld1}
+  \vspace{-0pt}
+\end{figure}

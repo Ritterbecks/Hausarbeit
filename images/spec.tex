@@ -1,0 +1,75 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth,
+  capbesideposition=top,
+  heightadjust=all,
+  postcode=flushup}
+\begin{figure}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\small
+%\sansmath
+\begin{tikzpicture}
+\begin{scope}[scale=2.1]
+\shade[right color=mycolor!35, left color=mycolor!75, every node/.style={ midway}, thick] (0,-0.3) rectangle (1,2);
+\shade[right color=mycolor!5, left color=mycolor!35, every node/.style={ midway}, thick] (1,-0.3) rectangle (5,2);
+\shade[right color=halfgray!20, left color=halfgray!25, every node/.style={ midway}] (2.2, 2.1) rectangle (3.4, 2.7);
+\draw[thick, mycolor2] (2.2, 2.1) rectangle (3.4, 2.7);
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]},dashed, thick] (2.2, 2.4) -- ++ (-1.5, 0) -- ++ (0, -0.55);
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick] (2.2, 2.4) -- ++ (-0.3, 0) -- ++ (0, -0.55);
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick] (3.1, 2.1) -- ++ (0, -0.25);
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick] (3.4, 2.4) -- ++ (0.9, 0) -- ++ (0, -0.55);
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick] (3.4, 2.5) -- ++ (1.6, 0);
+\node(example-align) [align=center, thick, every node/.style={fill=none, draw=none, midway}] at (2.8,2.4) { \large Datensystem};
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick, halfgray!50] (5.1, 1.6) -- ++ (2, 0);
+\draw[->,>={latex[length=0pt 3*11,width=0pt 11]}, thick, halfgray!50] (5.1, 1.6) -- ++ (0, 1);
+\node(example-align) [align=center, thick, every node/.style={fill=none, draw=none, midway}] at (6.1,1.4) { Massenspektrum};
+\draw[mycolor4] (5.3, 1.6) -- ++ (0, 0.2);
+\draw[mycolor4] (5.4, 1.6) -- ++ (0, 0.4);
+\draw[mycolor4] (5.7, 1.6) -- ++ (0, 0.3);
+\draw[mycolor4] (5.8, 1.6) -- ++ (0, 0.7);
+\draw[mycolor4] (5.9, 1.6) -- ++ (0, 0.1);
+\draw[mycolor4] (6.2, 1.6) -- ++ (0, 0.6);
+\draw[mycolor4] (6.6, 1.6) -- ++ (0, 0.3);
+
+\shade[right color=halfgray!15, left color=halfgray!35, every node/.style={ midway}] (0.2, 1.8) -- ++ (1.0,0) -- ++ (0, -0.1) -- ++ (0.2, 0) -- ++ (0, 0.1) -- ++ (1, 0) -- ++ (0, -0.2) -- ++ (0.2, 0) -- ++ (0, 0.2) -- ++ (1, 0) -- ++ (0, -0.2) -- ++ (0.2, 0.0) -- ++ (0, 0.2) -- ++ (1, 0.0) -- ++ (0, -1.2) -- ++ (-1,0) -- ++ (0, 0.2) -- ++ (-0.2,0) -- ++ (0, -0.2) -- ++ (-0.2,0) -- ++ (0, -0.4) -- ++ (-0.6, 0) -- ++ (0, 0.4 ) -- ++ (-0.2,0) -- ++ (0, 0.2) -- ++ (-0.2,0) -- ++ (0, -0.2)  -- ++ (-0.2,0) -- ++ (0, -0.4) -- ++  (-0.6, 0) -- ++ (0, 0.4 ) -- ++ (-0.2,0) -- ++ (0, 0.1) -- ++ (-0.2,0) -- ++ (0, -0.1)  -- ++ (-0.4,0) -- ++ (0, -0.4) -- ++ (-0.2,0) -- ++ (0, 0.4) -- ++ (-0.4, 0) -- ++ (0, 1.2);
+\draw[thick, mycolor2] (0.2, 1.8) -- ++ (1.0,0) -- ++ (0, -0.1) -- ++ (0.2, 0) -- ++ (0, 0.1) -- ++ (1, 0) -- ++ (0, -0.2) -- ++ (0.2, 0) -- ++ (0, 0.2) -- ++ (1, 0) -- ++ (0, -0.2) -- ++ (0.2, 0.0) -- ++ (0, 0.2) -- ++ (1, 0.0) -- ++ (0, -1.2) -- ++ (-1,0) -- ++ (0, 0.2) -- ++ (-0.2,0) -- ++ (0, -0.2) -- ++ (-0.2,0) -- ++ (0, -0.4);
+\draw[thick, mycolor2] (2.8, 0.2) -- ++ (0, 0.4 ) -- ++ (-0.2,0) -- ++ (0, 0.2) -- ++ (-0.2,0) -- ++ (0, -0.2)  -- ++ (-0.2,0) -- ++ (0, -0.4);
+\draw[thick, mycolor2] (1.6, 0.2) -- ++ (0, 0.4 ) -- ++ (-0.2,0) -- ++ (0, 0.1) -- ++ (-0.2,0) -- ++ (0, -0.1)  -- ++ (-0.4,0) -- ++ (0, -0.4);
+\draw[thick, mycolor2] (0.2, 0.6) -- ++ (0.4, 0.0 ) -- ++ (-0.0,-0.4);
+\foreach \x in {1,...,30}
+        {
+\draw (0.2,{1.8-\x*0.04}) -- ++ (0.04, 0.00);
+};
+\foreach \x in {1,...,25}
+        {
+\draw (1.28,{1.7-\x*0.04}) -- ++ (0.04, 0.00);
+};
+\draw[thick, every node/.style={fill=white, midway},  halfgray!50] (0,-0.4) -- ++ (1,0) node {$\dots$};
+\draw[thick, , halfgray!50] (1,-0.4) -- ++ (4,0);
+\draw[dotted, thick] (1,-0.3) -- ++ (0,2.3);
+\foreach \x in {0,...,5}
+        {
+\draw[halfgray!50] ({0+\x},-0.45) --++ (0, 0.1);
+};
+\draw[thick, draw=none, ->,>={Kite[round, length=0.4cm, width=4pt]}, every node/.style={fill=white, midway}] (2,-0.9) -- ++ (1,0) node [above] {Druck};
+\node at (0, -0.6) {$1$};
+\node at (1, -0.6) {$10^{-8}$};
+\node at (2, -0.6) {$10^{-9}$};
+\node at (3, -0.6) {$10^{-10}$};
+\node at (4, -0.6) {$\si{\bar}$};
+\node at (5, -0.6) {$10^{-12}$};
+\draw[decorate,decoration={brace,amplitude=10pt},yshift=0pt, thick] (1,-0.35) -- ++ (4, 0) node [black,midway,above=10pt] {Hochvakuum};
+\node[thick, every node/.style={fill=white, midway}] at (0.5,0) {Atomsphäre/};
+\node[thick, every node/.style={fill=white, midway}] at (0.5,-0.2) {Vakuum};
+\node(example-align) [align=center, thick, every node/.style={fill=none, draw=none, midway}] at (0.7,1.2) {\large Proben- \\\large einlass};
+\node(example-align) [align=center, thick, every node/.style={fill=none, draw=none, midway}] at (1.9,1.2) {\large Ionen- \\\large quelle};
+\node(example-align) [align=center, thick, every node/.style={fill=none, draw=none, midway}] at (3.1,1.2) {\large Massen- \\ \large analysator};
+\node(example-align) [align=center, thick, every node/.style={fill=none, draw=none, midway}] at (4.3,1.2) { \large Detektor};
+\end{scope} 
+\end{tikzpicture}
+\caption[Komponenten eines Massenspektrometers]{\protect\rule{0cm}{3.4cm}Schematische Darstellung der Komponenten eines Massenspektrometers. Im Probeneinlass herrscht üblicherweise ein Druck von $\SI{1}{\bar}$. Der übrige Experimentierraum befindet sich in einem Hochvakuum zwischen $\SI{E-5}{\milli\bar}$ und $\SI{E-9}{\milli\bar}$. Das Datensystem kann mit jeder Komponente verbunden werden und so beispielsweise die Untersuchung steuern oder ein Massenspektrum ausgeben (nach \cite[S.\,8]{Gross2012}).}
+  \label{fig:spec1}
+\end{figure}

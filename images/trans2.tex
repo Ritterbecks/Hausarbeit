@@ -1,0 +1,73 @@
+  \thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+
+\begin{figure}[htb!p]
+\centering
+%\sansmath
+\begin{tikzpicture}
+\begin{axis}[	
+	clip mode=individual, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white,thick},
+%	axis on top,
+    width=12cm,
+    height=8.797cm,
+    xmin=-0.1,
+    xmax=0.6,
+    ymin=-0.025,
+    ymax=0.05,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={$x$},
+    ylabel={$y$},   
+   x label style={at={(axis cs:0.5,-0.010)}},
+    y label style={at={(axis cs:-0.105,0.025)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\footnotesize},
+    yticklabels={  -25, 0,  {$\SI{E-3}{\metre}$}, 50},            
+    ytick={  -0.025, 0, 0.025, 0.050, 0.100},
+    xtick={-0.1,0,0.1,0.2,0.3,0.4,0.5, 0.6}, 
+    xticklabels={-0.1,0,0.1,0.2,0.3,0.4,{$\si{\metre}$}, 0.6},
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\small,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+       legend style ={ at={(axis cs:0.05,0.05)}, 
+            anchor=north west, draw=none, 
+            fill=none,align=left, text=Honeydew4!70!black, font=\footnotesize},
+        cycle list name=mycolor4 white,
+        smooth
+    %nodes near coords={\pgfmathfloatifflags{\pgfplotspointmeta}{0}{}{\pgfmathprintnumber{\pgfplotspointmeta}}},
+    %every node near coord/.append style={    fill=white,    anchor=mid west,        shift={(3pt,4pt)},    inner sep=0,    font=\footnotesize,    rotate=45},
+]
+\draw[thick, Honeydew4!70!black, ->,>={Kite[round, length=0.4cm, width=4pt]}] (axis cs:-0.105,0.015) -- (axis cs:-0.105,0.035);
+\draw[thick, Honeydew4!70!black, ->,>={Kite[round, length=0.4cm, width=4pt]}] (axis cs:0.4,-0.010) -- (axis cs:0.6,-0.010);
+\addplot
+ table[x =x, y =y,]{images/data/5.dat};
+ \addlegendentry{Bahn 1};
+ \addplot
+  table[x =x, y =y,]{images/data/6.dat};
+  \addlegendentry{Bahn 2};
+  \addplot
+   table[x =x, y =y,]{images/data/7.dat};
+   \addlegendentry{Bahn 3};
+   \addplot
+    table[x =x, y =y,]{images/data/8.dat};
+    \addlegendentry{Bahn 4};
+    \addplot
+     table[x =x, y =y,]{images/data/9.dat};
+     \addlegendentry{Bahn 5};
+\end{axis}
+\clipright
+\end{tikzpicture}
+  \caption[Transformierte Bewegung der ersten Kugel]{Transformierte Bewegung der ersten Kugel. Zu beachten ist, dass diese Kugel stärker von der Nulllinie abweicht als die Mehrzahl der übrigen 9 Kugeln.}
+  \label{fig:trans2}
+  \vspace{-0pt}
+\end{figure}

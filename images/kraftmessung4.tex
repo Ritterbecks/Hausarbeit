@@ -1,0 +1,504 @@
+  \thisfloatsetup{%
+   capposition=bottom}
+
+\begin{figure*}
+\centering
+%\sansmath
+\subfloat[Stufe 2, $s=\SI{1}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor4, draw=mycolor4, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor4}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S20.dat};
+\addplot[mycolor, fill=mycolor!25, smooth, domain=-7:7,thick, opacity=0.4] {230.90*exp(-((x)/1.903)^2)};
+\end{axis}
+\end{scope}
+\end{tikzpicture}}
+\quad
+\subfloat[Stufe 1, $s=\SI{1}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor, draw=mycolor, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S10.dat};
+\addplot[mycolor4, fill=mycolor4!25, smooth, domain=-7:7,thick, opacity=0.4] {143.40*exp(-((x)/1.929)^2)};
+\end{axis}
+\end{scope}
+\clipright
+\end{tikzpicture}}
+\\
+\subfloat[Stufe 2, $s=\SI{5}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor4, draw=mycolor4, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor4}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S21.dat};
+\addplot[mycolor, fill=mycolor!25, smooth, domain=-7:7,thick, opacity=0.4] {199.20*exp(-((x)/1.912)^2)};
+\end{axis}
+\end{scope}
+\end{tikzpicture}}
+\quad
+\subfloat[Stufe 1, $s=\SI{5}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+     yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+         ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor, draw=mycolor, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S11.dat};
+\addplot[mycolor4, fill=mycolor4!25, smooth, domain=-7:7,thick, opacity=0.4] {117.90*exp(-((x)/1.836)^2)};
+\end{axis}
+\end{scope}
+\clipright
+\end{tikzpicture}}
+\\
+\subfloat[Stufe 2, $s=\SI{10}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor4, draw=mycolor4, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor4}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S22.dat};
+\addplot[mycolor, fill=mycolor!25, smooth, domain=-7:7,thick, opacity=0.4] {140.90*exp(-((x)/2.201)^2)};
+\end{axis}
+\end{scope}
+\end{tikzpicture}}
+\quad
+\subfloat[Stufe 1, $s=\SI{10}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor, draw=mycolor, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S12.dat};
+\addplot[mycolor4, fill=mycolor4!25, smooth, domain=-7:7,thick, opacity=0.4] {84.26*exp(-((x)/2.067)^2)};
+\end{axis}
+\end{scope}
+\clipright
+\end{tikzpicture}}
+\\
+\subfloat[Stufe 2, $s=\SI{15}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor4, draw=mycolor4, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor4}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S23.dat};
+\addplot[mycolor, fill=mycolor!25, smooth, domain=-7:7,thick, opacity=0.4] {106.50*exp(-((x)/2.381)^2)};
+\end{axis}
+\end{scope}
+\end{tikzpicture}}
+\quad
+\subfloat[Stufe 1, $s=\SI{15}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor, draw=mycolor, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S13.dat};
+\addplot[mycolor4, fill=mycolor4!25, smooth, domain=-7:7,thick, opacity=0.4] {64.61*exp(-((x)/2.338)^2)};
+\end{axis}
+\end{scope}
+\clipright
+\end{tikzpicture}}
+\\
+\subfloat[Stufe 2, $s=\SI{20}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor4, draw=mycolor4, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor4}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S24.dat};
+\addplot[mycolor, fill=mycolor!25, smooth, domain=-7:7,thick, opacity=0.4] {85.22*exp(-((x)/2.609)^2)};
+\end{axis}
+\end{scope}
+\end{tikzpicture}}
+\quad
+\subfloat[Stufe 1, $s=\SI{20}{\centi\metre}$]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.78]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=3cm,
+    height=4.397cm,
+    xmin=-7,
+    xmax=7,
+    ymin=0,
+    ymax=250,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Abstand $d$},
+    ylabel={\rotatebox[origin=b]{270}{Windlast $F_\mathrm{LW}$}},   
+   x label style={at={(axis cs:5,-55.190)}},
+    y label style={at={(axis cs:-3.5,200)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\normalsize},
+    yticklabels={${50}$, ${100}$, ${150}$,${\si{\milli\newton}}$, ${250}$},                     
+        ytick={50,100,150,200,250},
+    xticklabels={-7,-5,-3,-1,1,3, $\si{\centi\metre}$, 7},
+     xtick={-7,-5,-3,-1,1,3,5, 7}, 
+    scaled ticks=false,
+    width=\textwidth,                                   
+    label style={font=\normalsize,Honeydew4!70!black,},
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-3.50, 160) -- (axis cs:-3.50, 240);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:3.00, -55.19) -- (axis cs:7.00, -55.19);
+\addplot[fill=mycolor, draw=mycolor, only marks, mark=*, error bars/.cd,
+   x dir=both,
+   x explicit, error bar style={mycolor}]
+table[x = x, y =y, x error=dx]{images/data/kraftmessung4S14.dat};
+\addplot[mycolor4, fill=mycolor4!25, smooth, domain=-7:7,thick, opacity=0.4] {50.31*exp(-((x)/2.692)^2)};
+\end{axis}
+\end{scope}
+\clipright
+\end{tikzpicture}}
+  \caption[Gaussglocken-Fits Kugelradius $r=\SI{15.0}{\milli\metre}$, Abstand $s=\SI{1}{\centi\metre}$ bis $\SI{20}{\centi\metre}$]{Gaussglocken-Fits Kugelradius $r=\SI{15.0}{\milli\metre}$, Abstand $s=\SI{1}{\centi\metre}$ bis $\SI{20}{\centi\metre}$}
+  \label{fig:kraftmessung4}
+  \vspace{-0pt}
+\end{figure*}

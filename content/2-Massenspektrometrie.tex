@@ -1,0 +1,316 @@
+\chapter{Massenspektrometrie}
+\label{kap:2}
+\bookmarksetupnext{level=subsubsection}
+\chapterinfo{Ausgehend spektrometrischer Grundlagen physikalischen Zusammenhängen wird die Entstehungsgeschichte der Massenspektrometrie umrissen und insbesondere der erste geschwindigkeitsfokussierende Massenspektograph von \textsc{Aston} beschrieben.}
+
+\textit{Ausgehend von physikalischen Zusammenhängen wird die Entstehungsgeschichte der Massenspektrometrie umrissen und insbesondere der erste geschwindigkeitsfokussierende Massenspektograph von \textsc{Aston} beschrieben.}
+
+\section{Grundlegendes}
+Sämtliche Massenspektrometer unterschiedlichster Bauart erzeugen aus einer \textit{Substanzprobe} Ionen, die nach ihrem $\sfrac{q}{m}$-Verhältnis aufgespalten und anschließend registriert werden.\footcite[vgl.][S.\,7]{Budz2005}\par
+Die moderne Massenspektrometrie ist ein sich rasant weiterentwickelndes Feld mit einer Vielzahl von Massenspektrometer-Archetypen, wie \textsc{Gross} konstatiert, wenn er schreibt, dass ein Großteil der 1987 prädominanten Spektrometer --- namentlich Sektorfeld- und Massenspektrometer --- bereits verschwunden, jedoch moderne Systeme an ihre Stelle getreten seien.\footcite[vgl.][S.\,131]{Gross2012}\\
+\input{images/spec}
+Gemein ist allen Spektrometern die Gliederung in vier Kernkomponenten, wobei seit den 1980er Jahren eine fünfte, mandatorische, hinzugekommen ist. Die Komponenten sind in Graphik \ref{fig:spec1} dargestellt und werden im Folgenden kurz umschrieben.
+\begin{items}
+\item Der \textsw{Probeneinlass} dient als Bindeglied zwischen dem \textit{Hochvakuum} im Bereich (von $\SI{E-5}{\milli\bar}$ bis $\SI{E-9}{\milli\bar}$) der weiteren Komponenten und der zu untersuchenden Substanz \textit{per se}. Der Niederdruck ist erforderlich, um die \textit{mittlere freie Weglänge} der Ionen (zwischen erwarteten Stößen) zu erhöhen. Als Ausnahme ist die \textit{direkte Probleneinführung} zu nennen, bei welcher die Substanz über eine Vakuumschleuse direkt in die Ionenquelle eingespeist wird, wo sie durch Erhitzen ihren \textit{Dampfdruck} in den Hochvakuumbereich erniedrigt.\footcite[vgl.][S\,12]{Budz2005}
+\item In der \textsw{Ionenquelle} müssen neutral geladene Teilchen \textit{ionisiert} werden, damit elektrische und magnetische Felder sie beeinflussen können. Hierzu ist eine \textit{Ionisierungsenergie} nötig, welche die Mindestenergie darstellt, um ein Elektron abzuspalten (z.\,B. $\SI{13.8}{\electronvolt}$ für $\ce{CO2}$).
+
+Das klassische Verfahren, dies zu bewerkstelligen, ist der Beschuss mit Elektronen, die sogenannte \textit{Elektronenstoßionisation}, bei der die Probensubstanz in der Gasphase (vgl. die direkte Probeneinführung) mit Elektronen beschossen wird, welche eine kinetische Energie von einigen $\SI{10}{\electronvolt}$ aufweisen. ">Bei der Wechselwirkung der Elektronen mit den Molekülen [...] kann entweder die zur Abspaltung eines Elektrons notwendige Energie aufgenommen [...] oder ein Elektron"<\footcite[S.\,18]{Budz2005} auf ein höherenergetisches \textit{Orbital} gehoben werden.
+
+Neben der gewünschten Bildung von Ionen können aufgrund der hohen Energie, welche für die Elektronenstoßionisation benötigt wird, auch Nebenprodukte wie ">Molekül-Ionen, Fragment-Ionen, mehrfach geladene Ionen, metastabile Ionen, umgelagerte Ionen und Ionenpaare"<\footcite[S.\,26]{Gross2012} auftreten. Die gewünschte Reaktion ist jedoch immer
+\begin{equation*}
+\ce{M + e- -> M^{+.} + 2e-}.
+\end{equation*}
+Da die \textit{Ionenausbeute} aufgrund der Nebeneffekte nicht für alle Zwecke ausreichend ist, wurden ">die sogenannten weichen Ionisierungsverfahren entwickelt"<\vspace*{-2cm}\footfullcite[S.\,25]{Koestler2010}\vspace*{2cm} (insbesondere die \textit{Elektronenspray-Ionisation} oder \textit{Matrix-unterstützte Laser-Desorption/Ionisation}).
+Eine appropriate Analogie zu den Vorgängen in der \textit{Ionisationskammer} liefert \textsc{Blaum} in seiner Examensarbeit aus dem Jahr 2011, wenn er den Elektronenbeschuss mit den Analogbereichen aus Tabelle \ref{tab:ionisation} erklärt.\footfullcite[vgl.][S.\,91]{Blaum2011}
+\input{tables/ionisation}
+\item Bei dem \textsw{Massenanalysator} müssen zwei Bereiche mitgedacht werden: 
+
+Dem ersten Teil des Analysators kommt die Aufgabe zu, die erzeugten Ionen auf eine bestimmte Geschwindigkeit zu beschleunigen und den Ionenstrahl mit Hilfe von Gittern oder Lochblenden zu fokussieren. Dieser Teilbereich des Analysators wird im weiteren Verlauf auch \textit{Beschleunigereinheit} genannt und wird zumeist über ein Potentialgefälle $U_\mathrm{B}$, dessen Feldlinien in Richtung Ionenkammer zeigen, realisiert. Die Gesetze, die zu der Beschleunigung führen, sollen im Abschnitt \ref{sec:force1} dargelegt werden.
+
+Die weitere Komponente ist der eigentliche \textit{Analysator}, der über magnetische und/oder elektrische Felder für eine Aufspaltung der Ionen sorgt. Von \textsc{Gross} und \textsc{Budzikiewicz} werden \textit{Flugzeit-Massenspektrometer} (\textit{tof:} engl. f. \textit{time of flight}), \textit{Magnetsektorfeld-Geräte}, \textit{Quadrupolspektrometer}, \textit{Orbitrap-Spektrometer}, \textit{Ionen-Cyclotron-Resonanz-Aufbauten} uvm. genannt, wobei diese Arbeit sich auf die klassischen \textit{EB-Sektorfeld{\-}massen{\-}spek{\-}tro{\-}met{\-}er} beschränken wird (\textit{EB} f. E-Feld un B-Feld), da sich mit ihnen die wertschöpfendsten Analogien bilden lassen.
+\item Der \textsw{Detektor} sorgt für die Registrierung der im Analysator abgelenkten Ionen. Hierfür gibt es nach \textsc{Budzikiewicz} drei Möglichkeiten:\footcite[vgl.][S.\,44--45]{Budz2005}
+\begin{enumerate}
+\item In der frühen Massenspektrometrie wurde die Detektion zumeist durch \textit{Photoplatten} realisiert, die von den auftreffenden Ionen geschwärzt werden. Je dunkler ein Bereich wird, desto mehr Ionen wurden registriert. Photoplatten werden fortschreitend durch angepasste \textit{CCD-Sensoren} (beispielsweise in Digitalkameras zu finden) abgelöst.
+\item \textit{Auffänger} fungieren als Einzeldetektoren für spezifische Masse-Ladungs-Verhältnisse. \textit{Faraday-Töpfe} registrieren die Entladung der Ionen, wodurch eine Proportionalität zu der am jeweiligen Auffänger gemessenen Stromstärke besteht.
+\item Die dritte Variante besteht in einem schmalen \textit{Kollektorspalt}, der nur von Ionen mit einer Streuung von $r_0$ erreicht wird. Hinter dem Spalt befindet sich ein \textit{Sekundärelektronenvervielfacher} (SEV), welcher über eine Hintereinanderreihung von \textit{Dynoden} die auftreffenden Ionenströme vervielfacht und somit ein verstärktes Signal ausgibt. Um unterschiedliche Masse-Ladungs-Verhältnisse durch den Kollektorspalt zu leiten, werden die Spannung $U_\mathrm{Kon}$ und die Magnetfeldstärke $B$ variiert. 
+\end{enumerate}
+Für den zu entwickelnden Analogieversuch ist die Variante mit den Einzeldetektoren am Zweckdienlichsten.
+\item Bei allen modernen Massenspektrometern ist ein \textit{Datensystem} mit dem Massenspektrometer gekoppelt, welches in Abhängigkeit seiner Leistungsfähigkeit für die ">Steuerung des Massenspektrometers, Aufnahme und Speicherung der Rohdaten"<\footcite[S.\,51]{Budz2005}, Modellierung, Berechnung und Auswertung, Rauschfiltration usw. genutzt wird. Bei der Analyse der Ausschläge greifen Datensysteme unter anderem auf Datenbanken mit bereits bekannten Spektren zurück, berechnen Konfidenzintervalle dafür, dass es sich bei einem \textit{peak} (im Kontext engl. f. \textit{Maximum}) um ein bestimmtes Element handelt, \textit{et cetera perpetuum perpetuum} (womit das unerschöpfliche Anwendungspotenzial der rechnergestützten Messwerterfassung und -analyse angedeutet werden soll).  
+\end{items}
+Bei allen oben genannten Methoden bleibt das jeweilige \textit{Auflösungsvermögen}
+\begin{equation}
+\label{eq:aufloesung}
+A = \frac{m}{\Delta m}
+\end{equation}
+ein entscheidender Faktor für die Güte des Spektrometers. Je feiner die Unterteilung detektierbarer $\sfrac{q}{m}$-Verhältnisse bei ausreichend guter Peakhöhe, desto leistungsfähiger ist ein Massenspektrometer. Beläuft sich $A$ auf $20$, so würden beispielsweise die Maxima der Massen $\SI{20}{\atomicmassunit} = m$ (ca. $20\cdot \SI{1.66E-27}{\kilo\gram}$) und $\SI{19}{\atomicmassunit}=m-\Delta m$ dergestalt voneinander getrennt werden, dass das Tal zwischen den beiden (in dieser Definition gleich hohen) Maxima nur $\SI{10}{\percent}$ der Peakhöhe hat.\footcite[vgl.][S.\,41]{Budz2005} Aufgrund dieser Beschreibung des Auflösungsvermögens wird klar, dass sowohl die Rauschminimierung als auch die Empfindlichkeit des Detektors von großer Bedeutung sind.
+
+
+\section{Kraftfelder des Massenspektrometers}
+\label{sec:force1}
+Zum Verständnis der Massenspektrometrie und der Analogiebetrachtungen im vierten Kapitel (\ref{kap:4}) werden in diesem Teil der Arbeit die wichtigsten physikalischen Gesetzmäßigkeiten \textit{elektrischer Felder} (E-Felder) und \textit{magnetischer Felder} (B-Felder) zusammengefasst, wobei insbesondere die Ablenkung von Ladungen thematisiert wird. Anhand von Bewegungsgleichungen (vgl. \eqref{eq:bewegung4}) wird gezeigt, dass geladene Teilchen in einem elektrischen Feld unabhängig von ihrer Masse aufgespalten werden, während diese im Magnetfeld eine Rolle spielt. Bei den Betrachtung in Abschnitt \ref{sec:aston} werden die Proportionalitäten erläutert. 
+
+\subsection{Coulombkraft}
+
+Die Grundkenntnisse über elektrische Felder wurden vom französischen Ingenieur und Physiker \textsc{Charles-Augustin de Coulomb} (1736--1806) herausgefunden.\footfullcite[vgl.][S.\,25]{Schiller32016} So beschreibt er das Feld $\boldsymbol{E}$ einer punktförmigen Ladung $Q$, welche sich im \textit{Koordinatenursprung} befindet, im Abstand $\boldsymbol{r}$ als
+\begin{equation}
+\label{eq:coulomb1}
+\boldsymbol{E}(\boldsymbol{r})=\frac{1}{4\uppi\epsilon_\mathrm{0}}\frac{Q}{r^2}\frac{\boldsymbol{r}}{r}\;\mathrm{,} \qquad \text{wobei}\qquad \epsilon_\mathrm{0} \approx \SI{8.9E-12}{\ampere\second\per\volt\per\metre}
+\end{equation}
+\input{images/feld2}
+die \textit{elektrische Feldkostante} ist (bei Vernachlässigung der \textit{Materialkonstante} $\epsilon_{\mathrm{r}}$). Im weiteren Verlauf wird $\sfrac{\boldsymbol{r}}{r}$ mit $\boldsymbol{e}_r$ bezeichnet, d.\,h. als normierter \textit{Einheitsvektor} in Ladungsrichtung. Die Wirkung einer näherungsweise punktförmigen, kugelsymmetrischen Ladung auf eine Elementarladung $q$, die betragsmäßig gegenüber $Q$ verschwindend gering ist, wird in Abbildung \ref{fig:feld2} illustriert. \par
+Mittels vektorieller Addition von $n$ elektrischen Felder erhält man ein Gesamtfeld
+\begin{equation}
+\label{eq:super1}
+\boldsymbol{E}(\boldsymbol{r}_1,\dots \boldsymbol{r}_n)= \boldsymbol{E}_1(\boldsymbol{r}_1) + \cdots + \boldsymbol{E}_n(\boldsymbol{r}_n).
+\end{equation}
+Aufgrund dieses \textit{Superpositionsprinzips} ist leicht ersichtlich, dass durch ausreichend große \textit{Kondensatorplatten} bei geringem Abstand $r$ ein nahezu \textit{homogenes} E-Feld erzeugt wird, wie es ausgehend von Abbildung \ref{fig:feld1} bereits erwartet werden kann.  Die \textit{Kräfteparallelogramme} werden über \textit{Kräfteaddition} konstruiert, wobei 
+\begin{equation}
+\label{eq:kraft1}
+\boldsymbol{E}(\boldsymbol{r})\cdot q = \boldsymbol{F}(\boldsymbol{r})
+\end{equation} 
+gilt, da das elektrische Feld am Ort $\boldsymbol{r}$ über die auf eine \textit{Probeladung} $q$ ausgeübte \textit{Coulombkraft} definiert ist.\vspace*{-2cm}\footfullcite[vgl.][S.\,5]{Demtroeder2009}\vspace*{2cm} 
+
+Über die \textit{Flächenladungsdichte} $\sigma$ kann die von einem \textit{Plattenkondensator} auf eine Ladung $q$ ausgeübte Gesamtkraft über \textit{trigonometrische} Beziehungen hergeleitet werden.\vspace{-0.5cm}\footcite[vgl.][S.\,6]{Demtroeder2009}
+\input{images/feld1}\vspace{0.5cm}
+Aufgrund der Homogenitität eines Plattenkondensators \marginnote{Konvention: Für die Intensität eines elektrischen Feldes wird $E$ verwendet, bei Energien wird stets ein passendes Subskript hinzugefügt (z.\,B. $E_{\mathrm{kin}}$). } beläuft sich die parallele, auf $q$ einwirkende Kraftkomponente $F_\parallel$ auf $\SI{0}{\newton}$. Damit ergibt sich nach \textsc{Demtröder} die Gesamtkraft auf die Ladung zu 
+\begin{equation}
+\label{eq:kraft2}
+2\cdot \boldsymbol{F} = \int_{0}^{\sfrac{\uppi}{2}}\mathrm{d}F_\perp\cdot\boldsymbol{e}_x.=\frac{q\sigma}{\epsilon_0}\boldsymbol{e}_x.
+\end{equation} 
+Eine weitere wichtige Größe ist das \textit{elektrische Potential}, dessen Analogon in dem \textit{Gravitationspotential} in Abschnitt \ref{sec:gravity} dargelegt werden wird. Wie bei jeglichen \textit{konservativen Kraftfeldern} wird die Verschiebungsarbeit $W$ über einen Weg $a$ mit einem \textit{wegunabhängigen} Integral beschrieben. Die geleistete Arbeit ist demnach nur von Anfangs- und Endpunkt abhängig, nicht jedoch vom genauen Weg.\vspace*{-2cm}\footfullcite[vgl.][S.\,61]{Demtroeder2008}\vspace*{2cm} So ist die Differenz von \textit{potentiellen Energien} zwischen zwei Ortspunkten $\boldsymbol{r}_1$ und $\boldsymbol{r}_2$ in konservativen Kraftfeldern ausschließlich durch das Integral der Kraft --- skalar multipliziert mit einer infinitesimalen Wegkomponente $d\boldsymbol{s}$ --- definiert, nicht jedoch von dem expliziten Weg:
+\begin{equation}
+\label{eq:epot}
+-\int_{\boldsymbol{r}_2}^{\boldsymbol{r}_1}\boldsymbol{F}\cdot\mathrm{d}\boldsymbol{s}=\boldsymbol{E}_\mathrm{el}(\boldsymbol{r}_1)-\boldsymbol{E}_\mathrm{el}(\boldsymbol{r}_2)
+\end{equation}
+In diesem Zusammenhang ist zu bemerken, dass jedes Integral über einen geschlossenen Weg betragsmäßig verschwindet: Physikalisch vollbringt \textsc{Sisyphus} aus der griechischen Mythologie hiernach beim Hochrollen des Felsbrockens zwar eine Leistung, aber die \textit{Sisiphyusarbeit} wird von der Schwerkraft ein ums andere mal zunichte gemacht und ist somit non existent. \vspace*{-1.3cm}\footnote{Wie der allgemeine Sprachgebrauch beim Lernen von Physik detrimentär sein kann, wird in Kapitel \ref{kap:3} noch genauer erläutert.}\vspace*{1.3cm}\par
+Die elektrische \textit{Potentialdifferenz} ist als Änderung des Potentials einer Ladung $q$ definiert, welche innerhalb eines elektrischen Feldes verschoben wird.\footfullcite[vgl.][S.\,795]{Giancoli2010} Aufgrund der linearen Abhängigkeit eines E-Feldes von der Ladung gilt daher
+\begin{equation}
+\label{eq:epot2}
+\Delta E_\mathrm{el}=q\cdot U(\boldsymbol{r}_1,\boldsymbol{r}_2).
+\end{equation}
+Gleichungen \eqref{eq:kraft1}, \eqref{eq:epot} und \eqref{eq:epot2} liefern die elektrische Potentialdifferenz $U$ als
+\begin{equation}
+\label{eq:potdif1}
+q\cdot U(\boldsymbol{r}_1,\boldsymbol{r}_2)=q\cdot (\phi(\boldsymbol{r}_1)-\phi(\boldsymbol{r}_2))=-q\int_{\boldsymbol{r}_2}^{\boldsymbol{r}_1}\boldsymbol{E}\cdot\mathrm{d}\boldsymbol{s}=E_\mathrm{el},
+\end{equation}
+wobei für einen als ideal angenommenen Plattenkondensator, die Setzung  $\boldsymbol{r}_1-\boldsymbol{r}_2:=r$ und eine geeignete Koordinatenachsenfestlegung 
+\begin{equation}
+\label{potdif2}
+q\cdot U(r)=-E\cdot r\cdot q\qquad\text{gezeigt werden kann.}
+\end{equation}
+Da die elektrische Energie nach dem Energieerhaltungssatz in einem idealisierten Modell ohne Bindungsenergien vollständig in kinetische Energie umgesetzt wird, kann Gleichung \eqref{eq:epot2} zu
+\begin{equation}
+\begin{alignedat}{2}
+\label{eq:bewegung1}
+&-\Delta E_\mathrm{el}&=\Delta E_\mathrm{kin}\\
+\Leftrightarrow  & -qU_\mathrm{B} &= \frac{1}{2}m\boldsymbol{\dot{r}}^2
+\end{alignedat}
+\end{equation}
+mit der \textit{Beschleunigungsspannung} $U_\mathrm{B}$ umformuliert werden. Über die allgemeine Definition der Kraft
+\begin{equation}
+\label{eq:kraft3}
+\boldsymbol{F}=m\boldsymbol{\ddot{r}}
+\end{equation}
+mit Masse $m$ und Beschleunigung $\boldsymbol{\ddot{r}}$ können unter der Annahme, dass die Geschwindigkeit $\boldsymbol{\dot{r}}$ der Ladung parallel zu den Kondensatorplatten verläuft, $\boldsymbol{\dot{r}}_x=\dot{x}$ und $\boldsymbol{\ddot{r}}_y=\ddot{y}$ gesetzt werden. Damit kann mit den Formeln \eqref{eq:kraft1} und \eqref{eq:kraft3} zunächst mit der Elementarladung eines Elektrons $e^-$ die Beschleunigung in $y$-Richtung für ein Elektron berechnet werden:
+\begin{equation}
+\label{eq:beschl1}
+\ddot{y}=\frac{e^-E}{m_\mathrm{e}}\left(=\frac{\SI{-1.6E-19}{\coulomb}\cdot E}{\SI{9.1E-31}{\kilo\gram}}\right).
+\end{equation}
+Diese zeitunabhängige Beschleunigung liefert über doppelte Integration die Geschwindigkeit und Auslenkung\footcite[vgl.][S.\,44]{Demtroeder2008} in $y$-Richtung als
+\begin{equation}
+\begin{alignedat}{2}
+\label{eq:bewegung2}
+\dot{y}(t)&=\frac{e^-E}{m_\mathrm{e}}t\quad\text{und}\\
+ y(t)&=\frac{e^- E}{2m_\mathrm{e}}t^2.
+\end{alignedat}
+\end{equation}
+\input{images/efeld1} 
+Die Bewegung entlang der $x$-Achse erfährt keine Beschleunigung und wird durch Umformung von Formel \eqref{eq:bewegung1} zu
+\begin{equation}
+\label{eq:bewegung3}
+x(t)= \mathlarger{\mathlarger{\int}} \sqrt{-\frac{2e^-U_\mathrm{B}}{m}}\mathrm{d}t=t\cdot\sqrt{-\frac{2e^-U_\mathrm{B}}{m}}.
+\end{equation}
+Für ein beliebig geladenes Teilchen, welches sich mit konstanter Geschwindigkeit parallel zu zwei Kondensarplatten mit Länge $l$ bewegt, kann die $y$-Position mittels einer Umformung von \eqref{eq:bewegung2} zu
+\begin{equation}
+\label{eq:bewegung4}
+y(x=t\dot{x})=
+\begin{cases}
+0\qquad &,\, x\leq\\
+\mp\frac{E}{4U_\mathrm{B}}x^2  \qquad &,\, 0< x \leq l\\
+\mp\frac{E\cdot l}{2U_\mathrm{B}}\left(x-l\right)   \qquad &,\,l< x
+\end{cases}
+\end{equation}
+bestimmt werden (die Ablenkrichtung ist durch die Feldrichtung und die Art der Ladung determiniert). Die geradlinige Bewegung hinter dem Kondensator erhält man, indem der Ausdruck für $y$ im Bereich des E-Feldes differenziert und der Ordinatenabschnitt über die Umstellung einer Geradengleichung berechnet wird. Man sieht anhand der Bewegungsleichung die umgekehrte Proportionalität der Auslenkung zu der durch die Beschleunigungsspannung mitgegebenen kinetischen Energie. Die Überlagerung der Geschwindigkeiten in den drei Raumrichtungen ($\dot{z}:=0$) ist in Diagramm \ref{fig:efeld1} skizziert.  
+
+\newpage 
+\subsection{Lorentzkraft}
+
+\marginnote{Diese Arbeit folgt \textsc{Halliday, Simon, Tipler, Giancoli, Schiller} usw. und benennt die Größe $\boldsymbol{B}$ stets als das \textsw{Ma{\-}gnet{\-}feld} oder sein Synonym, die \textsw{ma{\-}gnetische Feldstärke} und nicht mit den veralteten Begriffen \textsw{ma{\-}gnetische Fluss{\-}dich{\-}te} bzw. \textsw{ma{\-}gnetische In{\-}duk{\-}ti{\-}vi{\-}tät}.}\noindent Bereits 1269 publizierte der französische Militäringenieur \textsc{Pierre de Maricourt} (1219--1292) eine Studie zum Verhalten magnetischer Materialien, in welcher er sowohl konstatierte, dass alle Magneten \textit{Dipole} sind und gleiche \textit{Polaritäten} sich abstoßen, während entgegengesetzte sich anziehen.\vspace*{1.8cm}\footcite[vgl.][S.\,35-36]{Schiller32016}\vspace*{-1.8cm}\par
+Im Gegensatz zum vorigen Abschnitt und der Definition der Coulombkraft (vgl. \eqref{eq:kraft1}) kann aufgrund des Nichtvorhandenseins ma{\-}gnetisch{\-}er \textit{Monopole} das B-Feld nicht analog definiert werden. Daher sei das
+Magnetfeld $\boldsymbol{B}$ als diejenige Kraft, die auf eine bewegte Probeladung wirkt, definiert.\vspace*{0.2cm}\footfullcite[vgl.][S.\,836]{Halliday2009}\vspace*{-0.2cm}\par 
+Betrachtet man Abbildung \ref{fig:bfeldb}, so kann mit Hilfe der \textit{Rechte-Hand-Regel} die Kraftwirkung auf eine durch das Magnetfeld fliegende Ladung bestimmt werden: Handelt es sich um ein negativ geladenes, von links nach rechts fliegendes Teilchen, so beschreibt die waagerecht vor den Körper gehaltene Hand die \textit{technische Stromrichtung}. Werden die Finger nach unten abgeknickt, zeigen sie in Richtung des B-Feldes, während der ausgestreckte Daumen die Kraftrichtung angibt. Das hypothetische Teilchen würde demnach in Richtung des Betrachters, d.\,h. aus der Papierebene heraus abgelenkt. 
+\input{images/bfeld1}
+Aus diesen Betrachtungen folgt die sogenannte \textit{Lorentz-Beschleunigung}
+\begin{equation}
+\label{eq:b1}
+\boldsymbol{\ddot{r}}=\frac{q}{m}\boldsymbol{\dot{r}}\times\boldsymbol{B}, 
+\end{equation}
+benannt nach dem niederländischen Naturwissenschaftler \textsc{Hendrik Antoon Lorentz} (1853--1928), der 1902 den Nobelpreis für Physik überreicht erhielt.\footcite[vgl.][S.\,45]{Schiller32016} Wird die Gleichung \eqref{eq:b1} mit der Ladungsmasse \textit{m} multipliziert, erhält man die Krafteinwirkung des Magnetfeldes auf eine Probeladung. Das \textit{Vektorprodukt} $\boldsymbol{\dot{r}}\times \boldsymbol{B}$ kann über die \textit{Determinanten} einer nach $2\times 2$ entwickelten Matrix folgendermaßen berechnet werden:
+\begin{eqnarray}
+\begin{alignedat}{2}
+\label{b2}
+\boldsymbol{\dot{r}}\times \boldsymbol{B}& = \det 
+\begin{pmatrix}  
+\boldsymbol{e}_x & \dot{r}_x & B_x \\
+\boldsymbol{e}_y & \dot{r}_y & B_y \\
+\boldsymbol{e}_z & \dot{r}_z & B_z \\
+\end{pmatrix}
+= \begin{vmatrix}  
+\boldsymbol{e}_x & \dot{r}_x & B_x \\
+\boldsymbol{e}_y & \dot{r}_y & B_y \\
+\boldsymbol{e}_z & \dot{r}_z & B_z \\
+\end{vmatrix}
+\\
+& = \boldsymbol{e}_x
+\begin{vmatrix}  
+\dot{r}_y & B_y\\
+\dot{r}_z & B_z\\
+\end{vmatrix}
++ \boldsymbol{e}_y
+\begin{vmatrix} 
+\dot{r}_x & B_x\\
+\dot{r}_z & B_z\\
+\end{vmatrix}
++ \boldsymbol{e}_z
+\begin{vmatrix} 
+\dot{r}_x & B_x\\
+\dot{r}_y & B_y\\
+\end{vmatrix}\\
+& = \sum_{i,j,k=1}^{3}\epsilon_{ijk}\dot{r}_iB_j\boldsymbol{e}_k\qquad\text{mit }\\
+\epsilon_{ijk} & =
+\begin{cases}
++1 \qquad\text{, falls }i,j,k\text{ gerade Permutation von }(1,2,3) \text{ ,} \\
+0 \qquad\text{, falls }i,j,k\text{ ungerade Permutation von }(1,2,3) \text{ ,} \\
+-1 \qquad\text{, falls } i=j \vee i=k \vee j=k. \\
+\end{cases}
+\end{alignedat}
+\end{eqnarray}
+Geometrisch ist das Kreuzprodukt ein Vektor, der orthogonal auf den Faktoren steht (vgl. die Rechte-Hand-Regel mit dem Daumen als Versinnbildlichung des Vektorproduktes). Aus der Definition über die Determinante in \eqref{b2} sieht man auch, dass bei einer linearen Abhängigkeit von $\boldsymbol{\dot{r}}$ und $\boldsymbol{B}$ das Kreuzprodukt verschwindet. Somit würde keine Kraft auf die Probeladung wirken, falls Geschwindigkeit und Magnetfeld parallel (antiparallel) zueinander sind. Aus geometrischen Überlegungen folgt auch die Maximierung des Produktes, falls die Vektoren senkrecht aufeinander stehen.\footcite[vgl.][S.\,925]{Tipler2010}\par
+Fliegt demnach ein Teilchen in der $x$-$y$-Ebene durch ein Magnetfeld, welches in $z$-Richtung wirkt, für einfache Zwecke beispielsweise durch ein \textit{Helmholtz-Spulenpaar} mit Abstand $d =$ Radius $r$ der Ringspulen, so ist es möglich, durch das in Schulen häufig durchgeführte \textit{Fadenstrahlrohr-Experiment} die Masse eines Elektrons zu bestimmen (vgl. Abb. \ref{fig:fade}).\footfullcite[vgl.][S.\,52; 238]{Gomoletz2007}\par
+Überführt man Formel \eqref{eq:b1} in die Kraft-Darstellung, so zeigt sich mit den obigen geometrischen Betrachtungen, der \textit{lex tertia} \textsc{Sir Isaac Newton}s, \textit{actio gleich reactio}, und Auflösen von  \eqref{eq:bewegung1} nach $\dot{r}=v_\mathrm{Elektron}$
+\begin{equation}
+\begin{alignedat}{2}
+& F_\mathrm{Lorentz}& =F_\mathrm{zentripetal}\\
+\Leftrightarrow & e^-vB_z & =\frac{m_\mathrm{e}v^2}{r}\\
+\Leftrightarrow & \frac{e^-}{m}=\frac{2U_\mathrm{B}}{{B_z}^2r^2}.
+\end{alignedat}
+\end{equation} 
+\input{images/fadenstrahlrohr}
+Soll die Bewegung im senkrechten magnetischen Feld untersucht werden, so gilt es zuerst, die Bewegungsgleichungen herzuleiten. Mit Formel \eqref{eq:beschl1} und der Setzung $\boldsymbol{B}=(0,0,B_z)\tran$ gelangt man über das Kreuzprodukt zu
+\begin{equation}
+\label{eq:bfeld1}
+m\boldsymbol{\ddot{r}}= q\left(\dot{y}B\boldsymbol{e}_x-\dot{x}B\boldsymbol{e}_y\right).
+\end{equation}
+Wie bereits beim E-Feld soll die Bewegung komponentenweise untersucht werden, womit drei \textit{gekoppelte} Differentialgleichungen erhalten werden:
+\begin{equation}
+\label{eq:bfeld2}
+\begin{alignedat}{2}
+& m\ddot{x}  = & q\dot{y}B, \\
+& m\ddot{y}  = & -q\dot{x}B, \\
+& m\ddot{z}  = & 0. \\
+\end{alignedat}
+\end{equation}
+Da in $z$-Richtung keine Kräfte wirken, wird die dritte Zeile in den nachfolgenden Ausführungen ignoriert. Die sogenannte \textit{Entkopplung} von Differentialgleichungssystemen erfolgt mit Hilfe des Integrierens/Differenzierens einer Zeile und dem anschließenden \textit{Einsetzungsverfahrens}:\footfullcite[vgl.][S.\,89--91]{Furlan2012} 
+\begin{equation}
+\label{eq:bfeld3}
+\begin{alignedat}{2}
+\int m\ddot{y}\mathrm{d}t&=  m\dot{y}=  -qBx + C\\
+&\Rightarrow \ddot{x}+\frac{q^2B^2}{m^2}x -\underbrace{\sfrac{qBC}{m^2}}_{\dot{y}_0} =  0
+\end{alignedat}
+\end{equation}
+Wird die Beschleunigungskonstante $\dot{y}_0$ über die Startbedingung $\dot{y}(0)=0$ eliminiert, so erkennt man mit \textsc{Greiner}, dass es sich um die Differentialgleichung eines harmonischen Oszillators handelt, bei welcher die Kreisfrequenz\vspace*{-2.5cm}\footfullcite[vgl.][S.\,345]{Greiner2008}\vspace*{2.5cm}
+\begin{equation}
+\label{eq:bfeld4}
+\omega = 2\uppi f = \frac{qB}{m}\qquad \text{ist.}
+\end{equation}
+Mittels der allgemeinen Lösung für den harmonischen Oszillator,
+\begin{equation}
+\label{eq:bfeld5}
+x(t)=A\cos(\omega t)+B\sin(\omega t),
+\end{equation}
+ergibt sich für $x(0)=0$
+\begin{equation}
+\label{eq:bfeld6}
+x(t)=\frac{\sqrt{\dot{x}_0^2+\dot{y}_0^2}}{\omega}\sin(\omega t)\overset{\dot{y}_0=0}{=}\frac{\dot{x}_0m}{qB}\sin(\omega t).
+\end{equation}
+Bei erneuter Integration von \eqref{eq:bfeld2} zeigt sich für die $y$-Koordinate
+\begin{equation}
+\label{eq:bfeld7}
+y(t)=\frac{\dot{x}_0m}{qB}(\cos(\omega t)-1).
+\end{equation}
+In Gleichungen \eqref{eq:bfeld6} und \eqref{eq:bfeld7} können die Startbedingungen nach Belieben angepasst werden, indem $\dot{y}_0$ eingesetzt und/oder die Argumente des \textit{Sinus} und \textit{Cosinus} um einen Auftreffwinkel $\alpha$ verschoben werden.
+
+
+\section{Beginn der Massenspektrometrie}
+\label{sec:2.2}
+
+\textsc{Eugen Goldstein} (1850--1930) entdeckte 1886 die sogenannten \textit{Kanalstrahlen}, die sich entgegengesetzt zu einem Kathodenstrahl bewegen, konnte sie jedoch nicht als Ionenstrahlen identifizieren, da er seine Veröffentlichung mit den Gedanken, ">dass man die Kanalstrahlen für solche Theile [...] hält, die bei undurchbrochener Kathode sich nach vorn ausbreiten müssen [d.\,h. in Richtung Anode, Anmerkung des Verfassers]"<\vspace*{-1.50cm}\footfullcite[S.\,699]{Goldstein1886}\vspace*{1.5cm}.\par
+\textsc{Wilhelm Wien} (1864--1928) konnte 1897 durch das Messen des \textit{Ladungs-Masse-Verhältnisses} $\nicefrac{q}{m}$ die Kanalstrahlen als positiv geladene Ionen identifizieren. Ebenfalls 1897 maß \textsc{Joseph J. Thomson} (1856--1940) das $\nicefrac{q}{m}$-Verhältnis von \textit{Kathodenstrahlen} (Elektronenstrahlen).\vspace*{-0.8cm}\footfullcite[vgl.][S.\,31--32]{Demtroeder2010}\vspace*{0.8cm} Der Versuchsaufbau, mit dem \textsc{Thomson} dies gelang, ist in Abbildung \ref{fig:thoms1} dargestellt und kann als Vorstufe des ersten Massenspektrometers gesehen werden.\par
+\input{images/kathodenstrahl}
+\textsc{Tipler} wertschätzt insbesondere die Simplizität \textsc{Thomson}s Experimentes, wenn er feststellt, dass ">lediglich ein Voltmeter, ein Amperemeter und Lineal"<\footfullcite[S.\,147]{Tipler2010} benötigt wurden, um die \textit{spezifische Ladung} von Elektronen zu bestimmen. Obwohl das Ergebnis von \textsc{Thomson} nur ca. $\SI{40}{\percent}$ des heutig anerkannten Wertes betrug ($\SI[fraction-function=\sfrac]{0.7E11}{\coulomb\per\kilo\gram}$ anstatt $\sfrac{e}{m_\mathrm{e}} = \SI[fraction-function=\sfrac]{1.8E11}{\coulomb\per\kilo\gram}$), ist die Genauigkeit seiner Messungen sehr beeindruckend, da zuvor das \textit{Elektron} nie hatte nachgewiesen werden können und er demnach ein Phantom vermaß.\par
+Für die Entwicklung der Massenspektrometrie kam es ab 1910 zu einer in ihrer Fruchtbarkeit für die Wissenschaft gar nicht hoch genug einzuschätzenden Zusammenarbeit zwischen \textsc{Thomson} und einem seiner Doktoranden, \textsc{Francis William Aston} (1877--1945). Bereits 1906 hatte \textsc{Thomson} für seine Entdeckung des Elektrons den Nobelpreis für Physik gewonnen\footcite[vgl.][S.\,146]{Tipler2010} und wurde bei der Entwicklung des sogenannten \textit{Parabelspektrographen} (vgl. Abb. \ref{fig:thoms2}), mit welchem erstmals zwei \textit{Neon-Isotope} --- $^{20}$Ne und $^{22}$Ne --- nach Masse getrennt werden konnten, von \textsc{Aston} unterstützt (1912), welcher 1922 mit dem Nobelpreis für Chemie ausgezeichnet werden sollte.\footcite[vgl.][S.\,785]{Gross2012} Allein anhand der Nobelpreiskategorien lässt sich die Interdisziplinarität der Massenspektrometrie gut verdeutlichen.\par
+\input{images/parabelspektograph}
+\textsc{Thomson}s Parabelspektrograph, welcher in Abbildung \ref{fig:thoms2} dargestellt wird, beschleunigt mittels einer zwischen \textit{Anode} und \textit{Kathode} angelegten Spannung $U_\mathrm{B}$ die positiv geladenen Neon-Ionen in $x$-Richtung. In einem Bereich von parallel überlagerten elektrischen und magnetischen Felder führt das E-Feld zu einer Ablenkung in $y$-Richtung, während das B-Feld die Ladungen in $z$-Richtung ablenkt. Teilchen gleichen $\sfrac{q}{m}$-Verhältnisses werden entlang einer Parabel abgelenkt, die eine eindeutige Zuordnung der spezifischen Ladung ermöglicht.\par
+Aus Intensitätsgründen war es jedoch notwendig, eine Fokussierung der Ionenstrahlen zu erreichen, um auch geringere Probenvolumina zu untersuchen, oder Messungen in kürzerer Zeit durchführen zu können.\par
+Die \textit{Geschwindigkeitsfokussierung}, welche diese Arbeit zusätzlich zu der Aufspaltung nach Masse-Ladungs-Verhältnis umsetzen will, wurde 1919 von \textsc{Aston} realisiert.\footcite[vgl.][S.\,51]{Demtroeder2010} Der nächste Abschnitt stellt seinen Versuchsaufbau zusammengefasst dar.
+
+
+
+\section{Astons Massenspektrometer}
+\label{sec:aston}
+Das Massenspektrometer von \textsc{William Aston} dient dieser Arbeit als Vorlage für jedwede Analogiebetrachtungen. Mit seiner Hilfe (und derjenigen, der beiden verbesserten Ausführungen) konnte \textsc{Aston} die Majorität der natürlich vorkommenden \textit{Isotope} identifizieren.
+%\subsection{Funktionsprinzipien}
+\textsc{Aston}s Spektrograph utilisiert räumlich getrennte, hintereinandergeschaltete elektrische und magnetische Felder.\footcite[die nachfolgende Herleitung ist in weiten Teilen eine Paraphrasierung von][S.\,51--52]{Demtroeder2010}. Das E-Feld ist in $y_-$-Richtung, das B-Feld in $z_-$-Richtung orientiert, wodurch die Streuung der beiden Feldern anti-parallel ist (siehe Abb. \ref{fig:aston}).
+Nach Durchfliegen des elektrischen Feldes der Länge $l_1$ ist der Ionenstrahl nach Gleichung \eqref{eq:bewegung4} um $y(l_1)$ aus der Startrichtung ausgelenkt, woraus eine Steigung berechnet werden kann, die den Winkel $\alpha$ über den Quotienten von $\Delta y$ und $\Delta x$ berechenbar macht:
+\begin{equation}
+\label{eq:aston1}
+\arctan(-\frac{El_1}{2U_\mathrm{B}})=\arctan(-\frac{qEl_1}{m\dot{x}^2})=\alpha
+\end{equation}
+Im Magnetfeld kann analog
+\begin{equation}
+\label{eq:aston2}
+\arctan(\frac{qBl_2}{m\dot{x}})=\beta
+\end{equation}
+gezeigt werden. Durch diese leicht abweichenden, jedoch eleganteren Ausdrücke der Ablenkungen (vgl. Formeln \eqref{eq:bewegung4} und \eqref{eq:bfeld7}) sieht man eine umgekehrte Proportionalität der Ablenkung eines Teilchens zu seiner kinetischen Energie durch die Coulombkraft und gleichsam die umgekehrte Proportionalität zum Impuls durch die Lorentzkraft. 
+
+Bei Berücksichtigung der Reihenentwicklung des \textit{Tangens} kann für sehr kleine Ablenkwinkel ($\alpha << \SI{E-1}{\radian}$) die Näherung $\tan \alpha \approx \alpha$ verwendet werden, wobei der relative Fehler sich bis $\alpha = \sfrac{\uppi}{18}$ auf unter $\SI{1}{\percent}$ beläuft.
+\input{images/aston}
+Grafik \ref{fig:aston} zeigt mit der waagerechten Strecke vom Mittelpunkt des Plattenkondensators bis zum Detektor, $(a+b)$, und der $x$-Entfernung des hälftigen Bogenmaßes über dem Magnetfeld bis zum Detektor, $b$, somit die Relation
+\begin{equation}
+\label{eq:aston4}
+D= b\tan(\beta)-(a+b)\tan(\alpha)\approx b\beta - (a+b)\alpha.
+\end{equation}
+Die Abweichungsstreuung $\mathrm{d}D$ muss sehr klein gegenüber der Geschwindigkeitsdifferenz der Ionen sein, um von einer Geschwindigkeitsfokussierung sprechen zu können. In der Skizze sind sowohl schnellere Ionen (geringere Ablenkung im E-Feld) als auch langsamere Ionen (größere Streuung) angedeutet. Es wird demnach eine \textit{Fokusbedingung} gesucht. Diese ist mit der Lösung der Gleichung
+\begin{equation}
+\frac{\mathrm{d}D}{\mathrm{d}\dot{x}}=0
+\end{equation}
+und den Winkeländerungen in Abhängigkeit von der Geschwindigkeit 
+\begin{equation}
+\begin{alignedat}{2}
+\label{eq:aston3}
+\frac{\mathrm{d}\alpha}{\mathrm{d}\dot{x}} & =-\frac{2\alpha}{\dot{x}}\\
+\frac{\mathrm{d}\beta}{\mathrm{d}\dot{x}} & =-\frac{\beta}{\dot{x}},\\
+\end{alignedat}
+\end{equation}
+gegeben als
+\begin{equation}
+\begin{alignedat}{2}
+ & b\frac{\mathrm{d}\beta}{\mathrm{d}\dot{x}}-(a+b)\frac{\mathrm{d}\alpha}{\mathrm{d}\beta}&&=0\\
+\Rightarrow&\frac{2(a+b)\alpha}{\dot{x}}&&=\frac{b\beta}{\dot{x}}\\
+\Rightarrow& D &&=(a+b)\alpha. 
+\end{alignedat}
+\end{equation}
+Somit ist die benötigte Detektorgeometrie, für die man eine Geschwindigkeitsfokussierung erreicht, nur abhängig von dem Ablenkwinkel $\alpha$ im elektrischen Feld. Die Photoplatte muss demnach um eine geeigneten Winkel gegenüber der $x$-Achse gedreht werden, mit welchem die Blendengröße und -position für $B_3$ aus der zu detektierenden mittleren Geschwindigkeit $\bar{\dot{x}}$ hergeleitet werden müssen. 
+
+
+

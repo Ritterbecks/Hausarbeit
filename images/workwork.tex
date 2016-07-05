@@ -1,0 +1,132 @@
+  \thisfloatsetup{%
+  capbesidewidth=\marginparwidth
+  }
+\begin{figure}[htbp]
+\centering
+%\sansmath
+\subfloat[]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.98]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+	axis on top,
+    width=\textwidth,  
+    height=6.797cm,
+    xmin=0,
+    xmax=30,
+    ymin=0,
+    ymax=1200,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Entfernung $s$},
+    ylabel={\rotatebox[origin=b]{270}{Arbeit $W$}},   
+   x label style={at={(axis cs:25,-150)}},
+    y label style={at={(axis cs:-3.0,780)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\footnotesize},
+    yticklabels={${200}$, ${400}$, ${600}$,  ${800}$,  ${\si{\milli\newton\centi\metre}}$, ${1200}$ },            
+    ytick={200,400,600, 800, 1000, 1200},
+    xticklabels={0, 5, 10, 15, 20, $\si{\centi\metre}$, 30},
+     xtick={0,5,10,15,20,25,30}, 
+    scaled ticks=false,           
+           legend style ={ at={(axis cs:30,1200)}, 
+     anchor=north east, draw=none, 
+         fill=none,align=left, text=Honeydew4!70!black,
+          font=\footnotesize},               
+    label style={font=\small,Honeydew4!70!black,},
+    cycle list name=mycolor4 white,
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-5.50, 850) -- (axis cs:-5.50, 1150);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:21.00, -150) -- (axis cs:29.00, -150);
+\addplot
+table[x = x, y =y]{images/data/work1.dat};
+\addlegendentry{$\SI{17.5}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/work2.dat};
+\addlegendentry{$\SI{15.0}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/work3.dat};
+\addlegendentry{$\SI{12.5}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/work4.dat};
+\addlegendentry{$\SI{10.0}{\milli\metre}$};
+\end{axis}
+\end{scope}
+\clipright
+\end{tikzpicture}}
+\\
+\subfloat[]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.98]
+\begin{axis}[	
+	clip=false, % Verhindet weiße Punkte bei vielfach geplotteten x-Werten
+	ymajorgrids,
+    xmajorgrids,
+          axis x line*=middle,
+          axis y line*=center,
+    grid style={white},
+%	axis on top,
+    width=\textwidth,  
+    height=6.797cm,
+    xmin=0,
+    xmax=30,
+    ymin=0,
+    ymax=1200,
+    %/tikz/ybar interval,
+    tick align=center,
+    xtick align=outside,
+    xlabel={Entfernung $s$},
+    ylabel={\rotatebox[origin=b]{270}{Arbeit $W$}},   
+   x label style={at={(axis cs:25,-150)}},
+    y label style={at={(axis cs:-3.0,780)}},
+    axis line style={Honeydew4!70!black},
+    ticklabel style={Honeydew4!70!black, inner sep=1pt,
+                font=\footnotesize},
+    yticklabels={${200}$, ${400}$, ${600}$,  ${800}$,  ${\si{\milli\newton\centi\metre}}$, ${1200}$ },            
+    ytick={200,400,600, 800, 1000, 1200},
+    xticklabels={0, 5, 10, 15, 20, $\si{\centi\metre}$, 30},
+     xtick={0,5,10,15,20,25,30}, 
+    scaled ticks=false,           
+           legend style ={ at={(axis cs:30,1200)}, 
+     anchor=north east, draw=none, 
+         fill=none,align=left, text=Honeydew4!70!black,
+          font=\footnotesize},               
+    label style={font=\small,Honeydew4!70!black,},
+    cycle list name=mycolor white,
+    enlarge x limits=true,
+    %tick style={draw=none},
+    x tick label as interval=false,
+]
+\draw[thick, Honeydew4!70!black, ->,>={latex[Honeydew4!70!black, round, length=0.4cm, width=4pt]}] (axis cs:-5.50, 850) -- (axis cs:-5.50, 1150);
+\draw[thick,Honeydew4!70!black, ->,>={latex[Honeydew4!70!black,round, length=0.4cm, width=4pt]}] (axis cs:21.00, -150) -- (axis cs:29.00, -150);
+\addplot
+table[x = x, y =y]{images/data/work1.dat};
+\addlegendentry{$\SI{17.5}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/work5.dat};
+\addlegendentry{$\SI{15.0}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/work6.dat};
+\addlegendentry{$\SI{12.5}{\milli\metre}$};
+\addplot
+table[x = x, y =y]{images/data/work7.dat};
+\addlegendentry{$\SI{10.0}{\milli\metre}$};
+\addplot[mycolor, fill=none, smooth, domain=0:31,thick] {0.7145*\x^2-45.18*\x+1093};
+\end{axis}
+\end{scope}
+\clipright
+\end{tikzpicture}}
+  \caption[An einer vorbeirollenden Kugel verrichtete Arbeit]{Geplottet sind die Arbeitsintegrale nach Gleichung \eqref{eq:gebl2}. {\color{mycolor}\textbf{(a)}:} Je kleiner der Kugelradius $r$, desto geringer ist die Strömungswiderstandskraft und damit auch das Integral über selbige. {\color{mycolor}\textbf{(a)}:} Durch Multiplikation der Arbeitsintegrale mit den Proportionalitätsfaktoren, welche aus den Kugelprojektionsflächen berechnet werden, kann die lineare Skalierung gezeigt werden.}
+  \label{fig:workwork}
+  \vspace{-0pt}
+\end{figure}

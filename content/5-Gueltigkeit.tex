@@ -1,0 +1,161 @@
+\chapter{Gültigkeit}
+\label{kap:5}
+\bookmarksetupnext{level=subsubsection}
+\chapterinfo{Die entscheidenden Versuchsparameter werden durch selbstgebaute Apparaturen gemessen und mit den theoretischen Erwartungen verglichen, um aus der Schnittmenge ein mathematisches Modell des Analogieexperimentes zu entwickeln.}
+
+\textit{Die entscheidenden Versuchsparameter werden durch selbstgebaute Apparaturen gemessen und mit den theoretischen Erwartungen verglichen, um aus der Schnittmenge ein mathematisches Modell des Analogieexperimentes zu entwickeln.}
+
+\section{Kraftmessung im Strömungsfeld}
+
+Mit dem Ziel, die Krafteinwirkung des Gebläses auf vorbeirollende Kugeln --- und damit auch die Impulsänderung --- funktional ausdrücken zu können, wird eine Methode erarbeitet, das Strömungsfeld des Föhns systematisch zu vermessen.
+
+Zuerst wird, da Luftwiderstandsbeiwerte zumeist mit einem \textit{Sektor-Kraftmesser} bestimmt werden, der Versuch unternommen, diese Art von Messgerät nachzubauen. Das Prinzip eines Sektor-Kraftmessers kann mit einem Messwagen, der auf einem Gleis positioniert und über eine Umlenkrolle mit einem Federkraftmesser verbunden ist, imitiert werden.
+
+\input{images/stroemungskraftmessung1}
+
+\noindent Hierzu erhält ein Spielzeugauto eine Bohrung durch die Bodenplatte, um mit einem Haken den zu vermessenden Gegenstand anzubringen, und --- für die Verbindung mit dem Kraftmesser --- eine Bohrung am Heck. Als Messfläche wird eine dünne Sperrholzplatte genutzt, in welche eine schmale Aussparung für den unteren Haken gesägt wird. Um die Kraftmessung nur in eine Raumrichtung zuzulassen, werden mit einem Stechbeitel Schienen für den Messwagen in die Platte gehauen. Ein Foto des Versuchsaufbaus ist in Darstellung \ref{fig:stroemungskraftmessung1} abgebildet.
+
+Bereits nach den ersten Messungen stellt sich allerdings heraus, dass der Versuchsaufbau aus mehreren Gründen ungeeignet ist
+\begin{items}
+\item Federkraftmesser haben einen relativ langen \textit{Hubweg}. Dadurch wird nur für einen Sekundenbruchteil der wahre Abstand des Föhns zu der Kugel vermessen, da der Messwagen einige Zentimeter vorwärts rollt, was in einem Ausschlag des Federkraftmessers auf eine Kraft $N_\mathrm{max}$ gesehen werden kann, deren Anzeigedauer jedoch nicht lang genug für eine Aufzeichnung ist.
+\item Bei der Versuchsanordnung befindet sich der Ball nicht unmittelbar unterhalb der Platte, sondern in einem Abstand von ca. $\SI{1}{\centi\metre}$, was für eine Modellierung des Strömungsverhaltens im zu erstellenden Versuchsaufbau nicht hinnehmbar ist. Zudem ist das Sperrholzstück zu kurz, als dass das Gebläse direkt an ihm montiert werden könnte. Für verschiedene Messabstände ist jeweils eine zeitaufwendige Neukalibrierung erforderlich. 
+\item Eine Messreihe von ausreichender Größe für eine mathematische Beschreibung benötigt sehr viele Messwerte, die nach \textcite{Schilling1987} im Bereich um $\SI{100}{\milli\newton}$ zu erwarten sind. Ein Federkraftmesser dieser Genauigkeit kann zwar beschafft werden, jedoch erfordern die näheren Föhnabstände $s$ bei größerem Kugelradius $r$ einen weiteren Kraftmesser für einen höheren Messbereich, was eine Vergleichbarkeit der Messungen wiederum unmöglich macht.
+\end{items}
+
+\input{images/stroemungskraftmessung3}
+
+\noindent Aus einem Schülerversuch sind \textit{Coulomb-Kraftmesser} bekannt (siehe Abbildung \ref{fig:stroemungskraftmessung3}), die auf ein hundertstel $\si{\milli\newton}$ genau messen können und zudem --- laut Herstellerangaben von \textsc{Leybold Didactic}\footnote{vgl. \url{http://www.ld-didactic.de/documents/de-DE/GA/GA/5/524/524060d.pdf}, abgerufen am 29.06.2016} --- einen Hub von lediglich $\pm \SI{0.5}{\milli\metre}$ haben, womit diese Kraftmesser alle zuvor genannten Bedingungen erfüllt. Von Vorteil ist auch, dass durch die Messwerterfassung mit \textsc{Cassy} über ein Zeitintervall gemittelte Werte und damit genauere Ergebnisse möglich sind.
+
+\input{images/stroemungskraftmessung4}
+
+\noindent Ein Messtisch der Länge $l=\SI{35}{\centi\metre}$, der aus Sperrholz und Möbelfüßen schnell hergestellt ist, erhält ein Koordinatensystem, um die Datenerfassung zuverlässig und zügig vornehmen zu können. In die Bohrung des Coulomb-Kraftmessers wird von oben durch eine Ausfräsung des Messtisches ein mit einer Kugel beklebter Haken geschraubt. Durch diesen Aufbau ist es möglich, die Bälle direkt oberhalb der Platte, jedoch reibungsfrei zu lagern. Das Gebläse, wird auf einem schweren Stativ so angebracht, dass die Düsenöffnung $\SI{2}{\centi\metre}$ in die Platte hineinragt.
+
+Die 56 Messreihen (4 Kugelradien á 7 Abstände á 2 Gebläsestufen) werden folgendermaßen aufgezeichnet: Der Kraftmesser wird in einem festen Abstand $s_i$ zum Föhn fixiert. Dieser wird anschließend möglichst parallel zur $x$-Achse auf die $\SI{5}{\milli\metre}$ auseinanderliegenden Messpunkte geführt, wo nach einer Integrationszeit von $\SI{300}{\milli\second}$ der jeweilige Messwert von der Benutzeroberfläche des \textit{Cassy-Lab 2} abgelesen wird. Die ersten beiden Messungen sind in Tabelle \ref{tab:kraftmessung1} aufgelistet.
+
+\input{tables/kraftmessung1}
+
+\noindent Die Messungenauigkeit auf die Kraft $F_\mathrm{LW}$ beträgt nach den Herstellerangaben des verwendeten Gerätes $\SI{1}{\percent}$, womit sie gegenüber der Justage des Gebläses vernachlässigbar ist. Wird der Haartrockner nicht genau parallel zur $x$-Achse ausgerichtet, so ergibt sich über den Tangens bei zunehmendem Abstand $s$ eine Entfernungsdifferenz $\Delta s$ von bis zu $\SI{1.1}{\centi\metre}$, wenn davon ausgegangen wird, dass die Ausrichtung nur auf $\SI{2}{\degree}$ genau erfolgt (hierzu sei auf grafische Auftragungen wie \ref{fig:kraftmessung9} im Anhang verwiesen, bei denen eine \textit{Schiefe} erkannt werden kann). Selbst bei der als gering angenommenen Abweichung übertrifft diese Unsicherheit diejenige des Messgerätes um den Faktor fünf.
+
+\input{images/kraftmessung1}
+
+\noindent Abbildung \ref{fig:kraftmessung1} zeigt die Diagramme zu den Messwerten aus Tabelle \ref{tab:kraftmessung1}. Die Kurvenanpassung in Form einer Gaussglocke, die mit der Software \textit{Matlab} berechnet wird, folgt dem Modell
+\begin{equation}
+\label{eq:gebl1}
+f(d)=A\cdot \e^{-\left(\frac{d-\mu}{2\sigma^2}\right)^2},
+\end{equation}
+welches eine klassische \textit{Gaußverteilung} darstellt (siehe Tab. \ref{tab:gaaussfit1}). Werden nun die Integrale unterhalb der Kurven berechnet, so können diese als \textit{an den Kugeln verrichtete Arbeit} $W$ gesehen werden, wobei die Lösung durch die Verschiebung der Messpunkte um $\mu$ das Integral vereinfacht:
+\begin{equation}
+\label{eq:gebl2}
+\begin{alignedat}{2}
+ W & = \int_{d_\mathrm{min}}^{d_\mathrm{max}}A\cdot \e^{-\frac{d}{2\sigma^2}^2}\mathrm{d}d\\
+ & = \frac{1}{2}\sqrt{\uppi}\cdot A\cdot 2\sigma^2 \cdot \mathrm{erf}(\frac{d}{2\sigma^2}),
+\end{alignedat}
+\end{equation}
+wobei $\mathrm{erf}(\sfrac{d}{2\sigma^2})$ die \textit{gauß'sche Fehlerfunktion}
+\begin{equation}
+\mathrm{erf}(\frac{d}{2\sigma^2})=\frac{2}{\sqrt{\uppi}}\int_{0}^{\sfrac{d}{2\sigma^2}}\e^{-\tau^2}\mathrm{d}\tau
+\end{equation}
+bezeichnet. Die Funktion ist punktsymmetrisch zum Koordinatenursprung und konvergiert bereits ab $x=\pm 1$ schnell gegen $\pm 1$. Wie \textsc{Bronstein} aufführt, gilt zudem 
+\begin{equation}
+2\Phi (x)-1=\mathrm{erf}(\frac{x}{\sqrt{\uppi}}),
+\end{equation} 
+die Fehlerfunktion kann demnach mit der \textit{Standardnormalverteilung} $\Phi(x)$ berechnet werden.\footfullcite[vgl.][S.\,517]{Bronstein2008}
+
+\input{tables/gaussfit1}
+
+\noindent\textcite{Schilling1987} nehmen als verrichtete Arbeit das gesamte Integral unter $F_\mathrm{LW}(d)$ an. Sind die Kugeln jedoch weiter von dem Gebläse entfernt, sind sie aufgrund der Anordnung des Analogieexperiments mit seinen zwei disjunkten Platten diejenigen, welche zu den \textit{schnellen} (nur bis zu $\SI[fraction-function=\sfrac]{1}{\metre\per\second}$, womit das Adjektiv nicht überbewertet werden sollte) Kugeln gezählt werden, kürzer im Zentrum des Strömungsfeldes. 
+Als Richtwert wird daher angenommen, dass sich die Kugeln bei einer Fixierung der Gebläse-Position bei $x=\SI{0}{\centi\metre}$ von $x=-\SI{3}{\centi\metre}$ bis $x=\SI{3}{\centi\metre}$ im Strömungsfeld befinden.
+
+\input{images/workwork}
+
+\noindent Durch die Gleichung \eqref{eq:gebl2} werden die Arbeitsintegrale für die Sphären mit den Radien $r_1=\SI{10,0}{\milli\metre}$, $r_2=\SI{12,5}{\milli\metre}$, $r_3=\SI{15,0}{\milli\metre}$ und $r_4=\SI{17,5}{\milli\metre}$ berechnet. Mit Erinnerung an Abschnitt \ref{sec:umsetzung} wird von einer Proportionalität der Arbeit und damit auch der Impulsänderung mit der Projektionsfläche der Kugeln ausgegangen. Hierbei gilt $A_\mathrm{proj_1}\cdot 3,06=A_\mathrm{proj_2}\cdot 1,96=A_\mathrm{proj_3}\cdot 1,36=A_\mathrm{proj_4}$. Die Integrale sind in Abbildung \ref{fig:workwork} für die einzelnen Messreihen aufgetragen. Es ist gut zu sehen, dass die Hypothese angenommen werden kann, obwohl zwei Messreihen für die Kugel mit dem Radius $\SI{10}{\milli\metre}$ um bis zu $\SI{20}{\percent}$ unter den erwarteten Werten liegen. Für die eingezeichnete polynomische Anpassung wurde daher die kleinste Kugel nicht berücksichtigt.
+
+\section{Geschwindigkeitsmessung der Anströmung}
+
+Mit der ausgemessenen Kraftwirkung können ebenfalls die Widerstandsbeiwerte $c_\mathrm{W}$ berechnet und mit den Literaturwerten aus \ref{tab:cwwerte} verglichen werden, sofern die Geschwindigkeit der Anströmung bekannt ist.
+Zu diesem Zweck wird ein simples \textit{Anemometer} \footnote{Windgeschwindigkeitsmesser} gebaut. Die Konstruktion kann an dem Foto \ref{fig:windgeschw1} erläutert werden:
+
+\input{images/windgeschw1}
+
+\noindent Zwei Tischtennisbälle werden halbiert, um möglichst leichte Schalen zu erhalten. Am Rand jeder Hälfte wird ein kleines Loch gebohrt, durch welches ein Stahlnagel von $\SI{30}{\milli\metre}$ Länge gesteckt und anschließend eingeklebt wird. Drei dergestalt präparierte Schalen steckt man nun --- jeweils um $\SI{120}{\degree}$ gegeneinander verschränkt --- durch Bohrungen in der Verschlusskappe eines Kosmetikartikels oder ähnlichem. Hierbei fixieren die drei kurzen Stifte auch einen weiteren Nagel von mindestens $\SI{60}{\milli\metre}$ Länge, der orthogonal und mittig platziert wird, bevor die Kappe mit \textit{Epoxidharz} aufgefüllt wird.
+
+Durch ein Stück dickeren Sperrholzes (in der Abbildung $\SI{30}{\milli\metre}$) wird ein Loch von $\SI{4}{\milli\metre}$ Durchmesser gebohrt, in welches ein passend abgelängter Teil eines Messingrohres mit gleichem Außendurchmesser eingeschlagen wird, um den langen Nagel möglichst \textit{lotrecht} durchzuführen. An dem unteren Ende des Stahlstiftes wird eine weitere Halbschale fixiert, an welcher ein Magnet angeklebt ist (Mitte rechts im Bild). 
+
+Der durch das Rohr geführte Stahlstift dreht sich durch einen Luftstrom bei geringer Reibung auf einer Glasscherbe, die auf die Bodenplatte geklebt ist. Rechts unten in dem Gehäuse befindet sich ein \textit{Reed-Kontakt}, der beim Passieren des Magneten schließt. Durch Vermessen der Distanz von den Schalenmitten zu dem Stahlstift wird der \textit{Radumfang} am Fahrradcomputer eingegeben.
+
+\input{tables/windspeed}
+
+\noindent Die Verifikation der Justierung erfolgt, indem der Anemometer bei eingeschaltetem Tempomat eines Autos möglichst weit aus dem (Beifahrer-) Fenster gehalten wird. 
+Mit diesem Messgerät werden die Strömungsgeschwindigkeiten des Föhns für die Entfernungen $s_i$ bestimmt und in Tabelle \ref{tab:windspeed} aufgelistet, wobei eine Messungenauigkeit von $\SI{10}{\percent}$ auf die Geschwindigkeit und die bereits genannten --- über den Tangens berechneten --- Werte für den Gebläseabstand angenommen werden. 
+
+\input{tables/rey}
+
+\noindent Mit den nun bekannten Geschwindigkeiten kann ein mittlerer $c_\mathrm{W}$ Wert für die Kugeln bestimmt werden. Für die Gebläsestufe 2 führt Tabelle \ref{tab:rey} die Reynolds-Zahlen, experimentellen und theoretischen Luftwiderstandsbeiwerte der größten Kugel auf. Die restlichen Gegenüberstellungen befinden sich im Anhang (Tab. \ref{tab:rey2}, \ref{tab:rey3}).
+
+Als Nebeneffekt der Analyse des $c_\mathrm{W}$-Wertes kann schließlich gezeigt werden, dass bei den Versuchsparametern der Energieverlust auf Grund des Luftwiderstandes vernachlässigbar klein ist:
+
+Sei die Starthöhe maximal, d.\,h. $h=\SI{10}{\centi\metre}$, so folgt aus der Energieerhaltung
+\begin{equation*}
+v=\sqrt{\frac{10}{7}gh}\approx \SI{1,18}{\metre\per\second}.
+\end{equation*}  
+Es gilt demnach für die Luftwiderstandskraft
+\begin{equation*}
+F_\mathrm{W}=c_\mathrm{W}A\frac{\rho\dot{x}^2}{2}\approx \SI{0.4}{\milli\newton}
+\end{equation*}
+für die größten verwendeten Kugeln und maximal mögliche Geschwindigkeit in $x$-Richtung.
+Geht man näherungsweise von gleichbleibender Bewegungsgeschwindigkeit aus, so ist $F\cdot x = \Delta E_\mathrm{LW}$. Auf einer Strecke von $\SI{50}{\centi\metre}$ gilt damit $\Delta E_\mathrm{LW}\approx \SI{0,2}{\milli\newton\metre}$ gegenüber der Lageenergie von $\SI{15.9}{\milli\newton\metre}$ einer der verwendeten Holzkugeln mit einer Dichte um $\SI[fraction-function=\sfrac]{700}{\kilo\gram\per\metre\cubic}$.
+
+\section{Vorfaktor der potentiellen Energie}
+
+\input{images/aufbau2}
+
+\noindent Wie sich bei dem Vergleich mit \textsc{Mais} herausgestellt hat, werden nur gut $\SI{80}{\percent}$ der potentiellen in kinetische Energie umgesetzt. Um zu überprüfen, ob das neue Konzept für eine Beschleunigereinheit dazu in der Lage ist, die Energie signifikant besser umzuwandeln, wird neben den Daten aus Tabelle \ref{tab:energy} eine Messreihe mit der neuen Startvorrichtung aufgezeichnet, um anschließend einen \textit{Zweistichproben-Test} durchzuführen (siehe Abb. \ref{fig:aufbau2}).\footcite[vgl.][S.\,283]{Cramer2008} 
+
+Bei der Messreihe werden $10$ Kugelbahnen (Radius $\SI{17.5}{\milli\metre}$) per Video aufgezeichnet. An der Beschleunigereinheit sind fünf Markierungen angebracht, von denen aus jeweils zwei Kugeln (1 und 6, 2 und 7 etc.) losgelassen werden. Ein Überblick der Messung liefert Tabelle \ref{tab:maisbex1}.
+
+\input{tables/maisbex1}
+
+\noindent Seien die beiden unabhängigen Stichproben normalverteilt mit dem Erwartungswert $\mu$ und der Varianz $\sigma^2$, d.\,h.
+\begin{equation*}
+X_1,...\,,X_{n_1}\distras{iid} N(\mu_1,\, \sigma^2),\,Y_1,\,,Y_{n_2}\distras{iid} Y(\mu_2,\, \sigma^2),
+\end{equation*}
+wobei angenommen wird, dass die Varianzen gleich sind, da die jeweiligen Startvorrichtungen aus dem gleichen Material erstellt wurden, so ergibt sich der Schätzer für die Varianz zu
+\begin{equation*}
+\widehat{\sigma}^2=\frac{1}{n_1+n_2-2}\left(\sum\limits_{i=1}^{n_1}(X_i-\overline{X})^2+\sum\limits_{j=1}^{n_2}(Y_j-\overline{Y})^2\right)\approx 18,49
+\end{equation*}
+Überprüft wird nun die \textit{Teststatistik} $\widehat{D}$
+\begin{equation*}
+=\frac{\overline{X}-\overline{Y}}{\widehat{\sigma}\sqrt{\sfrac{1}{n_1}+\sfrac{1}{n_2}}}\approx -6,84
+\end{equation*}
+mit der Entscheidungsregel \textit{die Nullhypothese $H_0: \mu_1\geq \mu_2$ wird abgelehnt, falls}
+\begin{equation*}
+\widehat{D}<-t_{1-\alpha}(n_1+n_2-2)
+\end{equation*}
+gilt, wobei $t_{1-\alpha}$ das Beta-Quantil der T-Verteilung ist \footnote{$\beta = 1-\alpha$}. Mit
+\begin{equation*}
+-t_{0,9995}(17)=-3,965 > \widehat{D}
+\end{equation*}
+kann zum Signifikanzniveau $\SI{99.95}{\percent}$ bewiesen werden, dass der Erwartungswert der Abweichung zwischen potentieller und kinetischer Energie geringer als bei der alten Startvorrichtung ist. 
+
+Die Messungen der größten Holzkugeln haben im Mittel eine Umsetzung von $\SI{93}{\percent}$ der Lageenergie in kinetische Energie ergeben. Daher wird
+das Funktionsprinzip der neuen Startvorrichtung als überlegen angesehen,
+bei der mathematischen Beschreibung der Bewegungsgleichung $0,9\cdot E_\mathrm{pot}\approx \sfrac{7}{10}mv^2$ gesetzt und schließlich
+vorgeschlagen, diese Beschleunigereinheit von der mechanischen Werkstatt anfertigen zu lassen. 
+
+\section{Voraussagbarkeit}
+\label{sec:voraus}
+Im Zuge der Planung des Versuchsaufbaus wurde das erwartete Verhalten von Kugeln modelliert. Mit der im vorigen Abschnitt beschriebenen Messreihe wird nun überprüft, inwiefern das Modell Gültigkeit besitzt.
+
+Für den Einfluss der schiefen Ebene werden die in Kapitel \ref{kap:4} aufgestellten Bewegungsgleichungen für die $x$- und $y$-Positionen der rollenden Massen verwendet. Die Krafteinwirkung des Strömungsfeldes wird zunächst als punktueller Kraftstoß angenommen, der eine Geschwindigkeitsänderung in $y$-Richtung verursacht. Damit ergeben sich die graphischen Auftragungen in Abbildung \ref{fig:plot1}
+
+\input{images/plot1}
+\input{images/plot2}
+\newpage
+
+\noindent Die Kugeln 6--10 sind in Abbildung \ref{fig:plot2} aufgetragen. Die Fokussierungs-Zone liegt ca. $\SI{2.5}{\centi\metre}$ weiter als es bei den rechnerischen Werten der Fall ist, was sich mit den Erwartungen deckt: Die Impulsänderung erfolgt nach der Modellierung über eine Strecke von $\SI{6}{\centi\metre}$, d.\,h. drei Zentimeter vor $x=\SI{60}{\centi\metre}$ und drei dahinter. Über diese Distanz werden die Kugeln auf eine Kreisbahn gezwungen, wie dies auch im magnetischen Feld der Fall ist. Je schneller die Kugel, desto größer der Radius. Dadurch verschiebt sich die Spur der Kugeln im Mittel um die halbe Strecke des Kraftstoßes, d.\,h.  $\sfrac{6}{2}\,\si{\centi\metre}=\SI{3}{\centi\metre}$.
+
+Die weiteren Messreihen mit Holzkugeln haben ähnliche, jedoch nicht so gute Ergebnisse geliefert. Die Fokussierung erfolgte jeweils im Bereich von $y=\SI{2}{\centi\metre}$ bis $\SI{5}{\centi\metre}$, wobei es zu mehr Fehlmessungen gekommen ist, die durch die Asymmetrie der Kugeln, mangelhafte Justierung der Startrampe und ein Hüpfen an dem Übergang zwischen den beiden Platten bedingt waren. Die Glasmurmeln lieferten keine akzeptablen Ergebnisse.
+
+Bei dem endgültigen Versuchsaufbau sollten die Übergänge bis zu $\SI{5}{\centi\metre}$ abgeklebt werden, um die Höhendifferenz mit Acryl auszugleichen. Nach einer Antrockenzeit von einigen Stunden kann der gesamte Experimentiertisch beispielsweise mit Klavierlack ausgerollt werden, was den zusätzlichen Vorteil einer größeren Oberflächenhärte liefert, was den Rollwiderstand reduziert.
+
+Die Verlässlichkeit ließe sich weiter erhöhen, indem industriell gefertigte Kugeln in Kugellagerqualität beschafft werden würden. Für einen Versuchsnachmittag sollte ein vollständiger Satz genügen.

@@ -1,0 +1,29 @@
+  \thisfloatsetup{
+  capbesidewidth=\marginparwidth,}
+
+\begin{table}[htbp]
+\centering
+%\sffamily,
+\small
+%\sansmath
+\arrayrulecolor{white}
+\vspace{0.2cm}
+  \rowcolors{2}{halfgray!15}{halfgray!5}
+ \setlength{\extrarowheight}{.4em}
+			\begin{tabularx}{0.99\textwidth}{l*{1}{>{\RaggedRight\arraybackslash}X}}		
+\rowcolor{mycolor}\multicolumn{1}{l}{{\color{white}\textbf{Intervall}}}&  \multicolumn{1}{l}{{\color{white}\textbf{$\boldsymbol{c_\mathrm{W}(R\kern-.04em e)}$ [ohne Einheit]}}}\\
+$I_0$:\quad $R\kern-.04em e < 0,01$ &  $\frac{3}{16}+\frac{24}{R\kern-.04em e}$\\
+$I_1$:\quad $0,01<R\kern-.04em e \leq 20$ &  $\frac{24}{R\kern-.04em e}\left(1+0,1315R\kern-.04em e^{0,82-0,05\log_{10}(R\kern-.04em e)}\right)$\\
+$I_2$:\quad $20<R\kern-.04em e \leq 260$ &  $\frac{24}{R\kern-.04em e}\left(1+0,1935R\kern-.04em e^{0,6305}\right)$\\
+$I_3$:\quad $260<R\kern-.04em e \leq 1500$ &  $10^{0,0294\ln^2(R\kern-.04em e)-0,4882\ln(R\kern-.04em e)+1,6435}$\\
+$I_4$:\quad $1,5\cdot 10^3 <R\kern-.04em e \leq 1,2\cdot 10^4$ &  $10^{0,0086\ln^3(R\kern-.04em e)-0,1753\ln^2(R\kern-.04em e)+1,1000\ln(R\kern-.04em e)-2,4571}$\\
+$I_5$:\quad $1,2\cdot 10^4<R\kern-.04em e \leq 4,4\cdot 10^4$ &  $10^{-0,0120\ln^2(R\kern-.04em e)+0,2766\ln(R\kern-.04em e)-1,918}$\\
+$I_6$:\quad $4,4\cdot 10^4<R\kern-.04em e \leq 3,4\cdot 10^5$ &  $10^{-0,0292\ln^2(R\kern-.04em e)+0,6866\ln(R\kern-.04em e)-4,3390}$\\
+$I_7$:\quad $3,4\cdot 10^5<R\kern-.04em e \leq 4.0\cdot 10^5$ &  $29,78-5,3\log_{10}(R\kern-.04em e)$\\
+$I_8$:\quad $4\cdot 10^5<R\kern-.04em e \leq 10^6$ &  $0,1\log_{10}(R\kern-.04em e)-0,49$\\
+$I_9$:\quad $ 10^6<R\kern-.04em e$ &  $0,19-8\cdot 10^6\frac{1}{R\kern-.04em e}$\\		  
+		\end{tabularx}
+		\caption[Widerstandsbeiwerte in Abhängigkeit von der Reynolds-Zahl]{Abschnittsweise definierte Funktion für die Widerstandsbeiwerte einer homogenen Vollkugel in Abhängigkeit von der Reynolds-Zahl nach \cite[S.\,112]{clift2013}. Die Autoren sprechen allerdings nur von \textsw{Empfehlungen}.}
+		\label{tab:cwwerte}
+\vspace{0.2cm}		
+		\end{table}

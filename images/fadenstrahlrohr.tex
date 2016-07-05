@@ -1,0 +1,118 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+\begin{figure}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\small
+%\sansmath
+\begin{tikzpicture}[even odd rule,
+	scale=1,
+	ka roehre/.style={fill=white,draw=black!80}
+]
+\begin{scope}[scale=1.43]
+\begin{scope}[xshift=0.25cm, yshift= 0.25cm]
+% Helmholtz-Spule hinten
+\path[top color=halfgray!50, bottom color=halfgray!25, draw=black] (0, 0) circle[radius=2.5] circle[radius=2.2];
+\end{scope}
+%B-Feld
+\foreach \x in {0,...,6}
+        { \foreach \y in {0,...,4} {
+            \draw ({-1.5+0.5*\x},{-1.0+0.5*\y}) node[mycolor2] {\textbf{.}};
+            \draw[mycolor2] ({-1.5+0.5*\x},{-1.0+0.5*\y}) circle (3pt);
+        };      
+};
+            \draw (0,-2) node[mycolor2] {\textbf{.}};
+            \draw[mycolor2] (0,-2) circle (3pt);
+            \draw (0,2) node[mycolor2] {\textbf{.}};
+            \draw[mycolor2] (0,2) circle (3pt);
+                        \draw (-2,0) node[mycolor2] {\textbf{.}};
+                        \draw[mycolor2] (-2,0) circle (3pt);
+                        \draw (2,0) node[mycolor2] {\textbf{.}};
+                        \draw[mycolor2] (2,0) circle (3pt);
+\foreach \x in {0,...,4}
+        { 
+            \draw ({-1.0+0.5*\x},-1.5) node[mycolor2] {\textbf{.}};
+            \draw[mycolor2] ({-1.0+0.5*\x},-1.5) circle (3pt);
+        };
+\foreach \x in {0,...,4}
+        { 
+            \draw ({-1.0+0.5*\x},1.5) node[mycolor2] {\textbf{.}};
+            \draw[mycolor2] ({-1.0+0.5*\x},1.5) circle (3pt);
+        };                              
+% Neon-Dampf
+\foreach \x in {1,...,20}
+        {
+            \pgfmathrandominteger{\a}{0}{359}
+            \pgfmathrandominteger{\b}{175}{195}
+            \shade[ball color=mycolor5!50, opacity=1] ({0.01*\b*cos(\a)}, {0.01*\b*sin(\a)}) circle (1.5pt);
+        }; 
+\foreach \x in {1,...,50}
+        {
+            \pgfmathrandominteger{\a}{0}{359}
+            \pgfmathrandominteger{\b}{20}{160}
+            \shade[ball color=mycolor5!50, opacity=1] ({0.01*\b*cos(\a)}, {0.01*\b*sin(\a)}) circle (1.5pt);
+        };      
+\foreach \x in {1,...,10}
+        {
+            \pgfmathrandominteger{\a}{220}{480}
+            \pgfmathrandominteger{\b}{165}{173}
+            \shade[ball color=mycolor!75, opacity=1] ({0.01*\b*cos(\a)}, {0.01*\b*sin(\a)}) circle (1.5pt);
+        };                          
+%Verkabelung
+\node[draw=none,fill=none] at (-4.35, 0.1){$U_\mathrm{Heiz}$};
+\node[draw=none,fill=none] at (-3.9, 0.4){$+$};
+\node[draw=none,fill=none] at (-3.9, -0.20){$-$};
+\draw[thick] (-1.8,0.0) -- ++ (-2.1,0);
+\draw[thick] (-1.04,0.0)--(-1.04,0.2) -- ++ (-2.86,0) ;
+\draw [fill=white] (-3.9, 0.0) circle (2pt);
+\draw [fill=white] (-3.9, 0.2) circle (2pt);
+\draw[fill=black] (-3.4,0.0) circle (2pt);
+\draw[thick] (-3.4,0.0) -- ++ (0,-0.25);
+\draw[thick] (-3.2,-0.25) -- ++ (1.4,0) -- ++ (0,-0.5);
+\draw [fill=white] (-3.2, -0.25) circle (2pt);
+\draw [fill=white] (-3.4, -0.25) circle (2pt);
+\node[draw=none,fill=none] at (-3.3, -0.65){$U_\mathrm{B}$};
+\node[draw=none,fill=none] at (-3.2, -0.5){$+$};
+%Elektronenstrahl
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor, thick] (-1.42,-0.85) arc (210.9:522:1.69);
+%Kathode
+\draw[decoration={aspect=0.9, segment length=3.4, amplitude=1.5,coil},decorate, mycolor3, thick] (-1.8,0.0) -- (-1.04, 0.0);
+% Anode
+\draw[fill=mycolor2!50] (-1.8,-0.7) arc (180:540:0.38 and 0.1);
+\draw[fill=mycolor2!50] (-1.8,-0.8) arc (180:360:0.38 and 0.1) -- ++ (0.0,0.1) arc (360:900:0.38 and 0.1) -- cycle;
+\draw[fill=halfgray!20, opacity=0.7] (-1.55,-0.70) arc (180:-180:0.12 and 0.04) arc (180:210:0.12 and 0.04) arc (150:30:0.12 and 0.04) ;
+% Schutzblech 
+\draw[fill=halfgray!50]  (-0.95, 0.45) -- ++ (-0.05, -0.05) -- ++ (-0.85, 0)-- ++ (0, 0.05) -- ++ (0.1, 0.1) -- ++ (0.9,0)  -- ++ (-0.10, -0.10) -- ++ (-0.9, 0);
+\draw[fill=halfgray!50] (-0.95, 0.45) -- (-1.0, 0.40) -- ++ (0, -1.40) -- ++ (0.05, 0) -- ++ (0, 1.45) -- ++ (0.1,0.1) -- ++ (0, -1.45)-- ++ (-0.1, -0.1);
+\draw[fill=halfgray!50] (-1.85, 0.45) -- (-0.95, 0.45) -- (-0.95, -1) -- (-1, -1) -- (-1, 0.4) -- (-1.85, 0.4) -- cycle;
+% Drehwurm aka Vakuumröhre
+\draw[mycolor!50] (-1.93,0.52) arc (165:-165:2) arc (15:90:0.29) -- ++ (-0.8,0) arc (270:90:0.1 and 0.31) arc (90:-90:0.1 and 0.31) arc (270:90:0.1 and 0.31) -- ++ (0.80,0) arc (270:345:0.29) ;
+\shade[bottom color=mycolor!10, top color=mycolor!50,opacity=0.20] (-1.93,0.52) arc (165:-165:2) arc (15:90:0.29) -- ++ (-0.8,0) arc (270:90:0.1 and 0.31) arc (90:-90:0.1 and 0.31) arc (270:90:0.1 and 0.31) -- ++ (0.80,0) arc (270:345:0.29) ;
+% Elektronenstrahl
+\draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]}, thick, mycolor, shorten >=0.4pt] (-1.42, -.1)  -- (-1.42, -.75);
+%Helmholtz-Spule
+\path[top color=halfgray!75, bottom color=halfgray!50, draw=black] (0, 0) circle[radius=2.6] circle[radius=2.3];
+%Kraft
+  \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]},mycolor4, thick]  (0.29,1.70)   -- ++ (-0.98, 0.17); 
+   \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]},mycolor4!50!mycolor2, thick]  (0.29,1.70)   -- ++ (-0.17, -0.98); 
+  \shade[ball color=mycolor!25, opacity=1] (0.29,1.70) circle (3pt);
+    \node at (0.29,1.70) {$-$};   
+  \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]},mycolor4, thick]  (0.43,-1.63)   -- ++ (0.97, 0.26); 
+      \draw[<->,>={Triangle[length=0pt 3*4,width=0pt 4]}, thick]  (0.43,-1.63)   -- ++ (-0.44, 1.63); 
+      \node at (0.31, -.81){$r$};
+  \shade[ball color=mycolor!25, opacity=1] (0.43,-1.63) circle (3pt);
+    \node at (0.43,-1.63) {$-$};  
+        \node at (-0.2,1.92) {$\boldsymbol{\dot{r}}$};  
+            \node at (0.88,-1.62) {$\boldsymbol{\dot{r}}$};  
+          \node at (0.12,0.64) {$\boldsymbol{F}_\mathrm{L}=\boldsymbol{F}_\mathrm{z}$};  
+                
+\end{scope}
+\end{tikzpicture}
+  \caption[Das Fadenstrahlrohr-Experiment]{Das Fadenstrahlrohr-Experiment zur Bestimmung der Elektronenmasse kann als Anschauung für das Verhalten bewegter Ladungen in Magnetfeldern genutzt werden. Eine Elektronenkanone, bestehend aus Glühkathode und Lochanode beschleunigt Elektronen, welche bei eingeschaltetem Helmholtz-Spulenpaar, dessen B-Feld aus der Papierebene herauszeigt, durch die Bedingung $\boldsymbol{F}_\mathrm{L}=\boldsymbol{F}_\mathrm{z}$ auf eine Kreisbahn gezwungen werden. Ein Edelgas bei niedrigem Druck (so dass die mittlere freie Weglänge ausreichend groß ist) wird durch Stoßionisation auf der Kreisbahn zum Leuchten gebracht (eigene Darstellung).}
+  \label{fig:fade}
+  \vspace{-0pt}
+\end{figure}

@@ -1,0 +1,47 @@
+  \thisfloatsetup{
+  capbesidewidth=\marginparwidth,
+}
+\begin{table}[htb]
+\centering
+%\sffamily,
+\small
+%\sansmath
+\arrayrulecolor{white}
+%\setlength{\arrayrulewidth}{2pt}
+\vspace{0.2cm}
+  \rowcolors{2}{halfgray!15}{halfgray!5}
+ \setlength{\extrarowheight}{.00em}
+			\begin{tabularx}{0.99\textwidth}{*{2}{>{\RaggedLeft\arraybackslash}X}X*{3}{>{\RaggedLeft\arraybackslash}X}}	
+\rowcolor{mycolor}  {\color{white}\textbf{ Radius $\boldsymbol{r}$ in $\boldsymbol{\si{\milli\metre}}$}} & {\color{white}\textbf{Abstand $\boldsymbol{s}$ in $\boldsymbol{\si{\centi\metre}}$}} & {\color{white}\textbf{Amplitude $\boldsymbol{A}$ in $\boldsymbol{\si{\milli\newton}}$}} & {\color{white}\textbf{$\boldsymbol{\mu}$}} & {\color{white}\textbf{$\boldsymbol{2\sigma^2}$}}& {\color{white}\textbf{$\boldsymbol{R^2}$}}\\
+	&	1	&	302,8	&	2,143	&	-0,240	&	0,994	\\
+	&	5	&	260,4	&	2,099	&	-0,050	&	0,993	\\
+	&	10	&	183,9	&	2,378	&	-0,378	&	0,993	\\
+	&	15	&	152,8	&	2,349	&	-0,201	&	0,995	\\
+	&	20	&	121,4	&	2,604	&	-0,404	&	0,997	\\
+	&	25	&	95,2	&	3,650	&	-0,444	&	0,986	\\
+\multirow{-7}{*}{17,5}	&	30	&	73,2	&	3,518	&	-0,626	&	0,992	\\\midrule
+	&	1	&	230,9	&	1,903	&	-0,268	&	0,997	\\
+	&	5	&	199,2	&	1,912	&	-0,489	&	0,988	\\
+	&	10	&	140,9	&	2,201	&	-0,564	&	0,988	\\
+	&	15	&	106,5	&	2,381	&	-0,452	&	0,997	\\
+	&	20	&	85,2	&	2,609	&	-0,374	&	0,997	\\
+	&	25	&	65,7	&	3,237	&	-0,746	&	0,996	\\
+\multirow{-7}{*}{15,0}	&	30	&	55,9	&	3,755	&	-0,526	&	0,978	\\\midrule
+	&	1	&	157,9	&	1,870	&	-0,484	&	0,994	\\
+	&	5	&	139,7	&	1,923	&	-0,660	&	0,988	\\
+	&	10	&	100,9	&	1,873	&	-0,596	&	0,994	\\
+	&	15	&	73,3	&	2,219	&	-0,855	&	0,995	\\
+	&	20	&	60,1	&	2,665	&	-0,345	&	0,994	\\
+	&	25	&	44,9	&	2,868	&	-1,262	&	0,996	\\
+\multirow{-7}{*}{12,5}	&	30	&	39,9	&	3,689	&	-1,572	&	0,992	\\\midrule
+	&	1	&	104,1	&	1,733	&	-0,631	&	0,996	\\
+	&	5	&	83,6	&	1,693	&	-0,501	&	0,988	\\
+	&	10	&	66,7	&	1,799	&	-0,496	&	0,993	\\
+	&	15	&	49,9	&	1,735	&	-0,492	&	0,990	\\
+	&	20	&	38,9	&	2,302	&	-0,594	&	0,991	\\
+	&	25	&	29,3	&	2,512	&	-0,780	&	0,976	\\
+\multirow{-7}{*}{10,0}	&	30	&	25,2	&	2,768	&	-1,538	&	0,987	\\
+		\end{tabularx}
+		\caption[Ergebnisse der Gaußanpassungen für die höhere Gebläsestufe]{Ergebnisse der Gauß-Anpassungen für die Messreihen auf der höheren Gebläsestufe. $\mu$ und $\sigma$ sind ohne Einheit aufgeführt, da das Argument einer Exponentialfunktion stets dimensionslos ist. Wollte man sie mit aufführen, so wäre $[\mu]=\si{\metre}$ und $[\sigma] = \sqrt{\si{\metre}}$. Als Bestimmtheitsmaß wird $R^2$ gewählt, das für eine Anpassung, die keine \textsw{Residuen} übriglasst, den Wert eins annimmt.}
+		\label{tab:gaaussfit1}	
+		\end{table} %\vspace*{-5cm}\newpage

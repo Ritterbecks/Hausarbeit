@@ -1,0 +1,300 @@
+\chapter{Analogiebetrachtungen}
+\label{kap:4}
+\bookmarksetupnext{level=subsubsection}
+\chapterinfo{Auf Grundlage der bereits erarbeiteten Annahmen werden Entsprechungen zum primären Lernbereich in einem sekundären Analogbereich benannt, die objektal umgesetzt und begrifflich-mathematisch mit dem Primärbereich verknüpft werden.}
+
+\textit{Auf Grundlage der bereits erarbeiteten Annahmen werden Entsprechungen zum primären Lernbereich in einem sekundären Analogbereich benannt, die objektal umgesetzt und begrifflich-mathematisch mit dem Primärbereich verknüpft werden.}
+
+\section{Kraftfelder der Analogie}
+\label{sec:fields2}
+Zur erleichterten Nachvollziehbarkeit der anschließenden Betrachtungen werden zuvorderst die --- für diese Arbeit --- wichtigsten Eigenschaften von \textit{Gravitationsfeldern} und \textit{Strömungsfeldern} umrissen.
+
+\subsection{Gravitationskraft}
+\label{sec:gravity}
+Nachdem \textsc{Johannes Kepler} (1571--1630), ein protestantischer Theologe, zwischen 1609 und 1619 seine drei Bewegungsgesetze zur Beschreibung \textit{idealisierter Himmelskörper} publiziert hatte, gelang es dem britischen Physiker \textsc{Robert Hooke} (1635--1703) im Jahr 1684, diese Bewegungen in einen Zusammenhang mit der Masse eines Körpers zu bringen.\footfullcite[vgl.][S\,165--166]{Schiller12016} Die Beschleunigung der jeweils angezogenen Masse $m_2$ beträgt
+\begin{equation}
+\label{eq:gravity1}
+\ddot{r}=G\frac{m_1}{r^2}\qquad\text{mit }G=\SI{6.67E-11}{\metre\cubed\per\kilogram\per\second\squared}
+\end{equation}  
+mit dem \textit{Schwerpunkt-Schwerpunkts-Abstand} $\abs{\boldsymbol{r}}$ und der \textit{Gravitationskonstanten} $G$. Durch Einsetzen der Erdmasse und des Erdradius gelangt man zu der \textit{Erdbeschleunigung} von $g=\SI[fraction-function=\sfrac]{9.81}{\metre\per\second\squared}$. \par
+Die \textit{Lageenergie} eines Körpers in einer Höhe $h$ über der Erdoberfläche ist damit 
+\begin{equation}
+\label{eq:gravity2}
+E_\mathrm{pot}=mgh.
+\end{equation}
+Wird eine schiefe Ebene gemäß Abbildung \ref{fig:rampe1} betrachtet, so ergeben sich mit der nur in $x$-Richtung wirkenden \textit{Haftreibungskraft} $F_\mathrm{HR}$, dem Ebenenwinkel $\alpha$, dem Betrag der Gravitationskraft $F_\mathrm{G}$ und dem Dreh{\-}impuls $L$ folgende Bedingungen für $x$, $y$ und die \textit{Drehimpulsbilanz}:\vspace*{-2.2cm}\footfullcite[vgl.][S.\,135, 169--170]{Greiner2008II}\vspace*{2.2cm}\newpage
+\begin{equation}
+\begin{alignedat}{2}
+\label{eq:gravity3}
+& D: F_\mathrm{HR}r=\dot{L}\\
+& x: F_\mathrm{G}\sin(\alpha)-F_\mathrm{HR}=&m\dot{x}\\
+& y:F_\mathrm{G}\cos(\alpha)- \underbrace{F_{\mathrm{G}_y}}_{F_\mathrm{N}}=& 0
+\end{alignedat}
+\end{equation}
+\input{images/rampe1}
+Der Drehimpuls ist das Kreuzprodukt der \textit{Winkelgeschwindigkeit} $\omega$ mit dem \textit{Trägheitsmoment} $J$, welches sich für eine Vollkugel mit der Mittelachse $a$ und dem Radius $r$ zu
+\begin{equation}
+\begin{alignedat}{2}
+\label{eq:gravity4}
+J=&\rho \int a^2\mathrm{d}V = \rho \int_{l=0}^{r}\int_{\theta=0}^{\uppi}\int_{\phi=0}^{2\uppi}l^4\sin^3(\theta)\mathrm{d}l\,\mathrm{d\theta}\,\mathrm{d}\phi\\
+= &\frac{2}{5}r^2\underbrace{\rho\frac{4}{3}\uppi r^3}_{=\rho V=m}=\frac{2}{5}mr^2
+\end{alignedat}
+\end{equation}
+berechnet. Analog kann über eine dünne Kugelschale integriert werden, um zu zeigen, dass sich bei einer Hohlkugel der Trägheitsmoment $J=\sfrac{2}{3}mr^2$ ergibt. Überdies muss die Rollbedingung $L=J\omega$ erfüllt sein. Setzt man nun $J$ in die erste Zeile von \eqref{eq:gravity3} ein und löst diese nach $F_\mathrm{HR}$ auf, so kann die Haftreibung in der zweiten Zeile eingesetzt werden, um nach elementarer Umformung die Bewegungsgleichung
+\begin{equation}
+\label{eq:gravity5}
+\frac{5}{7}g\sin(\alpha)=\ddot{x}
+\end{equation}
+aufzustellen. Mit Hilfe der Beschleunigung ergibt sich die Haftreibung zu \begin{equation}
+\label{eq:gravity6}
+\frac{2}{7}mg\sin(\alpha)=F_\mathrm{HR},
+\end{equation}
+was unmittelbar zu der $x$-Position in Abhängigkeit von der Zeit führt:
+\begin{equation}
+\label{eq:gravity7}
+x(t) = \frac{5}{14}g\sin(\alpha)t^2
+\end{equation}
+In obenstehender Gleichung wird die Rollstrecke in Abhängigkeit der mittleren Geschwindigkeit, die auf einer schiefen Ebene  bei einer Startgeschwindigkeit von $\SI[fraction-function=\sfrac]{0}{\metre\per\second}$ nach $t$ Sekunden $\dot{x}\sfrac{t}{2}$ ist, ausgedrückt.
+\subsection{Strömungswiderstandskraft}
+Der Beschreibung des Strömungsverhaltens von Fluiden haben sich viele Wissenschaftler zwischen dem 17. und 19. Jahrhundert gewidmet. \textsc{Sir Isaac Newton} mathematisierte beispielsweise die \textit{innere Reibung} der nach ihm benannten \textit{Newton'schen Flüssigkeiten} mit einem Gedankenexperiment:\footfullcite[vgl. für die folgenden Ausführungen][S.\,128--132]{Stroppe2008}\par
+Eine zwischen zwei Platten eingeschlossene Flüssigkeit, die mit den Wänden über eine Kontaktfläche $A$ in Berührung steht, wird durch die \textit{Adhäsionskraft} über das Verschieben der oberen Platte mit einer Geschwindigkeit $\dot{x}_0$ mitgezogen. Benachbarte Flüssigkeitsschichten in einem Abstand $\Delta h$ werden über die \textit{Viskosität} des zu untersuchenden Fluids ebenfalls in eine Bewegung mit Geschwindigkeit $\dot{x}_1$ versetzt. Somit kann die innere Reibungskraft des Gases bzw. der Flüssigkeit mittels
+
+\begin{equation}
+\label{eq:fluid1}
+F_\mathrm{R}=\eta A\frac{\mathrm{d}\dot{x}}{\mathrm{d}h}
+\end{equation} 
+beschrieben werden. Die \textit{dynamische Viskosität} $\eta$ wird in der Einheit $\si{\pascal\second}$ ausgedrückt und ist temperaturabhängig. Sie beträgt beispielsweise bei $\SI{20}{\celsius}$ für Luft $\SI{18.2}{\pascal\second}$. \par
+\input{images/newton1}
+Großen Wert hat das Reibungsgesetz für den laminaren \textit{Volumenstrom} eines Fluides durch ein Rohr mit Radius $r$ und Länge $l$, dessen Verhalten von \textsc{Hagen} und \textsc{Poiseuille} mittels dem Druckgefälle $\Delta \tau$ als
+\begin{equation}
+\label{eq:fluid2}
+I=\frac{V}{t}=\frac{\uppi r^4\Delta \tau}{8\eta l}
+\end{equation} 
+modelliert wurde. Diese \textit{biquadratische} Abhängigkeit vom Rohrradius führt dazu, dass dünne Kapillargefäße bei geringen Druckunterschieden zwischen zwei Volumina nahezu keinen Volumenstrom zulassen, was unter anderem beim \textit{Parabelspektrographen} von \textsc{Thomson} Anwendung findet (vgl. Abschnitt \ref{sec:2.2} und Abbildung \ref{fig:thoms2}).\par
+Durch die Definition einer mittleren Strömungsgeschwindigkeit und gleichsetzen von \eqref{eq:fluid1} und \eqref{eq:fluid2} gelangt man zu der Reibungskraft einer Rohrströmung, welche von \textsc{Sir George Gabriel Stokes} (1819--1903) auf die Umströmung einer Kugel vom Radius $r$ in das \textit{Stokes'sche Reibungsgesetz} übertragen wurde:
+\begin{equation}
+\label{eq:fluid3}
+F_\mathrm{R}=6\uppi \eta r \dot{x}
+\end{equation}
+Die beschriebenen Gesetzmäßigkeiten gelten gleichwohl nur für ideale, \textit{inkompressible} Fluide. Möchte man den \textit{Strömungswiderstand} für reale Gase in eine Formel betten, so erhält man mit dem \textit{Staudruck} $\tau=\rho\sfrac{\dot{x}^2}{2}$, dem \textit{Widerstandsbeiwert} $c_\mathrm{W}$, sowie der \textit{Projektionsfläche} des umströmten Körpers
+\begin{equation}
+\label{eq:fluid4}
+F_\mathrm{W}=c_\mathrm{W}A_\mathrm{proj}\frac{\rho\dot{x}^2}{2}.
+\end{equation} 
+Der Widerstandsbeiwert ist bei kompressiblen Fluiden sowohl von der \textit{Reynolds-Zahl} (benannt nach \textsc{Osborne Reynolds} (1842--1912))
+\begin{equation}
+\label{eq:fluid5}
+Re=\frac{\rho l \dot{x}}{\eta}
+\end{equation}
+als auch wiederholt von der \textit{Anströmgeschwindigkeit} $\dot{x}$ abhängig. Nach \textsc{Stroppe} darf Luft bis zu einer ungefähren Geschwindigkeit von $\dot{x}=\SI[fraction-function=\sfrac]{240}{\metre\per\second}$ als nicht zusammenpressbar genähert werden\footcite[vgl.][S.\,131]{Stroppe2008}, weswegen die Betrachtung der \textit{Mach-Zahl}, d.\,h. des Quotienten von Anströmungsgeschwindigkeit und \textit{Schallgeschwindigkeit} für die weiteren Betrachtungen keine weitere Berücksichtigung findet.\par
+Der \textit{Strömungswiderstandskoeffizient} wird zumeist über direkte Messungen von Geschwindigkeit und Widerstandskraft ermittelt. Eine sehr umfangreiche Meta-Analyse von einigen hundert Versuchsreichen führten \textsc{Clift}, \textsc{Grace} und \textsc{Weber} zu einer abschnittsweise definierten Modellierung des Widerstandsbeiwertes einer Kugel in Relation zu der Reynolds-Zahl $R\kern-.04em e$ (vgl. Tabelle \ref{tab:cwwerte}).\vspace*{-2cm}\footfullcite[siehe][S.\,112]{clift2013}\vspace*{2cm}
+\vspace*{-0.1cm}\input{tables/cwwerte}\vspace*{-4cm}
+\newpage
+\section{Beispiele für Analogversuche}
+
+Aus den verschiedenen Herangehensweisen, einen Analogieversuch zur Massenspektrometrie zu erstellen, wählt diese Arbeit zwei möglichst unterschiedliche Modellversuche als Exempel aus. Hierbei fungiert einmal eine Magnetanordnung, das andere mal ein Gebläse als Analysator.
+
+\subsection{Magnete}
+
+Die Literaturgrundlage der Staatsexamensarbeiten von \textsc{Böhmer} und \textsc{Mais} ist ein Artikel von \textsc{Bühler} und \textsc{Graf} aus der Zeitschrift \textit{Praxis der Naturwissenschaften} zu einem von ihnen weiterentwickelten Modellversuch zur Massenspektrometrie. 
+
+Das Experiment stellt eine \textit{Weiterentwicklung} eines bereits 1970 von der \textsc{Nuffield Foundation} publizierten Versuchs dar,\footfullcite[vgl.][S.\,262--264]{Nuffield1970} bei welchem Kugellager-Kugeln eines Durchmessers zwischen $\SI{11}{\milli\metre}$ und $\SI{4}{\milli\metre}$ eine Glasröhre hinunterrollen und von einem Hufeisenmagneten in viertelkreisförmig angeordnete Auffangbehälter abgelenkt werden. (vgl. Abb. \ref{fig:nuffsaid}).
+
+\input{images/nuffield}
+
+\noindent\textsc{Bühler/Graf}, die bereits im zweiten Satz ihres Artikels \textsc{J. J. Thomson} mit dessen Sohn verwechseln,\footfullcite[vgl.][S.\,33]{Graf2002} befüllen Tischtennisbälle mit Eisenwolle und Nylonwatte, um unterscheidbare Massen-Ladungs-Verhältnisse nachzuahmen.
+Der leere Tischtennisball wird durch die Magnetanordnung nicht aus seiner Startrichtung ausgelenkt, der Ball mit $\SI{3}{\gram}$ Eisenwollfüllung wird am Stärksten abgelenkt und der Ball mit jeweils $\SI{3}{\gram}$ Eisenwolle- und Nyolonwattefüllung wird leicht abgelenkt (vgl. Abbildung \ref{fig:graf}).
+Sie umreißen ihren Versuch unter anderem mit den Adjektiven \textit{anschaulich}, \textit{objektiv} und \textit{begreifbar}.
+
+\input{images/graf}
+\noindent Als Motivation für die Neuauflage des Versuches schreiben sie jedoch der Version von 1970 zwei Probleme zu, welche diese gar nicht haben sollte: Sowohl der ">verschiedene Rollwiderstand"<\footcite[vgl.][S.\,35]{Graf2002} als auch das Fehlen der Entmagnetisierung der Kugeln wird moniert, indem auf \textsc{Nuffield} verwiesen wird. Dort heißt es jedoch ">the ball bearings that stick to the magnet will become magnetized and should be dropped several times to demagnetize them."<\footcite[S.\,264]{Nuffield1970} Es wird bei \textsc{Nuffield} mit Kugellagern gearbeitet, die zu den rotationssymmetrischsten und glattesten Kugeln gehören, die man kaufen kann (überdies ist der Rollwiderstand noch von dem Material abhängig, was jedoch bei allen Kugeln \textit{Stahl} ist). Zudem führt das Fallenlassen der Kugeln bereits zu einer Auflösung der \textit{Weiß'schen Bezirke},\footcite[vgl.][S.\,13]{Mais2014} da die Ausrichtung der magnetischen Spins sehr schwach ist.
+\input{tables/mais}
+
+\noindent Die Hauptprobleme des \textit{Magnetmodells} sind jedoch sowohl die Inhomogenität des magnetischen Feldes, welche eine mathematische Beschreibung der Kugelbewegung nahezu unmöglich macht, als auch die Nichtberücksichtung unterschiedlicher Trägheitsmomente. Bei makroskopischen Modellversuchen können die Kugeln nicht mehr als Punktmassen, was mit den Berechnungen in Abschnitt \ref{sec:fields2} bereits gezeigt wurde, genähert werden. 
+
+Durch \textsc{Böhmer} und \textsc{Mais} wurde dieser Versuch durch eine verbesserte Magnetanordnung und eine bogenförmige Detektoranordnung verbessert. Die abschließenden Analogiebetrachtungen der Examensarbeit von \textsc{Axel Mais} sind in Tabelle \ref{tab:mais} wiedergegeben.
+
+
+\subsection{Gebläse}
+
+Ein Funktionsmodell zur Massenspektrometrie, welches Gebläse als Analysatoren einsetzt, wurde 1987 im Rahmen einer Zulassungsarbeit von \textsc{Elisabeth Schilling} an der LMU München angefertigt. Der Archivierungszeitraum ist zwar bereits überschritten und damit die Arbeit für alle weiteren Recherchen verloren, jedoch sind die wichtigsten Ergebnisse in einem Artikel der Zeitschrift \textit{der mathematische und naturwissenschaftliche Unterricht} enthalten\footfullcite[vgl.]{Schilling1987}, der dem Verfasser freundlicherweise von Professor Klaus Wendt der Johannes Gutenberg Universität Mainz zugeschickt wurde.
+
+Dieses Funktionsmodell (siehe Abbildung \ref{fig:mnu}) ist die einzig bekannte Ausführung eines geschwindigkeitsfokussierenden Spektrometers. 
+
+Mittels einer $\SI{30}{\centi\metre}$ langen, v-förmigen Rampe, welche eine Steigung von ca. $\SI{20}{\degree}$ besitzt, werden $\SI{20}{\milli\metre}$ große Stahl-, Aluminium- und Plexiglaskugeln beschleunigt. Über eine Platte mit sehr geringer Neigung (ungefähr $1:100$) werden die Kugeln nach ihrer Geschwindigkeit aufgespalten. Je langsamer die Kugel, desto mehr Zeit hat die Erdbeschleunigung, sie abzulenken (vgl. \ref{sec:gravity}). Eine weitere Platte --- diesmal waagerecht montiert --- schließt an die Erste an. An ihrem oberen Ende ist ein Gebläse angebracht, das zu einer Auslenkung der rollenden Kugeln in Abhängigkeit von ihrem Impuls sorgt. Wie mathematisch gezeigt werden kann, kommt es zu einer Fokussierung von Kugeln gleicher Masse und unterschiedlicher Starthöhe. Hierzu sei unter Berücksichtigung der Abschnitte \ref{sec:fields2} und \ref{sec:aston} auf die weitere Analyse in \ref{sec:voraus} verwiesen.
+
+\textsc{Schilling} äußert auch die Gewissheit, dass sich das Funktionsmodell dazu eignet, komplexere Eigenschaften eines Massenspektrometers, wie beispielsweise das Auflösungsvermögen, zu untersuchen.\footcite[vgl.][S.\,37]{Schilling1987}
+\input{images/mnu}
+
+Abschließend wird anhand von \textit{Stroboskopaufnahmen} --- übrigens ein hervorragendes Mittel zur Visualisierung von Bewegungsprozessen --- eine quantitative Untersuchung der Impulsänderungen $\Delta p$ in Abhängigkeit von der Starthöhe durchgeführt. Hierbei wird ausgenutzt, dass 
+\begin{equation}
+\begin{alignedat}{2}
+\label{eq:impulsaenderung}
+\boldsymbol{F}&=m\boldsymbol{\ddot{r}}\\
+\Rightarrow \int \boldsymbol{F}\mathrm{d}t &=m\boldsymbol{\dot{r}}=\Delta p
+\end{alignedat}
+\end{equation} 
+gilt, d.\,h. die Krafteinwirkung eines Feldes --- über die Zeit der Einwirkung integriert --- ergibt eine Impulsänderung.
+
+Wenn demnach bekannt ist, wie groß die Krafteinwirkung des Gebläses in Beziehung zu der Entfernung und wie hoch die Geschwindigkeit der sich bewegenden Masse ist, so kann über eine Umformung von \eqref{eq:impulsaenderung} mit der Setzung $\boldsymbol{r}=\boldsymbol{\dot{r}}t$ (vgl. \eqref{eq:bewegung4}) das Integral der Kraft des Strömungsfeldes über dem Abstand von der Mittelachse $x$ berechnet werden, woraus man mittels Division durch die Kugelgeschwindigkeit die Impulsänderung erhält.
+
+\section{Umsetzung}
+\label{sec:umsetzung}
+Diese Arbeit sollte ursprünglich das Analogiemodell von \textsc{Mais} zu einem Praktikumsversuch weiterentwickeln. Nach einem Hinweis von Frau Professor \textsc{Heidrun Heinke}, dass --- in Anbetracht der Unzulänglichkeiten des Magnetmodells --- auch ein Gebläse als Analysatoreinheit verwendet werden könne, wurde der ursprüngliche Versuchsaufbau nach anfänglichen Testmessungen mit einem handelsüblichen Föhn verworfen (siehe Abschnitt \ref{sec:analysatoren1}).
+
+Aufgrund der Oberflächenähnlichkeit des Funktionsmodells aus \textcite{Schilling1987} mit einem Sektorfeld-Massenspektrometer wird jedoch \textsc{Böhmer} in diesem Punkte gefolgt.\vspace*{-0.4cm}\footcite[vgl. die ausführliche Begründung bei][S.\,26--27]{Boehmer2013}\vspace*{0.4cm} Aus diesem Grund wurde der \textsc{Aston}'sche Massenspektograph als Inkarnation eines EB-Spek{\-}tro{\-}me{\-}ters in Abschn. \ref{sec:aston} auf seine Ablenkung hin untersucht. 
+
+Nach Auswertung der physikalischen Hintergründe wird anhand des zu berücksichtigenden Schemas für wertschöpfende Analogexperimente von \textsc{Kircher} (Tab.\,\ref{tab:ana1}, insbesondere Schritte 3 und 4)  ein Vorschlag die Objektebene betreffend gemacht, welcher zusammengefasst in Tabelle \ref{tab:ana2} zu überblicken ist.
+
+\input{tables/ana2}
+
+\noindent Die Anforderungen an die Kugeln sind zwei Gestalt: Erstens muss die Möglichkeit bestehen, verschiedenartige Dichten zu verwenden. Des Weiteren besteht ein Bedarf an einer Projektionsfläche $A_\mathrm{proj}$, welche bestenfalls als Analogon der \textit{Quantelung} von Ladung herhalten kann, indem eine Querschnittsfläche $A_\mathrm{min}$ festgelegt wird, für die weitere Kugelgrößen anhand der Überlegung
+\begin{equation}
+\label{eq:umsetzung1}
+A_i=A_\mathrm{min}\cdot (i+1),\qquad i \in \mathbb{N}\text{ mit }A_i=\uppi r_i^2 
+\end{equation} 
+festgelegt werden. Dies ist zum Beispiel mit den Radien $r_0=\SI{10}{\milli\metre}$, $r_1=\SI{14}{\milli\metre}$, $r_2=\SI{17}{\milli\metre}$ und $r_3=\SI{20}{\milli\metre}$ erfüllt.
+
+Eine Geschwindigkeitsfokussierung ist nach \ref{sec:aston} nur möglich, wenn die Geschwindigkeiten im Strömungsfeld nicht zu weit auseinander liegen. Wird die Plattengröße klein genug gewählt, so besitzen sämtliche detektierbaren Kugeln gleicher Masse eine Breite $\Delta v$, auf der die Spuren der Kugeln sich nahezu schneiden.
+
+Durch die Auswertung der ersten Messung mit einem Gebläse als Massenanalysator ist augenscheinlich geworden, dass bei den vorhandenen Rampen ca. $\sfrac{1}{4}$ der potentiellen Energie, die durch die Starthöhe vorgegeben wird, nach dem Übergang von Rampe zu Platte nicht in kinetische Energie umgesetzt wird, bzw. dass diese durch ein \textit{Aufprallen} auf der ebenen Fläche verloren geht. Damit ist dieser Energieverlust wesentlich höher als experimentell und theoretisch bestimmte Luftreibungs- und Rollreibungsverluste (ausführlicher inklusive Messdaten siehe Kapitel \ref{kap:5}).
+
+Über einen Vergleich der theoretischen Abschnitte \ref{sec:force1} und \ref{sec:fields2} kann die schiefe Ebene als erster Teil der Massenanalyse eins zu eins auf das elektrische Feld übertragen werden, da Coulombkraft und Gravitationskraft jeweils zu einer Beschleunigung führen, die mit dem Abstand $s$\footnote{Im Folgenden gilt $a \mathop{\hat{=}} $ \textsw{Beschleunigung}, $v \mathop{\hat{=}} $ \textsw{Geschwindigkeit} und $s \mathop{\hat{=}} $ \textsw{Abstand}, um keine doppelte Variablenbelegung zu haben.} zum Quadrat abnimmt, linear mit einem Faktor ($\epsilon_0$ und $G$) skaliert und sich die Masse $m$ des Gravitationspotentials mit der Ladung $q$ des Coulompotentials ersetzen lässt.
+
+Über den zweiten Teil des Analysators sind nur die Erkenntnisse von \textcite{Schilling1987} bekannt. Daher folgt an dieser Stelle die Untersuchung des Haartrockners. In Tabelle \ref{tab:ana3} werden die Ergebnisse jedoch der Übersichtlichkeit halber bereits mit aufgeführt.
+
+\input{tables/ana3}
+
+\section{Gebläse}
+\label{sec:analysatoren1}
+
+Obwohl die Überprüfung der erarbeiteten Analogie-Setzungen erst in Kapitel \ref{kap:5} durchgeführt werden wird, muss zuvorderst der gewählte Analysator in Form eines durch einen Föhn hervorgerufenen Strömungsfeldes überprüft werden. Die Messergebnisse werden anschließend mit den abschließenden Werten von \textcite[S.\,53--66]{Mais2014} verglichen.
+
+Hierbei wird auch die Forderung nach einem \textit{gebogenen} Detektor umgesetzt, da die Aufspaltung der Kugeln als Winkelstreuung mit einem festen Mittelpunkt bei $(x, y)\tran$ = $(x, y)\tran (F_\mathrm{max})$, d.\,h. im Punkte der maximalen Krafteinwirkung, gesehen werden kann.
+
+\input{images/strobe1}
+
+Abbildung \ref{fig:strobe1} zeigt den rudimentären Versuchsaufbau nebst der stoboskopischen Aufnahme zweier Kugelbahnen. Ein im Baumarkt erhältliches Reststück einer Arbeitsplatte von etwa $\SI{1.2}{\metre}$ mal $\SI{0.8}{\metre}$ wurde bogenförmig ausgesägt, wobei der Ablenkwinkel von $\SI{0}{\degree}$ auf einer Achse mit der Startrampe liegt. Im Zuge dieser Videoauswertung wird auch die Güte der Rampe untersucht. Diese besitzt eine durch das bloße Auge zu erkennende Asymmetrie, welche den abrollenden Kugeln eine Rotation in $y$-Richtung mitgibt (das im Bildschirmfoto obere Segment der Startvorrichtung ist kürzer als das untere).
+
+Vor den eigentlichen Auswertungen muss daher erstmal ohne angeschalteten Föhn die \textit{Nulllinie} bestimmt werden. Hierzu werden die $10$ von \textcite[S.\,34]{Mais2014} präparierten Kugeln jeweils fünf mal von dem Anschlag bei einer Starthöhe von $h=\SI{55}{\milli\metre}$ abgerollt. Für sämtliche Videoauswertungen wird auf die in der Software \textit{Tracker} bestimmten Koordinaten eine Unsicherheit von $\SI{0.5}{\centi\metre}$ in beide Richtungen angenommen.
+
+Aufgrund der großen Datenmenge werden an dieser Stelle nur die Bewegungen der ersten Kugel tabellarisch und als Diagramm dargestellt. Bei den weiteren Videoauswertungen wird nur noch die Detektionshäufigkeit in Behälter $i$ betrachtet (siehe Tabelle \ref{tab:nullpunkt1}). 
+
+Es ist auch von Interesse, ob sich die Kugeln hinter der Stelle der Krafteinwirkung auf einer Geraden bewegen, d.\,h. ob die Platte trotz der Ungenauigkeit von Wasserwaagen horizontal ausgerichtet ist. Dazu eignet sich der \textit{Bravais-Pearson-Korrelationskoeffizient}, der genau dann einen der Werte $\pm 1$ annimmt, wenn sich die Messdaten auf einer Geraden mit positiver/negativer Steigung befinden.\footfullcite[vgl.][S.\,111]{Cramer2008} Der B-P-Koeffizient ist über den Quotienten der \textit{empirischen Kovarianz} $s_{xy}$ durch das Produkt der Standardabweichungen $s_x$, $s_y$ (oder \textit{empirische Varianzen}) definiert:
+\begin{equation}
+\label{eq:b-p-k}
+r_{xy}=\frac{s_{xy}}{s_xs_y}=\frac{\sum\limits_{i=1}^{n}(x_i-\overline{x})(y_i-\overline{y})}{\sqrt{\sum\limits_{i=1}^{n}(x_i-\overline{x}^2)}\sqrt{\sum\limits_{i=1}^{n}(y_i-\overline{y})^2}}\\
+\end{equation}
+
+\input{tables/nullpunkt}
+
+\noindent Da die hier gezeigten Datenkolonnen nicht ausufern sollen, wird eine alternative Form von Gleichung \eqref{eq:b-p-k} verwendet, die sich in Tabellenform verkürzt darstellen lässt:
+\begin{equation}
+\label{eq:b-p-k2}
+r_{xy} = \frac{\overline{xy}-\overline{x}\cdot \overline{y}}{\sqrt{(\overline{x^2}-\overline{x}^2)\cdot (\overline{y^2}-\overline{y}^2)}}
+\end{equation}
+
+\input{tables/bpk}
+
+\noindent Es ergeben sich die Korrelationskoeffizienten in Tabelle \ref{tab:bpk}, wobei auf eine Angabe der Unsicherheiten auf die Mittelwerte verzichtet wird, da die Koeffizienten rein qualitativ lineares Verhalten angeben sollen und nicht als \textit{Bestimmtheitsmaß} einer linearen \textit{Regression} gebraucht werden. Mit den Korrelationskoeffizienten ist eine geradlinige Bewegung verifiziert, was eine Winkeltransformation, d.\,h. eine Drehung des Koordinatensystems um den mittleren Auslenkwinkel $\phi$ erlaubt.
+
+Mit dem \textit{Arkustangens} der Steigung $\sfrac{\Delta y}{\Delta x}$ lässt sich für jede der $50$ verfolgten Kugeln ein Ablenkwinkel berechnen. Der Mittelwert dieser Winkel ist
+\begin{equation}
+\label{eq:phi}
+\phi = (2,45\pm 0,29)\si{\degree},
+\end{equation}
+die Unsicherheit berechnet sich hierbei als Wurzel der empirischen Varianz. Diese fünf Kugelspuren sind wie gemessen im Diagramm \ref{fig:trans} und transformiert als \ref{fig:trans2} zu sehen, wobei die Drehung sich aus
+\begin{equation}
+\begin{alignedat}{2}
+x_i^*&=x_i\cdot \cos(\phi)+y_i\cdot \sin(\phi)\text{ und}\\
+y_i^*&=-x_i\cdot \sin(\phi)+y_i\cdot \cos(\phi)
+\end{alignedat}
+\end{equation}
+ergibt.
+
+\input{images/trans1}
+\input{images/trans2}
+
+Auf Grundlage dieser Transformation werden alle weiteren Messungen durchgeführt. Um nun schließlich zu verifizieren oder falsifizieren, dass der Föhn als Analysator der Magnetanordnung aus \textcite{Mais2014} überlegen ist, werden die Daten gegenübergestellt.
+
+\input{images/maisbex} 
+
+Wie im Vergleich der Abbildung \ref{fig:maisbex} zu sehen ist, kann die Kraftwirkung eines Gebläses auf rollende Kugeln qualitativ als stärker betrachtet werden als die Lorentzkraft, welche auf Kugeln mit Eisenwollefüllung wirkt. Weiterhin ist die höhere Trennschärfe zwar für eine Massenanalyse besser geeignet, jedoch müssen bei Einsatz eines Föhns als Analysator die statistischen Auswertungsmethoden ( u.\,a. die Untersuchung auf eine \textit{Binomialverteilung}), die \textcite[S.\,48]{Mais2014} vorgeschlagen hatte, an einem Versuchsnachmittag nicht mehr durchführbar. Die für eine statistische Auswertung benötigte Datenmenge pro Kugelgewicht würde in die Hunderte gehen, falls die gewonnenen Messwerte repräsentativ sind.
+
+Abschließend lässt sich konstatieren, dass ein Gebläse als Analysator aus mehreren Gründen einer Magnetanordnung vorzuziehen ist: Neben der höheren Trennschärfe, die als Auflösungsvermögen eine wichtige Eigenschaft von Massenspektrometern ist, entfällt das aufwendige Entmagnetisieren der präparierten Kugeln \footcite[vgl.][S.\,49]{Mais2014}. Wie bereits zuvor bemerkt, spielt das Massenträgheitsmoment bei den Bewegungsgleichungen einer Kugel eine große Rolle. Daher ist die zwangsläufig inhomogene Dichte der Kugeln, die leer ein Gewicht von $\SI{4}{\gram}$ haben und befüllt $\SI{7}{\gram}$ wiegen, ein Hindernis für eine quantitative Beschreibung der Kugelaufspaltung. Ohne intensive Beschäftigung mit dem Sekundärbereich kann der Primärbereich auch nicht vollständig erschlossen werden. Als letzter Punkt wird festgehalten, dass es bei der Versuchsanordnung mit den Magneten eine größere Anzahl an Fehlversuchen gibt, die darauf zurückzuführen sind, dass Kugeln gelegentlich an den Magneten haften bleiben und somit nicht detektiert werden können.
+
+\section{Beschleunigereinheit}
+\label{sec:rampe1}
+
+Bei der Messreihe zur Nulllinie ist ein mangelhafte Umsetzung von der \textit{Lageenergie} der Kugeln in kinetische Energie augenscheinlich geworden. Dies ist nach Kapitel \ref{kap:5} nicht durch den Luftwiderstand und aufgrund der kurzen Rampe, die verwendet wurde, auch nicht durch die Rollreibung verursacht. Es erfordert daher eine Beschleunigereinheit, welche die Kugeln waagerecht und ohne, dass ein akustisches \textit{Knallen} wahrnehmbar ist, auf die Platten bringt. Die Neuausrichtung des Versuches, beziehungsweise die Hinzunahme der Ladungs-Analogie führt überdies dazu, dass die Rampe ebenfalls in der Breite verstellbar sein muss, ohne aus der Nulllinie ausgelenkt zu werden.
+
+\input{tables/energy}
+
+\noindent Zur Verifizierung kann in Tabelle \ref{tab:energy} die Auswertung für neun verfolgten Kugeln der ersten Messreihe zur Nulllinienbestimmung betrachtet werden. Die Geschwindigkeit wird über die ersten $\SI{0.2}{\second}$ berechnet. Da eine systematische Abweichung von über $\SI{20}{\percent}$ vorliegt, d.\,h. $E_\mathrm{pot}=E_\mathrm{kin} \cdot 1,2$, und die Messungenauigkeiten sich gleichermaßen positiv wie negativ auswirken, wird auf deren Angabe verzichtet.
+
+Zur Bewältigung dieser Probleme wird in einem frei verfügbaren \textit{CAD}-Programm (\textsw{c}omputer-\textsw{a}ided \textsw{d}esign) eine Rampe konstruiert (vgl. Abb. \ref{fig:rampedraw}).
+
+\input{images/rampenschliff3}
+
+\noindent Die Schiene dieser Rampe ist zweigeteilt und hat jeweils eine Aussägung in Form eines Kreisbogens mit Radius $r=\SI{900}{\milli\metre}$ von $\SI{267.2}{\degree}$ bis $\SI{270}{\degree}$. Die sechseckigen Aussparungen sind für die Aufnahme von Muttern gedacht, die mittels \textit{WIG}-Schweißen (\textsw{W}olfram-\textsw{I}nert\textsw{g}as) befestigt werden können. Oben links an der Vorderseite wird eine rechtsdrehende, auf der Rückseite eine linksdrehende Mutter verwendet. Die Mutterorientierung muss sich immer abwechseln, damit angebrachte Zahnräder gleichgerichtet drehen. Durch die mechanische Werkstatt werden Gewindestangen geschnitten, die jeweils hälftig aus Links- und Rechtsgewinde bestehen. 
+
+An diese Gewindestangen werden einseitig die Zahnräder mit \textit{Madenschrauben} befestigt. Somit kann die Rampe bei Drehung des linken oberen Zahnrades nach rechts zusammen und bei Drehung nach links auseinander gefahren werden.
+
+Da die Rampe möglichst schnell funktionsfähig sein muss, und gewisse Probleme mit dem vorhandenem 3D-Drucker bestehen, wird die Rampe aus Sperrholz selbst angefertigt, wie auf Foto \ref{fig:rampenschliff1} zu sehen ist. Die Aussparungen für die Muttern --- welche anschließend eingeklebt werden --- entstehen durch Bearbeitung mit einem Stechbeitel der Eisenbreite $\SI{3}{\milli\metre}$. Die Muttern werden anschließend eingeklebt und die beiden Rampensegmente mit den Gewindestangen verbunden.
+
+\input{images/rampenschliff1}
+
+\noindent Bei der Arbeit mit Holz ist eine Genauigkeit von einem halben Millimeter bereits ordentlich, die von der Werkstatt --- aus Aluminium --- geschnittenen Gewinde verzeihen jedoch kaum ein Abweichen von der Parallelität der Muttern. Da Aluminium ein weicher Werkstoff mit hohem Abrieb ist, sind die Gewinde schnell zerstört. Bei einem erneuten Bau sollten sie demnach zumindest aus Messing gefertigt werden.
+
+\input{images/toothpaste}
+
+Die Zahnräder werden mit dem 3D-Drucker bei maximaler Dichte aus \textit{ABS} (\textsw{A}crylnitril-\textsw{B}utadien-\textsw{S}tyrol) gedruckt, um das Schneiden eines Gewindes für die Madenschrauben zu ermöglichen. Anschließend werden Ungenauigkeiten des Druckergebnisses in einem \textit{Aceton-Dampfbad} bereinigt. Sowohl die Zahnräder als auch die Gewinde sind in Abbildung \ref{fig:toothpaste} dargestellt. Problematisch ist jedoch, dass die Gewinde schon bei recht geringem Zug ausreißen, da der verwendete Kunststoff nicht hart genug ist.
+
+Trotz der Unwägsamkeiten wird die Rampe mit der Vorrichtung aus Abbildung \ref{fig:rampfenschliff2} an den Experimentiertisch geschraubt. Eine Kugel wird auf das waagerechte Rampensegment gelegt, welches so auseinander-/zusammengeschoben wird, bis die Kugel die Tischplatte leicht berührt. Der Aufbau ist trotz der fehlenden Automatisierung praktikabel, wenn beide Gleise einzeln justiert und mit Gewindestangen fixiert werden.
+
+\input{images/rampenschliff2}
+
+\section{Kugeln}
+\label{sec:balls}
+
+Wie in den Analogiebetrachtungen bereits erwähnt, gibt es zwei Anforderungen an die Ionenanalogie: Es werden Kugeln benötigt, die in ihrer Größe und Dichte unterscheidbar sind. Um die Analogie $\sfrac{q}{m}\widehat{=}\sfrac{A_\mathrm{proj}}{m}$ weiter zu verbessern, soll die Quantelung der Ladung berücksichtigt werden, indem $A_{\mathrm{proj},i}=i\cdot A_{\mathrm{proj},0}$ gilt. Dies wäre zum Beispiel bei den Kugelradien $\SI{10}{\milli\metre}$, $\SI{14}{\milli\metre}$, $\SI{17}{\milli\metre}$ und $\SI{20}{\milli\metre}$ näherungsweise erfüllt.
+
+Da frei verfügbare Kugeln meistens in einer Schrittweite von $\SI{5}{\milli\metre}$ zu kaufen sind, entfällt diese Möglichkeit. Eine Anfrage an Produzenten von Präzisionskugeln verschiedener Werkstoffe ergab für einen Satz von 4 Kugelradien und 4 Werkstoffen gut unterscheidbarer Dichte, d.\,h. 160 Kugeln, einen Preis über $1\,000,-\euro$. 
+
+Eine weitere Möglichkeit, diese Forderungen zu erfüllen, wird darin gesehen, einen 3D-Drucker zu verwenden und die Füllung zwar homogen, jedoch zwischen den einzelnen Kugelarten unterscheidbar zu gestalten (bei 3D-Druckern besteht die Möglichkeit, die Dichte des Füllmaterials zu bestimmen). 
+
+\input{images/gedrucktekugeln2}
+
+\noindent Nach einem Probedruck von zwei Kugelhälften, die jeweils auf der Flachen Seite erstellt worden sind, wird der erste Satz von 10 Kugeln mit maximaler Dichte und einem Radius von $\SI{10.0}{\milli\metre}$ auf einem Stelzengeflecht gedruckt (siehe Abb. \ref{fig:gedrucktekugeln2}). Dieser Druck ergibt leider kein gutes Resultat, da die Unterseiten abgeflacht und somit die Kugeln nicht Rotationssymmetrisch sind. Bei dem Versuch, jeweils zwei Kugelhälften mit Aceton zusammenzukleben, fiel jedoch, wie auf Foto \ref{fig:fail} zu sehen ist, auf, dass trotz maximaler Druckdichte die Kugelschale wesentlich dichter gedruckt ist, als das Innenleben, und somit keine homogene Massenverteilung gewährleistet wird. 
+
+\input{images/fail}
+
+\noindent Um dennoch die restlichen Komponenten zufriedenstellend untersuchen zu können, wurden im Anschluss Holzkugeln aus dem Bastelbedarf und Glaskugeln (einfache Murmeln) gekauft. 
+
+\section{Schiefe Ebene}
+
+Die erste Hälfte der Experimentierplatte zu einer schiefen Ebene zu machen, während die zweite Hälfte in der Waage bleibt, wird realisiert, indem beide Teilplatten separat auf jeweils vier Standfüße, die unabhängig voneinander einstellbar sind, montiert werden, so dass beim Aneinanderschieben der beiden Platten die rechte waagerecht ist und die linke Platte an der Vorderkante einige Millimeter höher und an der Hinterkante dieselbe Distanz tiefer, jedoch in $x$-Richtung ebenfalls in der Waage liegt.
+
+Die Fixierung der beiden Platten und damit auch die Möglichkeit eines Transportes wird durch gehobelte Bretter umgesetzt, bei denen jeweils eine Hälfte um einige Zehntelmillimeter abgeschrägt wird, während die andere Hälfte um die festgelegte Anzahl an Millimetern abgeschabt wird (siehe Foto \ref{fig:brettvorderplatte}). Auf diese Weise kann die Neigung der schiefen Ebene festgelegt werden. Beispielsweise bei einer Plattenbreite von $\SI{40}{\centi\metre}$ führen jeweils $\SI{2}{\milli\metre}$ an der Vorder- und Hinterkante zu einer Neigung von $1:100$.
+
+\input{images/brettvorderplatte}
+
+\noindent Im Übergangsbereich der Platten wird --- wie bei \textcite{Schilling1987} --- Isolierband geklebt, damit die Kugeln den Höhenunterschied möglichst ohne Aufprallen/Springen überwinden können. Die Festlegung der Plattenneigung erfolgt über Berechnungen in \textit{Excel} und beträgt bei den Messungen ca. $1:35$, da eine möglichst große Auslenkung auf der schiefen Ebene gewünscht ist. Wie die Messungen zeigen werden, sollte jedoch für den endgültigen Aufbau ein geringeres Gefälle gewählt werden. Der Baustand während der Probemessungen kann in Abbildung \ref{fig:aufbau1} betrachtet werden.
+
+\input{images/aufbau1}
+
+\section{Detektoren}
+
+
+
+Wie bereits von \textsc{Mais} angemerkt, geschieht die Aufspaltung der analysierten Teilchen (Kugeln) radialsymmetrisch um den Punkt der größten Krafteinwirkung. Auch bei einem geschwindigkeitsfokussierenden Aufbau ändert sich nichts an diesem Prinzip, wobei jedoch zwischen den langsamsten und schnellsten Kugeln ein mittlerer Auslenkwinkel bestimmt werden muss. Aufgrund der Unzulänglichkeiten der verwendeten Holz- und Glaskugeln ist diese Kalibrierung noch nicht erfolgen.
+An dieser Stelle wird dennoch der Versuch unternommen, die Grundlagen einer praktischen Umsetzung zu beschreiben.
+\input{images/istregistriert}
+
+Bei dem Aufbau nach \textcite{Schilling1987} sind die Detektoren in einem festen Abstand $b$ zueinander angebracht. Dies führt allerdings --- bereits bei oberflächlicher Betrachtung dazu, dass ein Teil der weiter rechts liegenden Detektoren nur noch einige $\SI{E-1}{\degree}$ detektieren kann. Die waagerechte Platte ist ca. $\SI{65}{\centi\metre}$ lang, die schiefe Ebene etwa $\SI{55}{\centi\metre}$ (vgl. \ref{fig:mnu}). Somit entspricht die Ablenkung im Gravitationsfeld bei einer Starthöhe von $\SI{2}{\centi\metre}$ bis $\SI{8}{\centi\metre}$ zwischen $\SI{5}{\centi\metre}$ und $\SI{1}{\centi\metre}$. Nimmt man an, dass bei \textsc{Schilling} jeder Detektor eine Breite von $\SI{9}{\centi\metre}$ hat, so würde der letzte Detektor in einem Winkel zwischen $\SI{5.5}{\degree}$ und $\SI{4.7}{\degree}$ getroffen werden (bei den langsamsten Kugeln) und zwischen $\SI{1.2}{\degree}$ und $\SI{1.0}{\degree}$ bei den schnellsten, jedoch der erste Detektor bei den langsamen Kugeln im Bereich von $\SI{90}{\degree}$ bis $\SI{39}{\degree}$.
+
+Diese qualitativen Rechnungen gelten natürlich nur, wenn die Detektion auf der Fokussierungsachse erfolgen soll. Da die Impulsänderung $\Delta p$ linear mit dem Gewicht skaliert, wird schnell klar, dass im Bereich hoher Kugeldichten der Analysator ein hohes Auflösungsvermögen hätte, wenn die Analysatorlänge stark ausgedehnt werden würde. 
+
+Damit wird eine L-förmige Detektoranordnung vorgeschlagen, die auch Massen mit einem Registrierwinkel nahe $\SI{1}{\degree}$ wahrnehmen kann. Die Konzeption ist auf dem Foto \ref{fig:istregisrtiert} zu sehen: Je schwerer die Massen sind, desto weiter rechts werden sie detektiert und umso geringer ist der Auftreffwinkel. Somit bräuchten die linken Detektoren keine Breitenanpassung, sondern erst diejenigen weiter rechts. Da die Kugeln bei einem geringen Auftreffwinkel an den Begrenzungen der Detektoren hängen bleiben könnten, wird die waagerechte Platte bei $y=0$ abgetrennt und mit einer Neigung von $\SI{15}{\degree}$ erneut angeschraubt. Dieses Prinzip ist bereits 1970 in ähnlicher Form von der \textsc{Nuffield Foundation} verwendet worden (vgl. Abb. \ref{fig:nuffsaid}).
+
+

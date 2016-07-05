@@ -1,0 +1,25 @@
+  \thisfloatsetup{
+  capbesidewidth=\marginparwidth,
+}
+\begin{table}[htb]
+\centering
+%\sffamily,
+\small
+%\sansmath
+\arrayrulecolor{white}
+%\setlength{\arrayrulewidth}{2pt}
+\vspace{0.2cm}
+  \rowcolors{2}{halfgray!15}{halfgray!5}
+ \setlength{\extrarowheight}{.00em}
+			\begin{tabularx}{0.99\textwidth}{*{6}{>{\RaggedLeft\arraybackslash}X}}	
+			\rowcolor{mycolor} && &&&\\	
+\rowcolor{mycolor}  \multirow{-2}{*}{{\color{white}\textbf{$\boldsymbol{\bar{x}}$ in $\boldsymbol{\si{\centi\metre}}$}}} &  \multirow{-2}{*}{{\color{white}\textbf{$\boldsymbol{\bar{y}}$ in $\boldsymbol{\si{\centi\metre}}$}}}&\multirow{-2}{*}{{\color{white}\textbf{$\boldsymbol{\overline{x^2}}$ in $\boldsymbol{\si{\centi\metre\squared}}$}}}&\multirow{-2}{*}{{\color{white}\textbf{$\boldsymbol{\overline{y^2}}$ in $\boldsymbol{\si{\centi\metre}}$}}}&\multirow{-2}{*}{{\color{white}\textbf{$\boldsymbol{\overline{xy}}$ in $\boldsymbol{\si{\centi\metre\squared}}$}}} &\multirow{-2}{*}{{\color{white}\textbf{$\boldsymbol{K_\mathrm{B-P}}$}}}\\
+28,6	&	1,8	&	1090,3	&	3,99	&	65,68	&	0,98	\\
+29,1	&	1,2	&	1100,9	&	1,78	&	43,89	&	0,96	\\
+28,6	&	1,3	&	1102,0	&	2,09	&	47,19	&	0,96	\\
+29,4	&	0,5	&	1118,4	&	0,51	&	22,66	&	0,98	\\
+28,5	&	1,4	&	1070,7	&	2,80	&	54,25	&	0,99	\\
+		\end{tabularx}
+		\caption[Überprüfung auf lineare Bewegung]{Überprüfung der Kugelspuren auf Linearität mittels des Bravais-Pearson-Korrelationskoeffizienten} 
+		\label{tab:bpk}	
+		\end{table} %\vspace*{-5cm}\newpage

@@ -1,0 +1,62 @@
+\IfPackageLoaded{titletoc}{
+
+% default definition of the toc format of sections
+%\titlecontents{section}
+%[3.8em] % left
+%{}  % above code
+%{\contentslabel{2.3em}}    % numbered-entry-format
+%{\hspace*{-2.3em}}         % numberless-entry-format
+%{\titlerule*[1pc]{.}\contentspage} % filler-page-format
+%[]      % below code
+
+% Define partial toc for part pages
+%\contentsmargin{0cm} % Removes the default margin
+% Chapter text styling
+\titlecontents{chapter}[1.0cm] % Indentation
+{\addvspace{15pt}\large\scshape} % Spacing and font options for chapters
+{\contentslabel[\large\thecontentslabel]{1.00cm}} % Chapter number
+{}  
+{\normalfont\qquad\color{mycolor}\thecontentspage} % Page number
+% Section text styling
+\titlecontents{section}[2.5cm] % Indentation
+{\addvspace{2pt}} % Spacing and font options for sections
+{\contentslabel[\textlcsc{\thecontentslabel}]{1.0cm}} % Section number
+{}
+{\qquad\normalfont\color{mycolor}\thecontentspage} % Page number
+[]
+% Subsection text styling
+\titlecontents{subsection}[4.0cm] % Indentation
+{\addvspace{1pt}\normalsize} % Spacing and font options for subsections
+{\contentslabel[\thecontentslabel]{1.0cm}} % Subsection number
+{\qquad}
+{\qquad\normalfont\color{mycolor}\thecontentspage} % Page number
+[] 
+%\contentsmargin{2cm}
+\titlecontents{figure}[2cm] % Indentation
+{\addvspace{2pt}} % Spacing and font options for sections
+{\contentslabel[\textsc{Abb.~\thecontentslabel}]{2.0cm}} % Section number
+{}
+{\qquad\normalfont\color{mycolor}\thecontentspage} % Page number
+[]
+\titlecontents{table}[2cm] % Indentation
+{\addvspace{2pt}} % Spacing and font options for sections
+{\contentslabel[\textsc{Tab.~\thecontentslabel}]{2.0cm}} % Section number
+{}
+{\qquad\normalfont\color{mycolor}\thecontentspage} % Page number
+[]
+% Section text styling
+\titlecontents{lsection}[0em] % Indendating
+{\footnotesize\sffamily} % Font settings
+{}
+{}
+{}
+% Subsection text styling
+
+\titlecontents{lsubsection}[.5em] % Indentation
+{\normalfont\footnotesize\sffamily} % Font settings
+{}
+{}
+{}
+% Thanks to egreg, for providing this code at
+% http://tex.stackexchange.com/questions/101773/write-to-back-page-of-part
+} % end of \IfPackageLoaded{titletoc}

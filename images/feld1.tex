@@ -1,0 +1,182 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+\begin{figure*}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\small
+\subfloat[]{
+\begin{tikzpicture}
+\begin{scope}[scale=0.9]
+
+% Äquipotentiallinien  
+\draw[dashed] (-1.98,0) circle (14pt);    
+\draw[dashed] (-1.82,0) circle (25pt);    
+\draw[dashed] (-3.4,0) arc (180:70:2.18 and 2.6) arc (260:280:2.8) arc (110:-110:2.18 and 2.6) arc (80:100:2.8) arc (290:180:2.18 and 2.6);
+\draw[dashed] (-2.9,0) arc (180:35:1.33 and 1.33) -- ++ (0.98,-1.54) arc (215:505:1.33 and 1.33) -- ++ (-0.98,-1.54) arc (325:180:1.33 and 1.33);
+\draw[dashed] (-3.1,0) arc (180:70:1.9 and 1.9) arc (255:285:2.2) arc (110:-110:1.9 and 1.9) arc (75:105:2.2) arc (290:180:1.9 and 1.9);
+\draw[dashed] (1.98,0) circle (14pt);    
+\draw[dashed] (1.82,0) circle (25pt);
+%Beschriftungen
+  \draw[dotted, mycolor4]  (0.45,0.55)  -- ++ (-0.69, -0.15)-- ++ (1.17, -0.42) -- ++ (0.69, 0.15) -- ++ (-1.17, 0.42);
+        \node[fill=white, rectangle] at (-2.4,-0.33) {$Q_1$};   
+               \node[fill=white, rectangle] at (2.4,-0.3) {$Q_2$};   
+        \node[fill=white, rectangle] at (-0.4,0.3) {$\boldsymbol{F}_\mathrm{Q_1}$};   
+        \node[fill=white, rectangle] at (1.0,-0.27) {$\boldsymbol{F}_\mathrm{ges}$};   
+        \node[fill=white, rectangle] at (1.6,0.45) {$\boldsymbol{F}_\mathrm{Q_2}$}; 
+% Kraftrichtung
+ \draw[dotted, thick]  (-2,0)   -- (0.45,0.55) ; 
+  \draw[dotted, thick]  (2,0)   -- (0.45,0.55) ;     
+%Feldlinien 
+%#1
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) -- (1.11,0.24) arc (255:188:1) arc (188:181:20);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) -- (1.11,-0.24) arc (105:172:1) arc (172:179:20);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) -- (-1.11,0.24) arc (285:352:1) arc (352:359:20);                 
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) -- (-1.11,-0.24) arc (75:8:1) arc (8:1:20);
+%2
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (250:186:2.0) arc (186:181:21.5); 
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (70:6:2.0) arc (6:1:21.5); 
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (290:354:2.0) arc (354:359:21.5); 
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (110:174:2.0) arc (174:179:21.5); 
+%3
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (203:182:10.1);     
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (157:178:10.1);    
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (23:2:10.1);  
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (337:358:10.1);  
+%4
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (187:166:10.1);                  
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (173:194:10.1);                    
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (7:-14:10.1);   
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (353:374:10.1);  
+%5
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (155:135:10.1);                  
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (205:225:10.1); 
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (25:45:10.1); 
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (335:315:10.1);
+%6
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (108:95:10.1);                  
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (2,0) arc (252:265:10.1);                    
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (72:85:10.1); 
+\draw[postaction={decorate},decoration={markings,mark=at position 0.92 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] 
+                 (-2,0) arc (288:275:10.1);                                            		
+%Ladungen 
+ \shade[ball color=mycolor!75, opacity=1] (-2.0,0) circle (7pt);
+      \node at (-2,0) {$+$}; 
+ \shade[ball color=mycolor!75, opacity=1] (2.0,0) circle (7pt);
+       \node at (2,0) {$+$}; 
+\draw[->,>={Triangle[length=0pt 3*5,width=0pt 5]},mycolor4, thick]  (0.45,0.55)   -- ++ (1.17, -0.42) ;
+ \draw[->,>={Triangle[length=0pt 3*5,width=0pt 5]},mycolor4, thick]  (0.45,0.55)   -- ++ (-0.69, -0.15) ;
+\shade[ball color=mycolor!25, opacity=1] (0.45,0.55) circle (4pt);
+  \node at (0.25,0.75) {$q_\mathrm{-}$};   
+  \draw[->,>={Triangle[length=0pt 3*5,width=0pt 5]},mycolor4, thick]  (0.45,0.55)   -- (0.93, -0.02); 
+\end{scope}
+\end{tikzpicture}}
+\\
+\subfloat[]{
+\begin{tikzpicture}[
+	scale=1,
+	ka roehre/.style={fill=white,draw=black!80}
+]
+\begin{scope}[scale=1.1]
+
+% Äquipotentiallinien  
+\draw[dashed] (-1.02,0) circle (10pt);    
+\draw[dashed] (-1.15,0) circle (18pt);    
+\draw[dashed] (-1.25,0) circle (25pt); 
+\draw[dashed] (-1.7,0) circle (40pt); 
+\draw[dashed] (-0.2,0) arc (0:120:60pt);   
+\draw[dashed] (-0.2,0) arc (0:-120:60pt); 
+\draw[dashed] (-0.05,0) arc (0:100:80pt);   
+\draw[dashed] (-0.05,0) arc (0:-100:80pt); 
+
+\draw[dashed] (1.02,0) circle (10pt);    
+\draw[dashed] (1.15,0) circle (18pt);    
+\draw[dashed] (1.25,0) circle (25pt); 
+\draw[dashed] (1.7,0) circle (40pt); 
+\draw[dashed] (0.2,0) arc (180:60:60pt);   
+\draw[dashed] (0.2,0) arc (180:300:60pt); 
+\draw[dashed] (0.05,0) arc (180:80:80pt);   
+\draw[dashed] (0.05,0) arc (180:280:80pt);   
+%Ladung
+
+  \draw[dotted, mycolor4]  (0.3,1.35) -- ++ (0.4, 0.39)  -- ++ (0.5, -0.95) -- ++ (-0.4, -0.39)  -- ++ (-0.5, 0.95) ;
+       \node[fill=white, rectangle] at (-1,-0.5) {$Q_1$};   
+              \node[fill=white, rectangle] at (1.1,-0.5) {$Q_2$};   
+       \node[fill=white, rectangle] at (0.65,1.98) {$\boldsymbol{F}_\mathrm{Q_1}$};   
+       \node[fill=white, rectangle] at (1.58,0.77) {$\boldsymbol{F}_\mathrm{ges}$};   
+       \node[fill=white, rectangle] at (0.35,0.75) {$\boldsymbol{F}_\mathrm{Q_2}$};
+% Kraftrichtung
+ \draw[dotted, thick]  (-1,0)   -- (0.3,1.35) ; 
+  \draw[dotted, thick]  (1,0)   -- (0.3,1.35) ; 
+
+%#1
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.21 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+            decoration={markings,mark=at position 0.39 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (205:-204:1.12 and 0.4) ; 
+        
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.25 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+            decoration={markings,mark=at position 0.45 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (155:515:1.12 and 0.4) ;
+%#2            
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.43 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+              decoration={markings,mark=at position 0.76 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (225:-45:1.43 and 0.8) ;             
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.43 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+              decoration={markings,mark=at position 0.76 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (135:405:1.43 and 0.8) ;                
+%#3
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+              decoration={markings,mark=at position 0.66 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (255:165:2.29) ; 
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}},
+              decoration={markings,mark=at position 0.66 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (1,0)arc (285:375:2.29) ; 
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+               decoration={markings,mark=at position 0.66 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (105:195:2.29) ; 
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}},
+               decoration={markings,mark=at position 0.66 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (1,0)arc (75:-15:2.29) ;                           
+ 
+%#4
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+              decoration={markings,mark=at position 0.66 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (265:235:4.5) ; 
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}},
+              decoration={markings,mark=at position 0.66 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (1,0)arc (275:305:4.5) ;    
+\draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}},
+ decoration={markings,mark=at position 0.66 with {\arrow{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (-1,0)arc (95:125:4.5) ; 
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}},
+  decoration={markings,mark=at position 0.66 with {\arrowreversed{Triangle[length=0pt 3*8,width=0pt 7]}}}, mycolor] (1,0)arc (85:55:4.5) ;    
+% Ladungen                
+ \shade[ball color=mycolor!25, opacity=1] (1.0,0) circle (6pt);
+      \node at (1,0) {$-$}; 
+   \shade[ball color=mycolor!75, opacity=1] (-1.0,0) circle (6pt);
+       \node at (-1,0) {$+$};          
+     \draw[->,>={Triangle[length=0pt 3*5,width=0pt 5]},mycolor4, thick]  (0.3,1.35)   -- ++ (0.4, 0.39) ;
+    \draw[->,>={Triangle[length=0pt 3*5,width=0pt 5]},mycolor4, thick]  (0.3,1.35)   -- ++ (0.5, -0.95) ;
+    \shade[ball color=mycolor!75, opacity=1] (0.3,1.35) circle (3pt);
+         \node at (0.09,1.53) {$q_\mathrm{+}$};   
+    \draw[->,>={Triangle[length=0pt 3*5,width=0pt 5]},mycolor4, thick]  (0.3,1.35)   -- (1.2, 0.79) ;    
+\end{scope}
+\end{tikzpicture}}
+  \caption[Zwei-Ladungs-Systeme]{Dargestellt sind die elektrischen Feldlinien von zwei-Ladungssystemen nebst Äquipotentiallinien, die orthogonal zu der Kraftrichtung stehen, und Punktladungen mit den auf sie wirkenden Kräfteparallelogrammen. {\color{mycolor}\textbf{(a)}:} Positive Ladungen erzeugen ein Feld, welches im Übergangsbereich nahezu orthogonal zu der $x$-Achse liegt.  {\color{mycolor}\textbf{(b)}:} Entgegengesetzte Ladungen ziehen sich an. Sie bilden ein stationäres Feld, dessen Feldlinien nach Konvention von plus nach minus laufen. Mit Hilfe des Superpositionsprinzips lassen sich diese Fälle auf einen Plattenkondensator übertragen. Falls der Ebenenabstand $r$ klein gegenüber der Fläche $A$ ist, kann man in Näherung mit einem vollständig homogenen E-Feld argumentieren (nach \cite[S.\,6--7]{Demtroeder2009}).}
+  \label{fig:feld1}
+  \vspace{-0pt}
+\end{figure*}

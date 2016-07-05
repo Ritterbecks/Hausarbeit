@@ -1,0 +1,102 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+     \vspace*{6.6cm}
+\begin{figure*}[htbp]
+\centering
+\small
+%\sansmath
+ \caption[Massenspektograph von \textsc{Aston}]{Schematische Darstellung des Massenspektographen von \textsc{Aston}. Um alle auftretenden Größen adäquat beschreiben zu können, wird auf eine isometrische Darstellung verzichtet. Positiv geladene Ionen werden beschleunigt und durch jeweils eine Blende in $x$- und $y$-Richtung so abgeblendet, dass die Geschwindigkeit $\dot{r}$ mit $\dot{x}$ genähert werden kann. Durch ein elektrisches Feld erfolgt eine Ablenkung in negative $y$-Richtung um den Winkel $alpha$, bevor ein magnetisches Feld, welches in die Darstellungsebene hineinragt, den Ionenenstrahl um den Winkel $\beta$ positiv in Richtung einer Photoplatte beugt. Schnellere Ionen werden im E-Feld geringer, langsamere stärker abgelenkt, wobei es zu einer Streubreite $\Delta s$ kommt (nach \cite[S.\,52]{Demtroeder2010}).}
+  \label{fig:aston}
+  	\vspace*{-16.0cm} 
+\begin{tikzpicture}[
+	scale=1,
+	node/.style={fill=white,draw=black}
+]
+\begin{scope}[scale=0.62]
+% Winkel
+\draw[every node/.style={ midway}, thick] (-0.25, 0) arc (0:15:3.5) node [left=0.0]{$\alpha$};
+\draw[every node/.style={ midway}, thick] (-0.75, 0) arc (360:345:3) node [left=0.0]{$\alpha$};
+\draw[every node/.style={ midway}, thick] ({3.41+4*cos(15)},{-1.9+4*-sin(15)}) arc (345:393:4) node [left=0.0]{$\beta$};
+%Koordinaten
+\draw[->,>={latex[length=0pt 3*5,width=0pt 5]}, every node/.style={fill=white, yshift=-0.3}, thick] (-8,-4.5) --  ++ (0,2.5) node [right=0.05] {$y$};
+\draw[->,>={latex[length=0pt 3*5,width=0pt 5]}, every node/.style={fill=white,midway}, thick] (-8,-4.5) --  ++ (2.5,0) node [right=0.8] {$x$};
+\draw[->,>={latex[length=0pt 3*5,width=0pt 5]}, every node/.style={fill=white,midway}, thick] (-8,-4.5) --  ++ (-1.77,-1.77) node [below=0.2] {$z$};
+%B-Feld
+\draw[thick, mycolor2] (2.15,-2) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (2.15,-2) circle (6pt);
+\draw[thick, mycolor2] (3.65,-2) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (3.65,-2) circle (6pt);
+\draw[thick, mycolor2] (2.90,-2) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (2.90,-2) circle (6pt);
+\draw[thick, mycolor2] (4.40,-2) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (4.40,-2) circle (6pt);
+\draw[thick, mycolor2] (3.65,-1.25) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (3.65,-1.25) circle (6pt);
+\draw[thick, mycolor2] (2.90,-1.25) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (2.90,-1.25) circle (6pt);
+\draw[thick, mycolor2] (3.65,-2.75) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (3.65,-2.75) circle (6pt);
+\draw[thick, mycolor2] (2.90,-2.75) node[mycolor2, cross, minimum size=5.5pt] {};
+\draw[thick, mycolor2] (2.90,-2.75) circle (6pt);
+% Längen
+\draw[decorate,decoration={brace,amplitude=10pt},yshift=0pt, thick] (13.42, 4.61) -- (13.42, 0) node [black,midway,xshift=0.6cm] {$D$};
+\draw[decorate,decoration={brace,amplitude=10pt, mirror},yshift=0pt, thick] (13.42, 0) -- (13.42, -4.61) node [black,midway,xshift=-1.2cm] {$(a+b)\cdot \alpha$};
+\draw [<->,>={latex[length=0pt 3*5,width=0pt 5]}, every node/.style={fill=white,midway}] (-5.5,1.6) -- ++ (3.5,0) node  {$l_1$};
+\draw[dashed] (1.90,-2.90) -- ++ ({3*cos(45)}, {-3*sin(45)}); 
+\draw[dashed] (4.35,-0.84)  -- ++ ({3*cos(45)}, {-3*sin(45)}); 
+\draw [<->,>={latex[length=0pt 3*5,width=0pt 5]}, every node/.style={fill=white,midway}] ({1.90+2.5*cos(45)}, {-2.9-2.5*sin(45)}) -- ({4.35+2.5*cos(45)}, {-0.84-2.5*sin(45)}) node  {$l_2$};
+\draw[dashed](-3.75,-1) -- ++ (0,-4.82);
+\draw [<->,>={latex[length=0pt 3*5,width=0pt 5]}, every node/.style={fill=white,midway}] (-3.75,-5.32) -- ++ (7.16,0)  node  {$a$};
+\draw[dashed](3.41,-1.9) -- ++ (0,-3.92);
+\draw[dashed](3.41,-1.9) -- ++ ({2*cos(32)},{2*sin(32)});
+\draw [<->,>={latex[length=0pt 3*5,width=0pt 5]}, every node/.style={fill=white,midway}] (3.41,-5.32) -- ++ (10.01,0) node  {$b$};
+% Blenden
+\draw[mycolor4, thick, every node/.style={text=black}] (-9.5,3) -- ++ (0, -2.7) node [above=1.5] {$B_1$};
+\draw[mycolor4, thick, every node/.style={text=black}] (-7,3) -- ++ (0, -2.7) node [above=1.5] {$B_2$};
+\draw[mycolor4, thick, every node/.style={text=black}] (-9.5,-3) -- ++ (0, 2.7);
+\draw[mycolor4, thick] (-7,-3) -- ++ (0, 2.7);
+\draw[mycolor4, thick] (-9.7,0.3) -- ++ (0.4,0);
+\draw[mycolor4, thick] (-7.2,0.3) -- ++ (0.4, 0);
+\draw[mycolor4, thick] (-9.7,-0.3) -- ++ (0.4, 0);
+\draw[mycolor4, thick] (-7.2,-0.3) -- ++ (0.4, 0);
+\draw[mycolor4, thick, every node/.style={text=black}] (0,-1.5) -- ++ ({-2.6*cos(75)},{-2.6*sin(75)}) node [below=0.05] {$B_3$};
+\draw[mycolor4, thick]({0-0.2*cos(15)},{-1.5+0.2*sin(15)}) -- ++ ({0.4*cos(15)},{-0.4*sin(15)});
+\draw[mycolor4, thick] ({0+0.85*cos(75)},{-1.5+0.85*sin(75)}) -- ++ ({0.70*cos(75)},{0.70*sin(75)});
+\draw[mycolor4, thick]({0+0.85*cos(75)-0.2*cos(15)},{-1.5+0.85*sin(75)+0.2*sin(15)}) -- ++ ({0.4*cos(15)},{-0.4*sin(15)});
+%E-Feld
+\foreach \x in {0,...,5}
+        {
+\draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]}, thick, mycolor, shorten >=0.4pt] ({-5.4+\x*0.66},1) -- ++ (0,-2) ;
+};
+
+\filldraw[fill=mycolor!75, draw=black] (-5.5,0.8) rectangle (-2,1.0);
+\filldraw[fill=mycolor!25, draw=black] (-5.5,-0.8) rectangle (-2,-1.0);
+%Magnetfeld
+\draw[mycolor2, thick] (3.26,-2) circle (45pt);
+
+% Elektron
+\draw[dashed] (-5.5,0) arc (90:75:13.4) -- ++ ({16.0*cos(15)}, {-16.0*sin(15)}); 
+\draw[dashed] (-3.75,0) -- ++ ({17.25*cos(15)}, {17.25*sin(15)}); 
+\draw[->,>={latex[length=0pt 3*7,width=0pt 7]}, dashed] (-5.5,0) -- ++ (19.8,0);
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.95 with {\arrow{Triangle[length=0pt 3*5,width=0pt 5]}}},
+, mycolor, thick] (-10,0) -- ++ (+4.5,0); 
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.35 with {\arrow{Triangle[length=0pt 3*5,width=0pt 5]}}}, ,decoration={markings,mark=at position 0.85 with {\arrow{Triangle[length=0pt 3*5,width=0pt 5]}}},
+, mycolor, thick] (-5.5,0) arc (90:75:13.4) -- ++ ({4*cos(15)}, {-4*sin(15)}) arc (255:302:3.6)  -- ++ ({10.8*cos(325)}, {10.8*sin(32)});
+\draw[dashed] (13.42,4.68) -- ++ (0, -10.5); 
+%schneller
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.35 with {\arrow{Triangle[length=0pt 3*5,width=0pt 5]}}}, ,decoration={markings,mark=at position 0.85 with {\arrow{Triangle[length=0pt 3*5,width=0pt 5]}}},
+, dashed, thick, mycolor!50!mycolor2] (-5.5,0) arc (90:80:18.4) -- ++ ({4.3*cos(10)}, {-4.3*sin(10)}) arc (260:299:2.8)  -- ++ ({10.8*cos(29)}, {10.8*sin(29)});
+%langsamer
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.35 with {\arrow{Triangle[length=0pt 3*5,width=0pt 5]}}}, ,decoration={markings,mark=at position 0.85 with {\arrow{Triangle[length=0pt 3*5,width=0pt 5]}}},
+, dashed, thick, mycolor!75!mycolor2] (-5.5,0) arc (90:67:10.4) -- ++ ({4.0*cos(23)}, {-4.0*sin(23)}) arc (250:310:2.8)  -- ++ ({10.8*cos(38)}, {10.8*sin(38)});
+%Photoplatte 15°
+\draw[thick] (8,3.16) -- ++ (-0.05, 0.19) -- ++ ({6*cos(15)},{6*sin(15)}) -- ++ (0.05,-0.19) -- cycle;
+\shade[bottom color=halfgray!25, top color=halfgray!50] (8,3.16) -- ++ (-0.05, 0.19) -- ++ ({6*cos(15)},{6*sin(15)}) -- ++ (0.05,-0.19) -- cycle; 
+
+\end{scope}
+\end{tikzpicture}
+  \vspace{-0pt}
+\end{figure*}
+\vspace*{-9.6cm}

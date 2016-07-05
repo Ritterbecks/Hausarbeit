@@ -1,0 +1,296 @@
+\RequirePackage{fix-cm} % permit Computer Modern fonts at arbitrary sizes.
+%
+%% Document Class (Koma Script) -----------
+\documentclass[%
+   % draft=true,     % draft mode (no images, layout errors shown)
+    draft=false,     % final mode 
+%%% --- Paper Settings ---
+   paper=a4,
+   paper=portrait,
+   pagesize=auto,
+   twoside=false,
+   %captions=outerbeside,
+%%% --- Base Font Size ---
+   fontsize=11pt,%
+%%% --- Koma Script Version ---
+   version=last, %
+%%% --- Global Package Options ---
+   ngerman, % language (passed to babel and other packages)
+            % (ngerman, english, french, ...)
+]{scrbook} % Classes: scrartcl, scrreprt, scrbook
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Must be loaded first!
+\usepackage[utf8]{inputenc}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% packages required for the template
+\usepackage{atveryend} % must be loaded before etoolbox. (bugfix for pageslts)
+\usepackage{codesection}
+\usepackage{templatetools}
+%\raggedbottom 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% encoding
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% automatic selection of encoding
+% insert chars for umlaut a and sz
+\usepackage{selinput}
+\SelectInputMappings{adieresis={ä},germandbls={ß},Euro={€}} 
+
+% Encoding of _files and directories_
+% (ensures that any file can be loaded without problems)
+\usepackage[%
+   extendedchars, encoding, multidot, space,
+   filenameencoding=latin1, % Windows XP, Vista, 7
+   % filenameencoding=utf8,   % Linux, OS X
+]{grffile}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% preamble
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% load packages
+\input{preamble/packages.tex}
+%% apply style settings
+\input{preamble/style.tex}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Configurations
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%% Switch between colored links (web) and black links (print)
+\IfDefined{UseDefinition}{%
+  %\UseDefinition{Target}{Print}
+  \UseDefinition{Target}{Web}
+}% end of UseDefinition
+
+\IfPackageLoaded{hyperref}{%
+%%% set layout of PDF pages
+\hypersetup{pdfpagelayout=OneColumn}
+  % options:
+  %  SinglePage     Displays a single page; advancing flips the page
+  %  OneColumn      Displays the document in one column; continuous scrolling.
+  %  TwoColumnLeft  Displays the document in two columns, 
+  %                 odd-numbered pages to the left.
+  %  TwoColumnRight Displays the document in two columns, 
+  %                 odd-numbered pages to the right.
+  %  TwoPageLeft    Displays two pages, odd-numbered pages to the left 
+  %  TwoPageRight   Displays two pages, odd-numbered pages to the right 
+}% (end of hyperref)
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% custom definitions
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%% Hyphenation (Silbentrennung)
+\input{content/hyphenation.tex}
+% Vermeidung von Hurenkindern (sic!) und Schusterkindern (sic!)
+\clubpenalty = 500
+\widowpenalty = 1000
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% execute necessary commands
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% (... if the according package is loaded or not)
+\listfiles % list all loaded files at end of document
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% bibliography (now in preamble !)
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%%% bibtex file(s)
+% add multiple files with comma separation
+% biblatex requires files before document
+\IfPackageLoaded{biblatex}{
+  % add all .bib files:
+  \addbibresource{bib/bibliography.bib}
+ % \addbibresource{bib/publications.bib}
+  % \addbibresource{bib/BibtexData-anytopic.bib}
+}% end: biblatex
+
+\usepackage{truncate}
+%\usepackage{upgreek}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Definition of glossaries Entries (before document!)
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% glossary, acronym, symoblist and such
+\input{content/Z-GlossaryEntries.tex}
+\input{preamble/makeCommands.tex}
+%% document content %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\AtBeginDocument{%
+  \renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}
+}
+\input{bib/publications.bib}
+%\includeonly{
+% content/0-Deckblatt,
+%} % end includeonly
+% Ornament Widmung
+\RequirePackage{fourier-orns}
+\newcommand*{\fourierOrnament}[3]{{%
+  \fontencoding{U}\fontfamily{futs}\fontsize{#1}{#2}\selectfont\char#3}}
+\makeatletter
+\newcommand{\distas}[1]{\mathbin{\overset{#1}{\kern\z@\sim}}}%
+\newsavebox{\mybox}\newsavebox{\mysim}
+\newcommand{\distras}[1]{%
+  \savebox{\mybox}{\hbox{\kern3pt$\scriptstyle#1$\kern3pt}}%
+  \savebox{\mysim}{\hbox{$\sim$}}%
+  \mathbin{\overset{#1}{\kern\z@\resizebox{\wd\mybox}{\ht\mysim}{$\sim$}}}%
+}
+\makeatother
+\makeatletter                        
+\providecommand*{\toclevel@chapterinfo}{2}%    
+\makeatother  
+\PassOptionsToPackage{toc=bib}{biblatex}
+\usetikzlibrary{shadings}
+\usetikzlibrary{3d,calc}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{external}
+\tikzexternalize % activate!
+ \DeclareSIUnit\atmosphere{atm}
+ \DeclareFloatVCode{flushup}%
+ {\vskip-1.2cm}
+  \DeclareFloatVCode{flushupp}%
+  {\vskip-5.8cm}
+ \usepackage[version=4,arrows=pgf-filled]{mhchem}
+\tikzset{cross/.style={cross out, draw=mycolor2, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+%default radius will be 1pt. 
+cross/.default={1pt}}
+\newcommand{\midarrowr}{\tikz \draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]},mycolor4, thick] (0,0) -- +(.1,0);}
+\newcommand{\midarrow}{\tikz \draw[->,>={Triangle[length=0pt 3*3,width=0pt 3]},mycolor, thick] (0,0) -- +(.1,0);}
+\robustify\setcounter
+\robustify\addtocounter
+\robustify\setlength
+\robustify\addtolength
+\usetikzlibrary{external}
+\usetikzlibrary{mindmap}
+\tikzexternaldisable
+\newcolumntype{F}{>{\RaggedRight\let\newline\\\hspace{0pt}}X}
+
+%\tikzexternalise
+%%% document start %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pgfplotscreateplotcyclelist{mycolor white}{%
+only marks, every mark/.append style={solid, fill=mycolor}, mark=*\\%
+only marks, every mark/.append style={solid, fill=mycolor!75}, mark=square*\\%
+only marks, every mark/.append style={solid, fill=mycolor!50}, mark=otimes*\\%
+ only marks, every mark/.append style={solid, fill=mycolor!25}, mark=triangle*\\%
+only marks, every mark/.append style={solid, fill=mycolor!5},mark=diamond*\\%
+ only marks, every mark/.append style={solid, fill=mycolor2},mark=*\\%
+ only marks, every mark/.append style={solid, fill=mycolor2!75},mark=square*\\%
+only marks, every mark/.append style={solid, fill=mycolor2!50},mark=otimes*\\%
+ only marks,every mark/.append style={solid, fill=mycolor2!25},mark=diamond*\\%
+}
+\pgfplotscreateplotcyclelist{mycolor2 white}{%
+ only marks, every mark/.append style={solid, fill=mycolor2},mark=*\\%
+ only marks, every mark/.append style={solid, fill=mycolor2!75},mark=square*\\%
+only marks, every mark/.append style={solid, fill=mycolor2!50},mark=otimes*\\%
+ only marks,every mark/.append style={solid, fill=mycolor2!25},mark=triangle*\\%
+only marks, every mark/.append style={solid, fill=mycolor2!5}, mark=diamond*\\%
+only marks, every mark/.append style={solid, fill=mycolor!75}, mark=square*\\%
+only marks, every mark/.append style={solid, fill=mycolor!50}, mark=otimes*\\%
+ only marks, every mark/.append style={solid, fill=mycolor!25}, mark=triangle*\\%
+only marks, every mark/.append style={solid, fill=mycolor!5},mark=diamond*\\%
+}
+\pgfplotscreateplotcyclelist{mycolor4 white}{%
+ only marks, every mark/.append style={solid, fill=mycolor4},mark=*\\%
+ only marks, every mark/.append style={solid, fill=mycolor4!75},mark=square*\\%
+only marks, every mark/.append style={solid, fill=mycolor4!50},mark=otimes*\\%
+ only marks,every mark/.append style={solid, fill=mycolor4!25},mark=triangle*\\%
+only marks, every mark/.append style={solid, fill=mycolor4!5}, mark=diamond*\\%
+only marks, every mark/.append style={solid, fill=mycolor!75}, mark=square*\\%
+only marks, every mark/.append style={solid, fill=mycolor!50}, mark=otimes*\\%
+ only marks, every mark/.append style={solid, fill=mycolor!25}, mark=triangle*\\%
+only marks, every mark/.append style={solid, fill=mycolor!5},mark=diamond*\\%
+}
+\pgfplotscreateplotcyclelist{mycolor4 black}{%
+ only marks,each nth point={4}, every mark/.append style={solid, fill=mycolor4},mark=*\\%
+ only marks, each nth point={4},every mark/.append style={solid, fill=mycolor4!75},mark=square*\\%
+only marks,each nth point={3}, every mark/.append style={solid, fill=mycolor4!50},mark=otimes*\\%
+ only marks,each nth point={3},every mark/.append style={solid, fill=mycolor4!25},mark=triangle*\\%
+only marks,each nth point={2}, every mark/.append style={solid, fill=mycolor4!5}, mark=diamond*\\%
+only marks, every mark/.append style={solid, fill=mycolor!75}, mark=square*\\%
+only marks, every mark/.append style={solid, fill=mycolor!50}, mark=otimes*\\%
+ only marks, every mark/.append style={solid, fill=mycolor!25}, mark=triangle*\\%
+only marks, every mark/.append style={solid, fill=mycolor!5},mark=diamond*\\%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\boldPDFchapterstrue
+% Configure page numbering - required for hyperref (not displayed)
+\pagenumbering{alph}\setcounter{page}{1}%
+\pagestyle{empty}
+
+% -- title page --
+
+\input{content/0-Deckblatt}
+
+% -- table of contents --
+
+\frontmatter
+
+\pagestyle{scrplain}
+\addtocontents{toc}{\protect\pagestyle{scrplain}}
+\setcounter{tocdepth}{1}
+\tableofcontents
+%\thispagestyle{scrplain} % Print the table of contents itself 
+\thispagestyle{scrplain}
+\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{scrheadings} % Print headers again
+
+% --- Main Document --- --- --- --- --- --- ---
+\mainmatter
+
+
+\input{content/1-Einleitung}
+\input{content/2-Massenspektrometrie}
+\input{content/3-Fachdidaktik}
+\input{content/4-Analogie}
+\input{content/5-Gueltigkeit}
+\input{content/6-Schlussbemerkungen}
+
+%%% -- end of main content
+
+% -- bibliography --
+% (must be placed _before_ appendix)
+\boldPDFchaptersfalse
+
+% Biblatex Zeilenumbrpüche manuell mittels {\-}
+
+\IfPackageLoaded{biblatex}{
+  \cleardoublepage
+  \IfDefined{phantomsection}{\phantomsection}\label{sec:bibliography}
+  \printbibliography[
+  	%env=numbered+bold
+   % heading=bibintoc,
+    title = {Literaturverzeichnis}
+ % (bibintoc, bibnumbered)
+  ]	
+\addcontentsline{toc}{chapter}{\protect\lowercase\protect\texorpdfstring{{ %\color{mycolor} 
+\protect\hspace*{-0.1cm}Literaturverzeichnis}}{Literaturverzeichnis}}
+  }% end of bibliography
+  \newpage
+\pagenumbering{roman}
+\setcounter{page}{3}
+%% -- list of figures and tables --
+
+\cleardoublepage\IfDefined{phantomsection}{\phantomsection}\label{sec:lof}
+\listoffigures
+\cleardoublepage\IfDefined{phantomsection}{\phantomsection}\label{sec:lot}
+\listoftables
+
+%% -- List of Listings --
+% _Remove_ if no listing with caption is defined
+%\cleardoublepage
+%\IfDefined{lstlistoflistings}{\cleardoublepage\lstlistoflistings}
+%\addcontentsline{toc}{section}{Quellcode}
+
+% --- Appendix --- --- --- --- --- --- ---
+ \cleardoublepage
+\cleardoublepage\IfDefined{phantomsection}{\phantomsection}
+\appendix
+% Add `Appendix` to TOC
+%\addcontentsline{toc}{part}{III \appendixname}
+% must be _input_, otherwise the TOC entry is at the wrong place
+\input{content/Z-Anhang.tex}
+
+% -- declaration --
+\thispagestyle{scrplain}
+\input{content/Z-Declaration.tex}
+%%% document END %%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

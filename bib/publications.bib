@@ -1,0 +1,81 @@
+\ExecuteBibliographyOptions{labeldate,uniquename,uniquelist,pagetracker,
+                            ibidtracker=constrict,autocite=inline}
+
+\providecommand*{\mkibid}[1]{#1}
+\renewcommand*{\iffinalcitedelim}{\iflastcitekey}
+
+\DeclareBibliographyOption[boolean]{ibidpage}[true]{%
+  \ifstrequal{#1}{true}
+    {\ExecuteBibliographyOptions{loccittracker=constrict}}
+    {\ExecuteBibliographyOptions{loccittracker=false}}}
+    
+   \newbool{cbx:loccit}
+ \newbibmacro*{cite:ibid}{%
+   \printtext[bibhyperref]{\bibstring[\mkibid]{ibidem}}%
+   \ifloccit
+     {\global\booltrue{cbx:loccit}}
+     {}}  
+   
+
+\newbibmacro*{textciteebd}{%
+  \global\boolfalse{cbx:loccit}%
+  \ifnameundef{labelname}
+    {\iffieldundef{shorthand}
+       {\usebibmacro{cite:label}%
+        \setunit{%
+          \global\booltrue{cbx:parens}%
+          \nonameyeardelim\bibopenparen}%
+        \ifnumequal{\value{citecount}}{1}
+          {\usebibmacro{prenote}}
+          {}%
+        \usebibmacro{cite:labelyear+extrayear}}
+       {\usebibmacro{cite:shorthand}}}
+    {\printnames{labelname}%
+     \setunit{%
+       \global\booltrue{cbx:parens}%
+       \nameyeardelim\bibopenparen}%
+     \ifnumequal{\value{citecount}}{1}
+       {\usebibmacro{prenote}}
+       {}%
+     \iffieldundef{shorthand}
+       {\ifthenelse{\ifciteibid\AND\NOT\iffirstonpage}
+          {\usebibmacro{cite:ibid}}
+          {\iffieldundef{labelyear}
+             {\usebibmacro{cite:label}}
+             {\usebibmacro{cite:labelyear+extrayear}}}}
+       {\usebibmacro{cite:shorthand}}}}
+       
+       
+\newbibmacro*{citeebd}{%
+  \global\boolfalse{cbx:loccit}%
+  \iffieldundef{shorthand}
+    {\ifthenelse{\ifciteibid\AND\NOT\iffirstonpage}
+       {\usebibmacro{cite:ibid}}
+       {\ifthenelse{\ifnameundef{labelname}\OR\iffieldundef{labelyear}}
+          {\usebibmacro{cite:label}%
+           \setunit{\nonameyeardelim}}
+          {\printnames{labelname}%
+           \setunit{\nameyeardelim}}%
+        \usebibmacro{cite:labelyear+extrayear}}}
+    {\usebibmacro{cite:shorthand}}}       
+       
+  \DeclareCiteCommand{\textciteebd}
+    {\usebibmacro{cite:init}%
+     \usebibmacro{prenote}}
+    {\usebibmacro{citeindex}%
+     \usebibmacro{textciteebd}}
+    {}
+    {\usebibmacro{textcite:postnote}%
+     \usebibmacro{cite:post}}     
+       
+\DeclareCiteCommand{\parenciteebd}[\mkbibparens]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{citeebd}}
+  {\multicitedelim}
+  {\usebibmacro{cite:postnote}}
+  
+  \newbibmacro*{cite:postnote}{%
+    \ifbool{cbx:loccit}
+      {}
+      {\usebibmacro{postnote}}}

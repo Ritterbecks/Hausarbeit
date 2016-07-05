@@ -1,0 +1,57 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+\begin{figure}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\small
+%\sansmath
+\begin{tikzpicture}[
+	scale=1,
+	ka roehre/.style={fill=white,draw=black!80}
+]
+\begin{scope}[scale=2.0]
+%Rampe
+\shade[bottom color=mycolor2!50, top color=mycolor2!10] (-2, 0) -- ++ (4,2) -- ++ (0, -0.2) -- ++ (-3.6, -1.8) -- cycle;
+\draw[<->,>={latex[length=0pt 3*4,width=0pt 4]},thick, every node/.style={fill=white,midway}] (-2, 0) -- ++ (4,2);
+\draw[dashed] (-2, 0) -- ++ (4,0);
+% Ball
+\shade[ball color=mycolor!25, opacity=1] (0.91, 2.13) circle (0.60);
+% Kräfte
+   \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, mycolor4, thick]  (0.91,2.13)   -- ++ (-0.52, -0.28);
+  \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, mycolor4, thick]  (1.19,1.60)   -- ++ (-0.52, 1.0); 
+  \node at (0.90,2.46) {$\boldsymbol{F}_\mathrm{N}$};  
+  \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, mycolor4, thick]  (1.19,1.60)   -- ++ (0.39, 0.20); 
+   \node at (1.65,1.7) {$\boldsymbol{F}_\mathrm{HR}$}; 
+   \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, mycolor4, thick]  (0.91,2.13)   -- ++ (0.0, -1.28);  
+   \node at (1.05,0.95) {$\boldsymbol{F}_\mathrm{G}$};
+  \draw[dashed, ->,>={Triangle[length=0pt 3*4,width=0pt 4]}, mycolor4, thick]  (0.39,1.85)   -- ++ (0.52, -1.0); 
+  \node at (0.5,1.4) {$\boldsymbol{F}_{\mathrm{G}_y}$};   
+    \node at (0.4,2.0) {$\boldsymbol{F}_{\mathrm{G}_x}$};
+% Radius   
+  \draw[-, thick]  (0.91,2.13)   -- ++ (0.28, -0.53); 
+   \node at (1.13,1.93) {$\boldsymbol{r}$};  
+   % Länge
+    \node at (0.0,0.90) {$l$};  
+ % Höhe
+ \draw[<->,>={latex[length=0pt 3*4,width=0pt 4]},thick, every node/.style={fill=white,midway}]   (1.19,1.60) -- (1.19, 0) node {$h$};
+% Winkel   
+  \draw[-, thick]  (0.91,1.8) arc (270:296.57:0.33); 
+  \node at (0.98,1.9) {$\alpha$};  
+    \draw[-, thick]  (-1.5,0) arc (0:26.57:0.5); 
+    \node at (-1.7,0.05) {$\alpha$};   
+%Achsen    
+   \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, thick]  (-1.0,2.4)   -- ++ (0.63, -1.18); 
+   \draw[->,>={Triangle[length=0pt 3*4,width=0pt 4]}, thick]  (-0.7,2.3)   -- ++ (-1.17, -0.60);    
+  \node at (-1.75,1.85) {$x$}; 
+  \node at (-0.33,1.35) {$y$}; 
+  \draw[->,>=latex, mycolor4!50!mycolor2, thick]  (1.28,2.74)  arc (60:120:0.70);  
+   \node at (0.91,3.0) {$\boldsymbol{\omega}$};
+\end{scope}
+\end{tikzpicture}
+  \caption[Rollende Kugel auf einer schiefen Ebene]{Eine Kugel rollt eine schiefe Ebene herab. Das Koordinatensystem ist um den Winkel $\alpha +\SI{180}{\degree}$ gedreht, um die Bewegungsgleichungen zu simplifizieren. Sofern die Haftreibung $\boldsymbol{F}_\mathrm{HR}$ betragsmäßig geringer als die Hangabtriebskraft $\boldsymbol{F}_{\mathrm{G}_x}$ ist, gleitet die Kugel die schiefe Ebene herunter. Ein Rollen und damit eine Winkelgeschwindigkeit $\boldsymbol{\omega}$ treten auf, wenn die Rollbedingung $\dot{x}=\omega r$ erfüllt ist. Die Reaktionskräfte sind zum besseren Überblick nicht eingezeichnet (eigene Darstellung).}
+  \label{fig:rampe1}
+  \vspace{-0pt}
+\end{figure}

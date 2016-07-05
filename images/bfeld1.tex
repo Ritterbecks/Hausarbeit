@@ -1,0 +1,86 @@
+%% Autor: Björn Ritterbecks 
+%% Letzte Aenderung: 15.06.2016 
+\thisfloatsetup{%
+  capbesidewidth=\marginparwidth}
+\begin{figure}[htbp]
+\centering
+\usetikzlibrary{decorations.pathmorphing}
+\pgfplotsset{width=7cm,compat=1.13}
+\small
+%\sansmath
+\subfloat[\label{fig:bfelda}]{
+\begin{tikzpicture}
+\begin{scope}[scale=1.12]
+% Stabmagnet überdeckt
+\draw [fill=halfgray!25] (1.6, 0.4) -- ++ (0, -0.6) -- ++ (-0.1, -0.1) -- ++ (0, 0.6);
+% Feldlinien
+% Norden
+\draw[postaction={decorate},decoration={markings,mark=at position 0.70 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (-1.45, 0.05) arc (270:259:8);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.60 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (-1.45, 0.11) arc (265:242:4);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.50 with {\arrowreversed{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (1.55, 0.05) arc (270:281:8);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.40 with {\arrowreversed{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (1.55, 0.11) arc (275:298:4);
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,0.35) arc (205:-25:1.65 and 0.5) ;
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+             decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,0.29) arc (220:-40:1.96 and 0.7) ;   
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+             decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,0.23) arc (233:-53:2.5 and 0.9);      
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+             decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,0.17) arc (240:-60:3.0 and 1.1) ;    
+% Süden
+\draw[postaction={decorate},decoration={markings,mark=at position 0.70 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (-1.45, -0.00) arc (90:101:8);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.60 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (-1.45, -0.06) arc (95:118:4);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.50 with {\arrowreversed{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (1.55, -0.00) arc (90:79:8);
+\draw[postaction={decorate},decoration={markings,mark=at position 0.40 with {\arrowreversed{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick]  (1.55, -0.06) arc (85:62:4);
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,-0.29) arc (155:385:1.65 and 0.5) ;
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+             decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,-0.23) arc (140:400:1.96 and 0.7) ;   
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+             decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,-0.17) arc (127:413:2.5 and 0.9);      
+  \draw[postaction={decorate},decoration={markings,mark=at position 0.33 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+             decoration={markings,mark=at position 0.67 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-1.45,-0.11) arc (120:420:3.0 and 1.1) ;               
+% Stabmagnet 
+\shade[left color=halfgray!75, right color=halfgray!25,opacity=1]
+(-1.5,-0.3) rectangle (1.5,0.3);
+\shade[left color=halfgray!75, right color=halfgray!25,opacity=1]
+(-1.5,0.3) -- (-1.4,0.4) -- ++ (3,0) -- ++ (-0.1,-0.1) -- ++ (-3, 0);
+\draw (-1.5, 0.3) -- (-1.4, 0.4) -- (1.6, 0.4) -- ++ (-0.1, -0.1) -- ++ (0, -0.6) -- ++ (0.1, 0.1) -- ++ (0, 0.6);
+\draw (-1.5, -0.3) rectangle (1.5, 0.3);
+\node[draw=none,fill=none] at (-1.3, 0.0){\footnotesize N};
+\node[draw=none,fill=none] at (1.3, 0.0){\footnotesize S};
+\end{scope}
+\end{tikzpicture}}
+\qquad
+\subfloat[\label{fig:bfeldb}]{
+\begin{tikzpicture}[
+	scale=1,
+	ka roehre/.style={fill=white,draw=black!80}
+]
+\begin{scope}[scale=1.21]
+% Nordpol
+\draw[fill=halfgray!50] (-4.9,1.5) -- ++ (0.0,1) arc (180:360:0.55 and 0.15) arc (0:180:0.55 and 0.15) arc (180:360:0.55 and 0.15) -- ++ (0.0,-1) decorate[decoration={random steps,segment length=1.5pt,amplitude=0.5pt}] {arc (360:180:0.55 and 0.15) };
+\node[draw=none,fill=none] at (-4.35, 2.0){\footnotesize S};
+% Feldlinien
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.41 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.8 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-4.35,4.2) -- ++ (0,-1.7) ;
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.41 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.8 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-4.75,4.2) arc (168:192:4.1) ;
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.41 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.8 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-3.95,4.2) arc (12:-12:4.1) ;                        
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.41 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+              decoration={markings,mark=at position 0.8 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-4.55,4.2) arc (174:186:8.15) ;
+   \draw[postaction={decorate},decoration={markings,mark=at position 0.41 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+              decoration={markings,mark=at position 0.8 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-4.15,4.2) arc (6:-6:8.15) ;   
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.41 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.8 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-4.9,4.2) arc (150:210:1.7) ;
+ \draw[postaction={decorate},decoration={markings,mark=at position 0.41 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}},
+            decoration={markings,mark=at position 0.8 with {\arrow{Triangle[length=0pt 3*4,width=0pt 4]}}}, mycolor2, thick] (-3.8,4.2) arc (30:-30:1.7) ;                       
+\draw[fill=halfgray!75] (-4.9,5.22) -- ++ (0.0,-1) arc (180:360:0.55 and 0.15) -- ++ (0.0,1) decorate[decoration={random steps,segment length=1.5pt,amplitude=0.5pt}] {arc (0:180:0.55 and 0.15) arc (180:360:0.55 and 0.15)};
+\node[draw=none,fill=none] at (-4.35, 4.72){\footnotesize N};
+\end{scope}
+\end{tikzpicture}}
+  \caption[Magnetfeld eines Stabmagneten und eines offenen Ringmagneten]{Die magnetischen Feldlinien laufen per definitionem vom Nord- zum Südpol und sind im Allgemeinen geschlossen, woraus $\div \boldsymbol{B}=0$ folgt. {\color{mycolor}\textbf{(a)}:} Die Feldlinien des Stabmagneten laufen im Inneren des Volumens weiter. {\color{mycolor}\textbf{(b)}:} Zwischen den großen Polschuhen mit Durchmesser $D>>d$ ($d$ als Durchmesser des Hufeisenmagneten) herrscht ein näherungsweise homogenes Magnetfeld $\boldsymbol{B}$ (eigene Darstellung).}
+  \label{fig:bfeld1}
+  \vspace{-0pt}
+\end{figure}
